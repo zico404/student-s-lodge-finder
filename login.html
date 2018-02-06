@@ -1,0 +1,72 @@
+<?php
+	
+	require_once "include/header_start.php";
+
+?>
+
+	<title><?php echo page_title("Login"); ?></title>
+
+<?php
+	
+	require_once "include/header_end.php";
+	require_once "include/index_main_header.php";
+	require_once "include/process_login.php";
+
+?>
+
+
+	<div style="padding: 20px" class="z-depth-4 center">
+			<h2 style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4">
+			<i class="ion-android-lock"></i> Login</h2>
+	</div>
+
+	<div style="margin: 0px auto" class="row">
+		
+		<div style="padding: 20px" class="hide-on-small-and-down col m4"></div>
+
+		<div style="padding: 20px" class="col s12 m7">
+
+
+      		<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post">
+
+			<div><?php display_error();?></div>
+
+      			<div class="row">
+		            <div class="row">
+		              <div class="input-field col s12 m6">
+		                <input name="email" maxlength="70" id="email" type="email" class="validate">
+		                <label for="email" class="active">Email Address</label>
+		              </div>
+		            </div>
+		            <div class="row">
+		              <div class="input-field col s12 m6">
+		                <input name="pass" id="password" type="password">
+		                <label for="password">Password</label>
+		              </div>
+		            </div>
+		            <button name="login" id="btn_login" style="border-radius: 100px" class="purple darken-4 hoverable btn btn btn-large waves-effect">
+		            <i class="ion-android-unlock left"></i>  Login</button>
+      		</form>
+
+		        <p>
+		        	<a class="purple-text text-darken-4" href="forgot_password.html">Forgot Password ?</a>
+		        </p>
+		        <p>
+		        	<a class="purple-text text-darken-4" href="signup.html">Sign up</a>
+		        </p>
+
+			</div>
+
+
+
+		</div>
+
+		<div style="padding: 20px" class="hide-on-small-and-down col m4"></div>
+
+
+	</div>
+
+
+
+	<?php require_once "include/footer.php";
+	 ?>

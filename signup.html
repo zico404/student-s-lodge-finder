@@ -1,0 +1,124 @@
+<?php
+	
+	require_once "include/header_start.php";
+
+?>
+
+	<title><?php echo page_title("Register"); ?></title>
+
+<?php
+	
+	require_once "include/header_end.php";
+	require_once "include/index_main_header.php";
+
+?>
+
+<?php
+	
+	require_once "include/process_signup.php";
+
+?>
+
+<center>
+	
+	<div style="padding: 20px" class="z-depth-4">
+			<h2 style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4">
+			<i class="ion-android-person-add"></i> Sign Up</h2>
+	</div>
+
+	<div class="container">
+
+		<div style="padding: 20px">
+
+			<div><?php display_error();?></div>
+
+			<form action="<?php echo $_SERVER['PHP_SELF']?>" method="post" enctype="multipart/form-data">
+			
+				<div class="row">
+
+		              <div class="input-field col s12 m12">
+		              	<h4 class="purple-text text-darken-4 center flow-text">Account Info</h4>
+		              </div>
+
+		              <div class="input-field col s12 m6">
+		                <input name="fname" value="<?php return_user_input('fname');?>" maxlength="20" data-length="20" id="fname" type="text" class="validate" required>
+		                <label for="fname" class="active">First Name</label>
+		            </div>
+
+		              <div class="input-field col s12 m6">
+		                <input name="lname" value="<?php return_user_input('lname');?>" maxlength="20" data-length="20" id="lname" type="text" class="validate" required>
+		                <label for="email" class="active">Last Name</label>
+		            </div>
+
+		              <div class="input-field col s12 m12">
+		                <input name="email" value="<?php return_user_input('email');?>" id="email" type="email" class="validate" required>
+		                <label for="email" class="active">Email Address</label>
+		              </div>
+
+		              <div class="input-field col s12 m6">
+		                <input name="pass" id="password" type="password" class="validate" required>
+		                <label for="password">Password</label>
+		              </div>
+		              <div class="input-field col s12 m6">
+		                <input name="confirm_pass" id="password2" type="password" class="validate" required>
+		                <label for="password2">Confirm Password</label>
+		              </div>
+
+
+		              <div class="input-field col s12 m12">
+		              	<h4 class="purple-text text-darken-4 center flow-text">Personal Info</h4>
+		              </div>
+
+					  <div class="input-field col s12 m6">
+					    <select name="gender">
+					      <option value="male">Male</option>
+					      <option value="female">Female</option>
+					    </select>
+					    <label>Gender</label>
+					  </div>
+
+		              <div class="input-field col s12 m6">
+		                <input name="state" value="<?php return_user_input('state');?>" maxlength="20" id="state" type="text" class="validate" required>
+		                <label for="state" class="active">State Of Residence</label>
+		            </div>
+<!-- 
+						<div class="file-field input-field col s12 m6">
+						      <div class="btn btn-flat z-depth-2 purple darken-4 white-text waves-effect waves-light">
+						        <span>Picture</span>
+						        <input name="pic" type="file">
+						      </div>
+						      <div class="file-path-wrapper">
+						        <input class="file-path validate" type="text">
+						      </div>
+						    </div> -->
+
+						<div class="file-field input-field col s12 m6">										     	
+					          <input type="number" maxlength="15" data-length="15"  name="phone" id="phone" value="<?php return_user_input('phone');?>" required>
+					          <label for="phone">Mobile Number</label>
+						    </div>
+
+						<div class="file-field input-field col s12 m12">										     	
+					          <textarea maxlength="400" data-length="400"  name="bio" id="bio" class="materialize-textarea"><?php return_user_input('bio');?></textarea>
+					          <label for="bio">Bio</label>
+						    </div>
+
+        
+		              <div class="input-field col s12 m12">
+
+		           		 <button name="register" id="btn_login" style="border-radius: 100px" class="purple darken-4 hoverable btn btn btn-large waves-effect"> <i class="ion-android-person-add left"></i> Sign Up</button>
+		              </div>
+
+			</div>
+		</form>
+
+		</div>
+
+
+	</div>
+
+
+
+</center>
+
+
+	<?php require_once "include/footer.php"; ?>

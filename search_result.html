@@ -1,0 +1,53 @@
+<?php
+	
+	require_once "include/header_start.php";
+
+?>
+
+	<title><?php echo page_title("Search"); ?></title>
+
+<?php
+	
+	require_once "include/header_end.php";
+	require_once "include/index_main_header.php";
+
+?>
+
+	<?php
+
+		if (!empty($_REQUEST["search"]) and !empty($_REQUEST["state"]) and !empty($_REQUEST["typeof"])){
+
+			$search = htmlspecialchars($_REQUEST["search"]);
+			$type = $_REQUEST["typeof"];
+			$state = $_REQUEST["state"];
+
+
+			$query = "SELECT * FROM lodge WHERE address = '$state' and  ";
+
+		}
+
+	?>
+
+<center>
+	
+
+	<div style="padding: 20px" class="z-depth-4">
+
+		<h2 class="purple-text text-darken-4" style="font-weight: bold;letter-spacing: -2px">
+			
+		<i class="ion-android-search"></i> Search Results
+
+		</h2>
+
+	</div>
+
+		<p class="flow-text">You searched for: " "</p>
+
+
+
+
+</center>
+
+
+
+	<?php require_once "include/footer.php"; ?>

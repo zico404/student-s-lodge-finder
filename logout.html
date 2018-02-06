@@ -1,0 +1,48 @@
+<?php
+
+	require_once "include/header_start.php";	
+
+// redirect user if logout request is malicious
+
+if ( empty($_REQUEST['uid']) or $_REQUEST['uid'] !== $_SESSION["user-id"] ){
+
+	header("Location:index.html");
+
+}
+
+else{
+
+	session_destroy();
+
+}
+
+	
+
+?>
+
+	<title><?php echo page_title("Logout"); ?></title>
+
+<?php
+	
+	require_once "include/header_end.php";
+
+?>
+			<?php require_once "include/index_main_header.php";?>
+
+			<div class="container center">
+				
+				<br>
+				<h2 style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4 large">
+				 <i class="ion-android-hand"></i> You have logged out !</h2>
+				<h5 class="flow-text">We appreciate your presence so far, we hope to see you again soon.</h5>
+
+			</div>
+
+
+		</div>
+
+
+
+	<?php require_once "include/footer.php"; ?>
+
+

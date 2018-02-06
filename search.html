@@ -1,0 +1,97 @@
+<?php
+	
+	require_once "include/header_start.php";
+
+?>
+
+	<title><?php echo page_title("Search"); ?></title>
+
+<?php
+	
+	require_once "include/header_end.php";
+	require_once "include/index_main_header.php";
+
+?>
+
+<center>
+	
+
+	<div style="padding: 20px" class="container">
+
+		<h2 class="purple-text text-darken-4" style="font-weight: bold;letter-spacing: -2px">
+			
+		<i class="ion-android-search"></i> Search
+
+		</h2>
+
+		<form action="<?php echo htmlspecialchars('search_result.html');?>" method="get">
+			
+				<div class="row">
+
+		              <div class="input-field col s12 m12">
+		              	<p class="purple-text text-darken-4 center">Where do you want to live?</p>
+		              </div>
+
+		              <br>
+
+		              <div class="input-field col s12 m4">
+						<select name="state">
+							<?php require_once "include/select_states.php"; ?>
+					    </select>
+		            </div>
+
+		              <div class="input-field col s12 m4">
+						<select name="typeof">
+					      <option value="" disabled selected>Type Of Lodge</option>
+					      <option value="any">Any</option>
+					      <option value="1room">Single Room</option>
+					      <option value="selfcon">Self Contain</option>
+					      <option value="1bdflat">1 Bedroom Flat</option>
+					      <option value="2bdflat">2 Bedroom Flat</option>
+					    </select>
+		            </div>
+
+		              <div class="input-field col s12 m4">
+						<select>
+					      <option value="" disabled selected>Max. Price Of Lodge</option>
+					      <option value="1">20,000</option>
+					      <option value="2">40,000</option>
+					      <option value="3">70,000</option>
+					    </select>
+		            </div>
+
+
+		              <div class="input-field col s12 m12">
+
+          				<i class="ion-ios-search prefix"></i>
+		                <input name="search" value="<?php return_user_input('search');?>" maxlength="100" data-length="100" id="search" type="text" required>
+		                <label for="search" class="active">Search</label>
+		            </div>
+
+		              <div class="input-field col s12 m12">
+
+          				
+		           		 <button id="btn_login" style="border-radius: 100px;" class="purple darken-4 hoverable btn btn btn-large waves-effect"> 
+		           		 	<i class="ion-ios-search left"></i> Search lodge</button>
+		              </div>
+
+
+		        </div>
+
+		    </form>
+
+
+
+	</div>
+
+
+
+</center>
+
+<br>
+<br>
+<br>
+<br>
+
+
+	<?php require_once "include/footer.php"; ?>
