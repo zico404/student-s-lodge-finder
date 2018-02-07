@@ -36,16 +36,19 @@
 		$reg_time = time();
 		$user_ip = $_SERVER["REMOTE_ADDR"];
 
+
+
 		if (empty($email)){
 
-			$error_text .="<li>Enter your email address</li>";
+			$error_text .="<li>Enter your first name</li>";
 			$error = 1;
 
 		}
 
+
 		if (empty($fname)){
 
-			$error_text .="<li>Enter your email address</li>";
+			$error_text .="<li>Enter your last name</li>";
 			$error = 1;
 
 		}
@@ -57,24 +60,45 @@
 
 		}
 
-		// check if email exists on database
 
-		$mail_query = "SELECT * FROM users WHERE email = '$email' ";
-		$mail_result = mysqli_query($con,$mail_query);
 
-		if (mysqli_num_rows($mail_result) > 0 ){
 
-			$error_text .="<li>Email address already exists !</li>";
+		if (strlen($bio) > 400){
+
+			$error_text .="<li>User Bio shouldn't exceed 400 characters</li>";
 			$error = 1;
+
 		}
 
 
+		if (strlen($email) > 70){
+
+			$error_text .="<li>Email musn't exceed 70 characters</li>";
+			$error = 1;
+
+		}
+
+		if ( strlen($fname) > 20){
+
+			$error_text .="<li>Firstname shouldn't exceed 20 characters</li>";
+			$error = 1;
+
+		}
+
+		if ( strlen($lname) > 20){
+
+			$error_text .="<li>Lastname shouldn't exceed 20 characters</li>";
+			$error = 1;
+
+		}
+
+		
 
 		//test password for errors
 
 		switch ($pass) {
 
-			case strlen($pass < 6):			
+			case strlen($pass) < 6:			
 				$error_text .= "<li>Password should not be less than 6 characters</li>";
 				$error = 1;
 				break;
@@ -98,6 +122,18 @@
 				$error_text .= "<li>Confirm your password</li>";
 				$error = 1;
 				break;
+		}
+
+
+		// check if email exists on database
+
+		$mail_query = "SELECT * FROM users WHERE email = '$email' ";
+		$mail_result = mysqli_query($con,$mail_query);
+
+		if (mysqli_num_rows($mail_result) > 0 ){
+
+			$error_text .="<li>Email address already exists !</li>";
+			$error = 1;
 		}
 
 
