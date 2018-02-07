@@ -16,6 +16,11 @@
 			border-radius: 30px;
 		}
 
+		#sidenav-overlay{
+
+			background:transparent;
+		}
+
 	</style>
 
 
