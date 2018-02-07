@@ -22,8 +22,10 @@
       ?>
 
   	<div style="padding: 10px;">
-  		
-      <?php get_user_lodges($_SESSION["user-id"]);?>
+
+      <div class="row">
+        <?php get_user_lodges($_SESSION["user-id"]);?>
+      </div>
 
   	</div>
 

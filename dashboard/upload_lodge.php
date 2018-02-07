@@ -36,19 +36,75 @@
 
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
-            if (!empty($_REQUEST["lodge_name"]) and !empty($_REQUEST["lga"])){
+            if (!empty($_REQUEST["lodge_name"]) and !empty($_REQUEST["lga"]) 
+              and !empty($_REQUEST["meta"]) and !empty($_REQUEST["state"]) and !empty($_REQUEST["typeof"]) )
+            {
 
-                $lodge_id = "";
+                $text = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012346789"),0,6); 
+                $time = substr(time(),6,4);
+                $lodge_id = $text.$time;
 
                 $lodge_name = $_REQUEST["lodge_name"];
                 $lga = $_REQUEST["lga"];
                 $state = $_REQUEST["state"];
                 $typeof = $_REQUEST["typeof"];
                 $user_id = $_SESSION["user-id"];
-                $meta = 
+                $meta = $_REQUEST["meta"];
+                $picture = $_FILES["picture"];
 
-                $query = "INSERT INTO lodge (lodge_name,lga,state,typeof,user_id,meta) VALUES ('$lodge_name','$lodge_id,'$lga','$state','$typeof','$user_id','$meta')";
-            }
+
+                  $target_dir = "../uploads/img/lodge/";
+                 $lodge_img = $picture["name"];
+                 $target_file = $target_dir . basename($picture["name"]);
+                 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+
+                 // Check if image file is a actual image or fake image
+                 if(isset($_POST["submit"])) {
+                     $check = getimagesize($picture["tmp_name"]);
+                     if($check == false) {
+
+                         $error_text = "<li>File is not an image.</li>";
+                         $error = 1;
+                     }
+                 }
+                 // Check if file already exists
+                 if (file_exists($target_file)) {
+                     $error_text = "<li>Sorry, file already exists.</li>";
+                     $error = 1;
+                 }
+                 // Check file size
+                 if ($picture["size"] > 500000) {
+                     $error_text = "<li>Sorry, your file is too large.</li>";
+                     $error = 1;
+                 }
+                 // Allow certain file formats
+
+                 if(!empty($picture) && $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+                 && $imageFileType != "gif" ) {
+                     $error_text = "<li>Sorry, only JPG, JPEG, PNG & GIF files are allowed.</li>";
+                     $error = 1;
+                 }
+
+                $query = "INSERT INTO lodge (lodge_name,lodge_id,lodge_img,lga,state,type_of,user_id,meta) ";
+                $query .= "VALUES ('$lodge_name','$lodge_id','$lodge_img','$lga','$state','$typeof','$user_id','$meta')";
+                $result = mysqli_query($con,$query);
+
+                if ($result){
+
+                    if (move_uploaded_file($picture["tmp_name"], $target_file)) {
+
+                          $error_text = '<li class="green-text text-darken-3">The file ". basename( $picture["name"]). " has been uploaded.</li>';
+                          $error = 1;
+                      }
+
+                }
+
+                else{
+                  $error_text = "Wrong SQL";
+                  $error = 1;
+                }
+
+              }
 
             else{
 
@@ -60,15 +116,17 @@
 
       ?>
 
+
+      <div style="padding: 20px" class="center">
+          <h4 style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4">
+          <i class="ion-android-upload"></i> Upload Lodge</h4>
+      </div>
+
       <div style="padding: 10px" class="container">
 
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post" enctype="multipart/form-data">
       
         <div class="row">
-
-                  <div class="input-field col s12 m12">
-                    <p class="purple-text text-darken-4 center">Upload lodge</p>
-                  </div>
 
                   <div><?php display_error();?></div>
 
@@ -103,7 +161,7 @@
             <div class="file-field input-field col s12 m6">
                   <div class="btn btn-flat z-depth-2 purple darken-4 white-text waves-effect waves-light">
                     <span><i class="ion-ios-camera left"></i>Picture</span>
-                    <input name="pic" type="file" required>
+                    <input name="picture" type="file" required>
                   </div>
                   <div class="file-path-wrapper">
                     <input class="file-path validate" type="text">

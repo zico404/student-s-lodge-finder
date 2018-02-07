@@ -136,53 +136,10 @@
 			$error = 1;
 		}
 
-
-		// if (isset($picture) and !empty($picture)){
-
-		// 	$target_dir = "uploads/img/users";
-		// 	$userpic = $picture["name"];
-		// 	$target_file = $target_dir . basename($picture["name"]);
-		// 	echo $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-
-		// 	//$uploaded_pic_name = $picture["tmp_name"] = $user_id.".".$imageFileType;
-		// 	// Check if image file is a actual image or fake image
-		// 	if(isset($_POST["submit"])) {
-		// 	    $check = getimagesize($picture["tmp_name"]);
-		// 	    if($check == false) {
-
-		// 	        $error_text = "<li>File is not an image.</li>";
-		// 	        $error = 1;
-		// 	    }
-		// 	}
-		// 	// Check if file already exists
-		// 	if (file_exists($target_file)) {
-		// 	    $error_text = "<li>Sorry, file already exists.</li>";
-		// 	    $error = 1;
-		// 	}
-		// 	// Check file size
-		// 	if ($picture["size"] > 500000) {
-		// 	    $error_text = "<li>Sorry, your file is too large.</li>";
-		// 	    $error = 1;
-		// 	}
-		// 	// Allow certain file formats
-
-		// 	if(!empty($picture) && $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-		// 	&& $imageFileType != "gif" ) {
-		// 	    $error_text = "<li>Sorry, only JPG, JPEG, PNG & GIF files are allowed.</li>";
-		// 	    $error = 1;
-		// 	}
-
-		// }
-
 		
 			// register user if no error was found
 
 		if ($error == 0){
-
-			// if (!move_uploaded_file($uploaded_pic_name, $target_file)) {
-		 //        $error_text ="<li>Failed to upload Image</li>";
-		 //        $error = 1;
-		 //    } 
 
 			$to = "$email";
 			$headers = "MIME-VERSION:1.0" . "\r\n";
