@@ -46,62 +46,10 @@
 					<div class="container">
 				
 			 			<div class="row">
-			        		<div class="col s12 m6 l4">
-			          			<div class="card purple-grey darken-1">
-			    					<div class="card-image waves-effect waves-block waves-light">
-			      					<img class="activator" src="img/bg0.jpeg" height="170">
-			    				</div>
-			    				<div class="card-content grey darken-4">
-			      					<span class="card-title activator white-text">Lodge 1<br>
-			      						<span style="font-size: 14px" class="grey-text">Location</span>
-			      						<i class="waves-effect ion-android-more-vertical right"></i></span>
-			    				</div>
-			    				<div class="card-reveal">
-			      					<span class="card-title purple-text text-darken-4">Card Title<i class="ion-ios-close right"></i></span>
-			      					<p>Here is some more information about this product that is only revealed once clicked on.</p>
-			      					<p><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a></p>
-			    				</div>
-			          
-			          	  	</div>
-			          	</div>
 
+			 				<?php get_admin_lodges(); ?>
 
-			        		<div class="col s12 m6 l4">
-			          			<div class="card purple-grey darken-1">
-			    					<div class="card-image waves-effect waves-block waves-light">
-			      					<img class="activator" src="img/bg7.jpg" height="170">
-			    				</div>
-			    				<div class="card-content grey darken-4">
-			      					<p class="card-title activator white-text left-align">Okeosisi Lodge<br>
-			      						<span style="font-size: 14px" class="grey-text">Location</span>
-			      						<i class="waves-effect ion-android-more-vertical right"></i></p>
-			    				</div>
-			    				<div class="card-reveal">
-			      					<span class="card-title purple-text text-darken-4">Card Title<i class="ion-ios-close right"></i></span>
-			      					<p>Here is some more information about this product that is only revealed once clicked on.</p>
-			    				</div>
-			          
-			          	  	</div>
-			          	</div>
-
-			        		<div class="col s12 m6 l4">
-			          			<div class="card purple-grey darken-1">
-			    					<div class="card-image waves-effect waves-block waves-light">
-			      					<img class="activator" src="img/bg4.jpg" height="170">
-			    				</div>
-			    				<div class="card-content grey darken-4">
-			      					<span class="card-title activator white-text">Lodge 3<br>
-			      						<span style="font-size: 14px" class="grey-text">Location</span>
-			      						<i class="waves-effect ion-android-more-vertical right"></i></span>
-			    				</div>
-			    				<div class="card-reveal">
-			      					<span class="card-title purple-text text-darken-4">Card Title<i class="ion-ios-close right"></i></span>
-			      					<p>Here is some more information about this product that is only revealed once clicked on.</p>
-			    				</div>
-			          
-			          	  	</div>
-			          	</div>
-			        </div>
+			        	</div>
 			        
 
 			</div>

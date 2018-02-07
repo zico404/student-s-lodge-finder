@@ -30,7 +30,7 @@
 			    	<a href="lodge.php" class="grey-text text-darken-4">
 				    	<div class="collapsible-header">
 				    			<i style="font-size: 17px" class="ion-android-person grey-text text-darken-4"></i>
-				    		My Lodge<span class="badge"><?php get_lodge_size($_SESSION["user-id"]);?></span>
+				    		My Lodge<span class="badge"><?php echo get_lodge_size($_SESSION["user-id"]);?></span>
 				    	</div>
 			    	</a>
 

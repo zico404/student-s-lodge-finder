@@ -9,7 +9,7 @@
 			
 			while($row = mysqli_fetch_assoc($result)) {
 
-				echo $row["count(*)"];
+				return $row["count(*)"];
 			}
 		}
 
@@ -55,15 +55,14 @@
 				$meta =  $row["meta"];
 				
 		?>
-
-			          		
-			          		<div class="row">
+						 		
+			          		<div class="row hide-on-small-and-down">
 
 			          			<div class="col s6">
 			          				
 			          				<div class="row">
 			          					
-			          					<div class="col s3"><img class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+			          					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
 			          					<div class="col s9"><b class="truncate"><?php echo $lodge_name; ?></b></div>
 
 			          				</div>
@@ -73,11 +72,35 @@
 			          			<div class="col s3"><span class="truncate"><?php echo $meta; ?></span></div>
 
 			          			<div class="col s3 truncate">
-			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;
+			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
 			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i> Delete</a>
 			          			</div>
 
 			          		</div>
+
+
+			          		<div class="row hide-on-med-and-up">
+
+			          			<div class="col s6">
+			          				
+			          				<div class="row">
+			          					
+			          					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+			          					<div class="col s9"><b class="truncate"><?php echo $lodge_name; ?></b></div>
+
+			          				</div>
+
+			          			</div>
+
+			          			<div class="col s3"><span class="truncate"><?php echo $meta; ?></span></div>
+
+			          			<div class="col s3 truncate">
+			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
+			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i></a>
+			          			</div>
+
+			          		</div>
+			         
 
 
 	<?php

@@ -31,7 +31,7 @@
 
                   <div class="row">
                     <div class="col s12 m6 l4">
-                      <h1 style="font-weight: bold;" class="grey-text text-darken-4 center"><?php get_lodge_size($_SESSION["user-id"]);?></h1>
+                      <h1 style="font-weight: bold;" class="grey-text text-darken-4 center"><?php echo get_lodge_size($_SESSION["user-id"]);?></h1>
                   </div>
                     <div class="col s12 m6 l8 grey-text text-darken-4"> 
                       <div class="container center"> View all the lodges you uploaded & make modifications.</div>

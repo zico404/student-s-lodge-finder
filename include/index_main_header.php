@@ -30,11 +30,6 @@
 								</li>
 
 								<li>
-									<a class="dropdown-button" data-activates="dropdown1" href="#">Sign In
-									<i style="font-size: 10px" class="right ion-chevron-down"></i></a>
-								</li>
-
-								<li>
 									<a class="dropdown-button" data-activates="dropdown2" href="#">My Account
 									<i style="font-size: 10px" class="right ion-chevron-down"></i></a>
 								</li>
@@ -55,26 +50,16 @@
 
 							<!-- Dropdown Contents -->
 
-
-							<ul id="dropdown1" class="dropdown-content">
-								
-
-								<li><a class="purple-text text-darken-4" href="login.html">Login</a></li>
-								<li><a class="purple-text text-darken-4" href="signup.html">Sign Up</a></li>
-
-							</ul>
-
-
 							<ul id="dropdown2" class="dropdown-content">
 								
 
-								<li><a class="purple-text text-darken-4" href="dashboard/">Dashboard</a></li>
-								<li><a class="purple-text text-darken-4" href="#">Profile</a></li>
+								<li><a class="grey-text text-darken-4" href="dashboard/">Dashboard</a></li>
+								<li><a class="grey-text text-darken-4" href="#">Profile</a></li>
 
 								
 
 								<li class="divider"></li>
-								<li><a class="purple-text text-darken-4" href="logout.html?logout=true&uid=<?php echo $_SESSION['user-id'];?>">Log Out</a></li>
+								<li><a class="grey-text text-darken-4" href="logout.html?logout=true&uid=<?php echo $_SESSION['user-id'];?>">Log Out</a></li>
 
 							</ul>
 
@@ -152,8 +137,8 @@
 						<ul id="dropdown1" class="dropdown-content">
 							
 
-							<li><a class="purple-text text-darken-4" href="login.html">Login</a></li>
-							<li><a class="purple-text text-darken-4" href="signup.html">Sign Up</a></li>
+							<li><a class="grey-text text-darken-4" href="login.html">Login</a></li>
+							<li><a class="grey-text text-darken-4" href="signup.html">Sign Up</a></li>
 
 						</ul>
 

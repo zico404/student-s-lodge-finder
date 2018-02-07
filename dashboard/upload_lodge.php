@@ -34,6 +34,10 @@
 
       <?php require_once "include/header_main.php"; 
 
+
+        $error = null;
+        $error_text = "";
+
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
             if (!empty($_REQUEST["lodge_name"]) and !empty($_REQUEST["lga"]) 
@@ -43,6 +47,9 @@
                 $text = substr(str_shuffle("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ012346789"),0,6); 
                 $time = substr(time(),6,4);
                 $lodge_id = $text.$time;
+
+                $user_role = $_SESSION["user-role"];
+
 
                 $lodge_name = $_REQUEST["lodge_name"];
                 $lga = $_REQUEST["lga"];
@@ -85,25 +92,38 @@
                      $error = 1;
                  }
 
-                $query = "INSERT INTO lodge (lodge_name,lodge_id,lodge_img,lga,state,type_of,user_id,meta) ";
-                $query .= "VALUES ('$lodge_name','$lodge_id','$lodge_img','$lga','$state','$typeof','$user_id','$meta')";
-                $result = mysqli_query($con,$query);
+                 if ( get_lodge_size($user_id) >= 5){
 
-                if ($result){
+                     $error_text = "<li>You have exceeded your maximum lodge upload</li>";
+                     $error = 1;
 
-                    if (move_uploaded_file($picture["tmp_name"], $target_file)) {
+                 }
 
-                          $error_text = '<li class="green-text text-darken-3">The file ". basename( $picture["name"]). " has been uploaded.</li>';
-                          $error = 1;
-                      }
+                 if ( $error !== 1){
 
-                }
+                    $query = "INSERT INTO lodge (lodge_name,lodge_id,lodge_img,lga,state,type_of,user_id,user_role,meta) ";
+                    $query .= "VALUES ('$lodge_name','$lodge_id','$lodge_img','$lga','$state','$typeof','$user_id','$user_role','$meta')";
+                    $result = mysqli_query($con,$query);
 
-                else{
-                  $error_text = "Wrong SQL";
-                  $error = 1;
-                }
+                    if ($result){
 
+                        if (move_uploaded_file($picture["tmp_name"], $target_file)) {
+
+                              $error_text = '<li class="green-text text-darken-3"> Your lodge has been created.</li>';
+                              $error = 1;
+                          }
+
+                    }
+
+                    else{
+                      $error_text = "Wrong SQL";
+                      $error = 1;
+                    }
+
+
+                 }
+
+                
               }
 
             else{
@@ -160,11 +180,11 @@
 
             <div class="file-field input-field col s12 m6">
                   <div class="btn btn-flat z-depth-2 purple darken-4 white-text waves-effect waves-light">
-                    <span><i class="ion-ios-camera left"></i>Picture</span>
+                    <span><i class="ion-android-camera"></i></span>
                     <input name="picture" type="file" required>
                   </div>
                   <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text">
+                    <input disabled class="file-path validate" type="text">
                   </div>
                 </div>
 

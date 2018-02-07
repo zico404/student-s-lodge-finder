@@ -19,9 +19,26 @@
   <div class="col s12 l10 right">
 
       <?php require_once "include/header_main.php"; 
-      ?>
 
-  	<div style="padding: 10px;">
+      ?>
+    
+
+      <div style="padding: 20px" class="center">
+          <h4 style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4">
+          <i class="ion-ios-home"></i> My Lodge</h4>
+      </div>
+
+  	<div style="padding: 10px;" class="center">
+      
+      <div class="input-field">
+        
+        <i class="prefix ion-ios-search"></i>
+          <input id="search_lodge" class="validate" type="text" name="search_lodge">
+          <label for="search_lodge">Search Lodge</label>
+
+      </div>
+
+      <br>
 
       <div class="row">
         <?php get_user_lodges($_SESSION["user-id"]);?>
@@ -50,4 +67,5 @@
 
 
 </div>
+
 
