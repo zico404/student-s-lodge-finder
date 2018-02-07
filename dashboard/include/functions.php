@@ -56,26 +56,29 @@
 				
 		?>
 
-			        		<div class="col s12 m6 l4">
-			          			<div class="card grey darken-1">
-			    					<div class="card-image waves-effect waves-block waves-light">
-			      					<img class="activator" src="../img/<?php echo $lodge_img; ?>" height="170">
-			    				</div>
-			    				<div class="card-content grey darken-4">
-			      					<span class="card-title activator white-text"><?php echo $lodge_name; ?><br>
-			      						<span style="font-size: 14px" class="grey-text"><?php echo $state; ?></span>|
-			      						<span style="font-size: 14px" class="grey-text"><?php echo $state; ?></span>
-			      						<span style="font-size: 14px" class="grey-text"><?php echo $state; ?></span>
-			      						<i class="waves-effect ion-android-more-vertical right"></i></span>
-			    				</div>
-			    				<div class="card-reveal">
-			      					<span class="card-title purple-text text-darken-4"><?php echo $lodge_name; ?><i class="ion-ios-close right"></i></span>
-			      					<p><?php echo $meta; ?></p>
-			      					<p><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">Edit Lodge</a></p>
-			    				</div>
-			          
-			          	  	</div>
-			          	</div>
+			          		
+			          		<div class="row">
+
+			          			<div class="col s6">
+			          				
+			          				<div class="row">
+			          					
+			          					<div class="col s3"><img class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+			          					<div class="col s9"><b class="truncate"><?php echo $lodge_name; ?></b></div>
+
+			          				</div>
+
+			          			</div>
+
+			          			<div class="col s3"><span class="truncate"><?php echo $meta; ?></span></div>
+
+			          			<div class="col s3 truncate">
+			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;
+			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i> Delete</a>
+			          			</div>
+
+			          		</div>
+
 
 	<?php
 
@@ -83,5 +86,22 @@
 
 		}
 	}
+
+	function is_user_admin($user){
+
+		global $con;
+		$query = "SELECT * FROM users WHERE user_id = '$user' and role ='admin' ";
+		$result = mysqli_query($con,$query);
+
+		if ( mysqli_num_rows($result) > 0 ){
+				
+				return true;
+			}
+
+			else{
+
+				return false;
+			}
+		}
 
 ?>
