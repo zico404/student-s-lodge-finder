@@ -25,7 +25,7 @@
 
       <div style="padding: 20px" class="center">
           <h4 style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4">
-          <i class="ion-ios-home"></i> My Lodge</h4>
+          <i class="ion-android-home"></i> My Lodge</h4>
       </div>
 
   	<div style="padding: 20px;" class=" container center">

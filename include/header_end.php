@@ -21,6 +21,11 @@
 			background:transparent;
 		}
 
+		.card-reveal{
+
+			z-index: 200;
+		}
+
 	</style>
 
 

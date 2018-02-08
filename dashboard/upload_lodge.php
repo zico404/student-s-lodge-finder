@@ -92,7 +92,7 @@
                      $error = 1;
                  }
 
-                 if ( get_lodge_size($user_id) >= 5){
+                 if ( $_SESSION["user-role"] == "user" and get_lodge_size($user_id) >= 5){
 
                      $error_text = "<li>You have exceeded your maximum lodge upload</li>";
                      $error = 1;
