@@ -51,7 +51,7 @@
 				$lga = $row["lga"];
 				$address =  $row["address"];
 				$price =  $row["price"];
-				$purchased = $row["purchased"];
+				$available = $row["available"];
 				$meta =  $row["meta"];
 				
 		?>
