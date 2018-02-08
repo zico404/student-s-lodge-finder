@@ -30,10 +30,10 @@
 
 					    	<div class="container">
 
-							    <h2 id="listing" style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4 center-align">
-							    	<i class="ion-ios-cart"></i> Our Listings</h2>
-							    	<hr style="border-bottom: 4px solid #4a148c; width: 20%;margin: 0px auto;">
-							    	
+							    <h2 id="listing" style="font-weight: bold;letter-spacing: -2px;" class="grey-text text-darken-4 center-align">
+							    	<i class="ion-ios-cart red-text text-darken-2"></i> Our Listings</h2>
+							    	<!-- <hr style="border-bottom: 4px solid #4a148c; width: 20%;margin: 0px auto;">
+ -->							    	
 							    		<div class="container">	
 							    			<p class="center flow-text">Here is some of our listings, we have carefully selected some beautiful lodges for you.</p>
 							    		</div>
@@ -58,9 +58,8 @@
 
 				<div class="container">
 						
-					<h2 id="listing" style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4 center-align">
-						 <i class="ion-android-star"></i> Popular Listings</h2>
-						  <hr style="border-bottom: 4px solid #4a148c; width: 20%;margin: 0px auto;">
+					<h2 id="listing" style="font-weight: bold;letter-spacing: -2px;" class="grey-text text-darken-4 center-align">
+						 <i class="ion-ios-star yellow-text text-darken-2"></i> Popular Listings</h2>
 
 						  <div class="container">
 						  	<p class="center flow-text">Here is some of the popular uploads from our various user's.</p>

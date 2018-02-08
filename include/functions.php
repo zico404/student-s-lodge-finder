@@ -155,7 +155,7 @@
 
 		global $con;
 
-		$query = "SELECT * FROM lodge WHERE user_role = 'admin' LIMIT 6";
+		$query = "SELECT * FROM lodge WHERE user_role = 'admin' LIMIT 8";
 		$result = mysqli_query($con,$query);
 
 		if ( $result ){
@@ -175,14 +175,16 @@
 		?>
 
 
-			        		<div class="col s12 m6 l4">
+			        		<div class="col s12 m4 l3">
 			          			<div class="card purple-grey darken-1">
 			    					<div class="card-image waves-effect waves-block waves-light">
 			      					<img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="170">
 			    				</div>
 			    				<div class="card-content grey darken-4">
 			      					<span class="card-title activator white-text"><?php echo $lodge_name; ?><br>
-			      						<span style="font-size: 14px" class="grey-text"><?php echo $state; ?></span>
+			      						<span style="font-size: 14px;" class="grey-text">
+			      							<i class="ion-location"></i>
+			      							<?php echo $state; ?></span>
 			      						<i class="waves-effect ion-android-more-vertical right"></i></span>
 			    				</div>
 			    				<div class="card-reveal">

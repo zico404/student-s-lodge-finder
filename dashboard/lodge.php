@@ -28,7 +28,7 @@
           <i class="ion-ios-home"></i> My Lodge</h4>
       </div>
 
-  	<div style="padding: 10px;" class="center">
+  	<div style="padding: 20px;" class=" container center">
       
       <div class="input-field">
         
