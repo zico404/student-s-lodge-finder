@@ -12,26 +12,12 @@
 	require_once "include/index_main_header.php";
 
 ?>
-
-	<?php
-
-		if (!empty($_REQUEST["search"]) and !empty($_REQUEST["state"]) and !empty($_REQUEST["typeof"])){
-
-			$search = htmlspecialchars($_REQUEST["search"]);
-			$type = $_REQUEST["typeof"];
-			$state = $_REQUEST["state"];
-
-
-			$query = "SELECT * FROM lodge WHERE address = '$state' and  ";
-
-		}
-
-	?>
+	
 
 <center>
 	
 
-	<div style="padding: 20px" class="z-depth-4">
+	<div style="padding: 10px">
 
 		<h2 class="purple-text text-darken-4" style="font-weight: bold;letter-spacing: -2px">
 			
@@ -41,12 +27,36 @@
 
 	</div>
 
-		<p class="flow-text">You searched for: " "</p>
+		<div class="container">
+
+			<div class="container">
+				
+				<span style="font-size: 1.4em" class="flow-text truncate">You searched for: "<b> <?php echo $_REQUEST["search"]; ?> </b>"</span>
+
+			</div>
+
+			<br>
+
+			
+			<div class="row">
+
+				<?php 
+
+					search_results($_REQUEST["search"],$_REQUEST["state"],$_REQUEST["typeof"]);
+
+				?>
+
+			</div>
+
+		</div>
+
 
 
 
 
 </center>
+
+<br><br><br>
 
 
 

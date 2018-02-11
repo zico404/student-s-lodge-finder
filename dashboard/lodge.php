@@ -21,32 +21,56 @@
       <?php require_once "include/header_main.php"; 
 
       ?>
-    
 
-      <div style="padding: 20px" class="center">
-          <h4 style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4">
-          <i class="ion-android-home"></i> My Lodge</h4>
-      </div>
 
-  	<div style="padding: 20px;" class=" container center">
-      
-      <div class="input-field">
+  <div class="row">
+    <div class="col s12">
+      <ul class="tabs">
+        <li class="tab col s4"><a class="active" href="#test1">All</a></li>
+        <li class="tab col s4"><a href="#test2">Test 2</a></li>
+        <li class="tab col s4"><a href="#test4">Test 4</a></li>
+        <li class="tab col s4"><a href="#test9">Test 9</a></li>
+        <li class="tab col s4"><a href="#test0">Test 0</a></li>
+      </ul>
+    </div>
+
+
+
+    <div id="test1" class="col s12">
+
+          <br>
         
-        <i class="prefix ion-ios-search"></i>
-          <input id="search_lodge" class="validate" type="text" name="search_lodge">
-          <label for="search_lodge">Search Lodge</label>
 
-      </div>
+            <div class="container input-field">
+              
+              <i class="prefix ion-ios-search"></i>
+                <input id="search_lodge" class="validate" type="text" name="search_lodge">
+                <label for="search_lodge">Search Lodge</label>
 
-      <br>
+            </div>
 
-      <div class="row">
-        <?php get_user_lodges($_SESSION["user-id"]);?>
-      </div>
+         <div class="center">
+          
 
-  	</div>
+            <div class="clearfix"></div>
 
-    
+            <br>
+
+            <div style="text-transform: capitalize;" class="row">
+              <?php get_user_lodges($_SESSION["user-id"]);?>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div id="test2" class="col s12">Test 2</div>
+    <div id="test4" class="col s12">Test 4</div>
+  </div>
+
 
   </div>
 
@@ -67,5 +91,14 @@
 
 
 </div>
+
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+    $('ul.tabs').tabs();
+  });
+        
+
+</script>
 
 

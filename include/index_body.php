@@ -80,6 +80,6 @@
 					
 				 			<div class="row">
 
-				 				<?php get_user_lodges(); ?>
+				 				<?php get_users_lodge(); ?>
 
 				        	</div>

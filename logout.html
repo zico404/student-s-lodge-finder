@@ -13,6 +13,8 @@ if ( empty($_REQUEST['uid']) or $_REQUEST['uid'] !== $_SESSION["user-id"] ){
 else{
 
 	session_destroy();
+	header("Location:index.html");
+	
 
 }
 
@@ -20,7 +22,7 @@ else{
 
 ?>
 
-	<title><?php echo page_title("Logout"); ?></title>
+<!-- 	<title><?php echo page_title("Logout"); ?></title>
 
 <?php
 	
@@ -41,7 +43,7 @@ else{
 
 		</div>
 
-		<br><br>
+		<br><br> -->
 
 
 

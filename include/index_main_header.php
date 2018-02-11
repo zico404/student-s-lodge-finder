@@ -11,8 +11,7 @@
 						<div class="nav-wrapper grey darken-4">
 							
 							<a class="button-collapse right" data-activates="mobile-menu"><i class="ion-android-menu"></i></a>
-							<a href="index.html" style="margin-left: 20px" class="brand-logo left">
-								<img src="img/logo.jpg" class="circle" width="70" height="70"></a>
+							<a href="index.html" style="margin-left: 20px" class="brand-logo left"> </a>
 
 
 							<ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -94,8 +93,7 @@
 					<div class="nav-wrapper grey darken-4">
 						
 						<a class="button-collapse right" data-activates="mobile-menu"><i class="ion-android-menu"></i></a>
-						<a href="index.html" style="margin-left: 20px" class="brand-logo left">
-							<img src="img/logo.jpg" class="circle" width="70" height="70"></a>
+						<a href="index.html" style="margin-left: 20px" class="brand-logo left">  </a>
 
 
 						<ul id="nav-mobile" class="right hide-on-med-and-down">
