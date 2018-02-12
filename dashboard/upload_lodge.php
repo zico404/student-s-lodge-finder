@@ -115,11 +115,6 @@
 
                     }
 
-                    else{
-                      $error_text = "Wrong SQL";
-                      $error = 1;
-                    }
-
 
                  }
 
@@ -234,4 +229,6 @@
 
 
 </script>
+
+<?php require_once "include/footer.php"; ?>
 

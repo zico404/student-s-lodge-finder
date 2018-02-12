@@ -4,7 +4,9 @@
 					<div class="nav-wrapper purple darken-4">
 						
 						<a class="button-collapse left" data-activates="mobile-menu"><i class="ion-android-menu"></i></a>
-						<a href="<?php echo $_SERVER['PHP_SELF']?>" style="margin-left: 10px;letter-spacing: -2px;" class="brand-logo flow-text">Dashboard</a>
+						<a href="<?php echo $_SERVER['PHP_SELF']?>" style="margin-left: 10px;letter-spacing: -1px;" class="flow-text">
+							Dashboard
+						</a>
 
 
 						<ul id="nav-mobile" class="right hide-on-small-and-down">

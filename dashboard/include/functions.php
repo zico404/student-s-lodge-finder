@@ -1,5 +1,6 @@
 <?php
 
+
 	function get_lodge_size($user){
 		global $con;
 		$query = "SELECT count(*) FROM lodge WHERE user_id = '$user' ";
@@ -46,6 +47,7 @@
 
 				$lodge_name = $row["lodge_name"];
 				$lodge_img = $row["lodge_img"];
+				$lodge_id =  $row["lodge_id"];
 				$user_id =  $row["user_id"];
 				$state =  $row["state"];
 				$lga = $row["lga"];
@@ -62,18 +64,18 @@
 			          				
 	          					
 	          					<div class="col s2"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-	          					<div class="col s6"><b class="truncate"><?php echo $lodge_name; ?></b></div>
-	          					<div class="col s2"><span class="truncate"><?php echo $state; ?></span></div>
-	          					<div class="col s2"><span class="truncate"><?php echo $lga; ?></span></div>
+	          					<div class="col s6 left-align"><b class="truncate"><?php echo $lodge_name; ?></b></div>
+	          					<div class="col s2 left-align"><span class="truncate"><?php echo $state; ?></span></div>
+	          					<div class="col s2 left-align"><span class="truncate"><?php echo $lga; ?></span></div>
 
 
 			          			</div>
 
-			          			<div class="col s3"><span class="truncate"><?php echo $meta; ?></span></div>
+			          			<div class="col s3 left-align"><span class="truncate"><?php echo $meta; ?></span></div>
 
 			          			<div class="col s3 truncate">
-			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
-			          				<a class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i> Delete</a>
+			          				<a id="<?php echo $lodge_id . '_edit'; ?>" class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
+			          				<a id="<?php echo $lodge_id . '_del'; ?>" class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i> Delete</a>
 			          			</div>
 
 			          		</div>
@@ -116,7 +118,7 @@
 	function is_user_admin($user){
 
 		global $con;
-		$query = "SELECT * FROM users WHERE user_id = '$user' and role ='admin' ";
+		$query = "SELECT * FROM users WHERE uid = '$user' and role ='admin' ";
 		$result = mysqli_query($con,$query);
 
 		if ( mysqli_num_rows($result) > 0 ){
