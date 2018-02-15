@@ -15,6 +15,7 @@
 
 <script type="text/javascript">
   
+$(".button-collapse").sideNav();
   $(document).ready(function(){
     $('ul.tabs').tabs();
     $('select').material_select();
