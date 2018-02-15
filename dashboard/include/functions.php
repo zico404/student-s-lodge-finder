@@ -1,6 +1,37 @@
 <?php
 
 
+	function get_user_count(){
+		global $con;
+		$query = "SELECT count(*) FROM users ";
+		$result = mysqli_query($con,$query);
+
+		if ( mysqli_num_rows($result) > 0 ){
+			
+			while($row = mysqli_fetch_assoc($result)) {
+
+				return $row["count(*)"];
+			}
+		}
+
+	}
+
+	function get_total_lodge_size(){
+		global $con;
+		$query = "SELECT count(*) FROM lodge";
+		$result = mysqli_query($con,$query);
+
+		if ( mysqli_num_rows($result) > 0 ){
+			
+			while($row = mysqli_fetch_assoc($result)) {
+
+				return $row["count(*)"];
+			}
+		}
+
+	}
+
+
 	function get_lodge_size($user){
 		global $con;
 		$query = "SELECT count(*) FROM lodge WHERE user_id = '$user' ";
@@ -16,9 +47,74 @@
 
 	}
 
+	function get_new_lodges($amount){
+
+		global $con;
+		$query = "SELECT * FROM lodge ORDER BY id DESC LIMIT $amount ";
+		$result = mysqli_query($con,$query);
+
+		if ( mysqli_num_rows($result) > 0 ){
+			
+			while($row = mysqli_fetch_assoc($result)) {
+
+				$lodge_name = $row["lodge_name"];
+				$lodge_img = $row["lodge_img"];
+
+		?>
+
+
+				<div class="row">
+					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					<div class="col s6 truncate"><span><?php echo $lodge_name; ?></span></div>
+					<div class="col s3"><a href="#" class="purple-text text-darken-4"> View</a></div>
+				</div>
+
+
+<?php
+			}
+		}
+
+	}
+
+		function get_pending_lodges($amount){
+
+		global $con;
+		$query = "SELECT * FROM lodge WHERE approved = '0' ORDER BY id DESC LIMIT $amount ";
+		$result = mysqli_query($con,$query);
+
+		if ( mysqli_num_rows($result) > 0 ){
+			
+			while($row = mysqli_fetch_assoc($result)) {
+
+				$lodge_name = $row["lodge_name"];
+				$lodge_img = $row["lodge_img"];
+				$user_role = $row["user_role"];
+
+				if ($user_role == "user"){
+
+		?>
+
+
+				<div class="row">
+					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					<div class="col s6 truncate"><span><?php echo $lodge_name; ?></span></div>
+					<div class="col s3">
+						<a href="#" class="green-text"><i class="ion-ios-checkmark-outline left"></i> Approve</a>
+					</div>
+				</div>
+
+
+<?php
+
+				}
+			}
+		}
+
+	}
+
 	function get_order_size($user){
 		global $con;
-		$query = "SELECT count(*) FROM order WHERE user_id = '$user' ";
+		$query = " SELECT count(*) FROM orders WHERE user_id = '$user' ";
 		$result = mysqli_query($con,$query);
 
 		if ( mysqli_num_rows($result) > 0 ){
@@ -51,7 +147,6 @@
 				$user_id =  $row["user_id"];
 				$state =  $row["state"];
 				$lga = $row["lga"];
-				$address =  $row["address"];
 				$price =  $row["price"];
 				$available = $row["available"];
 				$meta =  $row["meta"];
@@ -74,7 +169,7 @@
 			          			<div class="col s3 left-align"><span class="truncate"><?php echo $meta; ?></span></div>
 
 			          			<div class="col s3 truncate">
-			          				<a id="<?php echo $lodge_id . '_edit'; ?>" class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
+			          				<a onclick="loader(<?php echo $lodge_id; ?>)" class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
 			          				<a id="<?php echo $lodge_id . '_del'; ?>" class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i> Delete</a>
 			          			</div>
 

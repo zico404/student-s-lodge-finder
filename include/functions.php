@@ -183,7 +183,7 @@
 
 		global $con;
 
-		$query = "SELECT * FROM lodge WHERE user_role = 'admin' LIMIT 8";
+		$query = "SELECT * FROM lodge WHERE user_role = 'admin' ORDER BY id DESC LIMIT 8";
 		$result = mysqli_query($con,$query);
 
 		if ( $result ){
@@ -196,12 +196,11 @@
 				$user_id =  $row["user_id"];
 				$state =  $row["state"];
 				$lga = $row["lga"];
-				$address =  $row["address"];
 				$price =  $row["price"];
 				$available = $row["available"];
 				$meta =  $row["meta"];
 
-					if ($available !== "1"){
+					if ($available !== "0"){
 				
 		?>
 
@@ -276,7 +275,7 @@
 
 		global $con;
 
-		$query = "SELECT * FROM lodge WHERE user_role = 'user' LIMIT 8";
+		$query = "SELECT * FROM lodge WHERE user_role = 'user' ORDER BY id DESC LIMIT 8";
 		$result = mysqli_query($con,$query);
 
 		if ( $result ){
@@ -289,12 +288,12 @@
 				$user_id =  $row["user_id"];
 				$state =  $row["state"];
 				$lga = $row["lga"];
-				$address =  $row["address"];
 				$price =  $row["price"];
 				$available = $row["available"];
+				$approved = $row["approved"];
 				$meta =  $row["meta"];
 
-					if ($available !== "1"){
+					if ($available !== "0" and $approved !== "0"){
 				
 		?>
 

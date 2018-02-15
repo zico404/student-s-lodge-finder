@@ -30,7 +30,7 @@
   
     <?php require_once "include/desktop_side_nav.php"; ?>    
 
-  <div class="col s12 l10 right">
+  <div  style="padding: 0" class="col s12 l10 right">
 
       <?php require_once "include/header_main.php"; 
 
@@ -223,12 +223,6 @@
 </div>
 
 
-<script type="text/javascript">
-
-    $('select').material_select();
-
-
-</script>
 
 <?php require_once "include/footer.php"; ?>
 

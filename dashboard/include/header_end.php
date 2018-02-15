@@ -10,11 +10,6 @@
 			border-radius: 30px;
 		}
 
-		.row .col{
-
-			padding: 0;
-		}
-
 		.tabs .tab a,.tabs .tab a:hover{
 
 			color: #4a148c;

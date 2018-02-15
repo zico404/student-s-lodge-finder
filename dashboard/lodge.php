@@ -16,7 +16,7 @@
   
     <?php require_once "include/desktop_side_nav.php"; ?>    
 
-  <div class="col s12 l10 right">
+  <div  style="padding: 0" class="col s12 l10 right">
 
       <?php require_once "include/header_main.php"; 
 
@@ -29,8 +29,6 @@
         <li class="tab col s4"><a class="active" href="#test1">All</a></li>
         <li class="tab col s4"><a href="#test2">Test 2</a></li>
         <li class="tab col s4"><a href="#test4">Test 4</a></li>
-        <li class="tab col s4"><a href="#test9">Test 9</a></li>
-        <li class="tab col s4"><a href="#test0">Test 0</a></li>
       </ul>
     </div>
 
@@ -39,15 +37,20 @@
     <div id="test1" class="col s12">
 
           <br>
-        
 
-            <div class="container input-field">
+          <div class=" row">
+
+            <div class=" col s12 m4 input-field  right">
               
               <i class="prefix ion-ios-search"></i>
                 <input id="search_lodge" class="validate" type="text" name="search_lodge">
                 <label for="search_lodge">Search Lodge</label>
 
-            </div>
+            </div>    
+
+          </div>
+        
+
 
          <div class="center">
           
@@ -79,5 +82,15 @@
 
 
 <?php require_once "include/footer.php"; ?>
+
+<script type="text/javascript">
+  $(document).ready(function){
+
+    alert("ddd");
+  });
+
+
+
+</script>
 
 
