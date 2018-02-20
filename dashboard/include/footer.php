@@ -1,11 +1,11 @@
 <!-- Floating Button & Components -->
 
-<div class="fixed-action-btn">
+<div class="fixed-action-btn hide-on-med-and-up">
 	
 
 	<a href="#modal1" id="menu" class="modal-trigger waves-effect waves-light hoverable btn btn-floating purple darken-4 btn-large">
 
-		<i class="large ion-ios-chatboxes"></i>
+		<i class="ion-android-add"></i>
 
 	</a>
 

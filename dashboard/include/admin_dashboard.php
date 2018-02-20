@@ -91,7 +91,7 @@
                   <i style="font-size: 1em;" class="ion-ios-star yellow-text text-darken-4"></i>
                   <b>Popular Lodges</b>
                   </div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                <div class="collapsible-body"><?php echo get_popular_lodges(4); ?></div>
               </li>
               <li>
                 <div class="collapsible-header purple darken-1 white-text active waves-effect waves-light">

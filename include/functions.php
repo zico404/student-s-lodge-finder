@@ -212,7 +212,7 @@
 		      <div class="card">
 
 		        <div class="card-image">
-		          <img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="120">
+		          <img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="140">
 		          <?php
 
 		          if (!empty($_SESSION["user-id"])){
@@ -230,7 +230,7 @@
 
 		          ?>
 
-		          <a href="#!" class="btn-floating halfway-fab red darken-4 white-text"><i class="ion-ios-heart"></i></a>
+		          <a href="#!" class="btn-floating halfway-fab purple darken-4 white-text"><i class="ion-ios-heart"></i></a>
 
 		          <?php
 
@@ -305,7 +305,7 @@
 		      <div class="card">
 
 		        <div class="card-image">
-		          <img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="120">
+		          <img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="140">
 		          <?php
 
 		          if (!empty($_SESSION["user-id"])){
@@ -323,7 +323,7 @@
 
 		          ?>
 
-		          <a href="#!" class="btn-floating halfway-fab red darken-4 white-text"><i class="ion-ios-heart"></i></a>
+		          <a href="#!" class="btn-floating halfway-fab purple darken-4 white-text"><i class="ion-ios-heart"></i></a>
 
 		          <?php
 
@@ -387,7 +387,6 @@
 				$user_id =  $row["user_id"];
 				$state =  $row["state"];
 				$lga = $row["lga"];
-				$address =  $row["address"];
 				$price =  $row["price"];
 				$available = $row["available"];
 				$meta =  $row["meta"];
@@ -404,7 +403,7 @@
 		      <div class="card">
 
 		        <div class="card-image">
-		          <img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="120">
+		          <img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="140">
 		          <?php
 
 		          if (!empty($_SESSION["user-id"])){

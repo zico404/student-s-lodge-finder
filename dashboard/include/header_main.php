@@ -30,12 +30,8 @@
 						<!-- Mobile Menu -->
 
 						<ul id="mobile-menu" class="side-nav">
-							
 
-							<li><a href="#">One</a></li>
-							<li><a href="#">Two</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Three</a></li>
+							<?php require_once "include/mobile_side_nav.php"; ?>
 
 						</ul>
 

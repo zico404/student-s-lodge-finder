@@ -24,19 +24,17 @@
 
 
   <div class="row">
-    <div class="col s12">
+    <div style="padding: 0"  class="col s12">
       <ul class="tabs">
         <li class="tab col s4"><a class="active" href="#test1">All</a></li>
-        <li class="tab col s4"><a href="#test2">Test 2</a></li>
-        <li class="tab col s4"><a href="#test4">Test 4</a></li>
+        <li class="tab col s4"><a href="#test2">Pending</a></li>
+        <li class="tab col s4"><a href="#test4">Active</a></li>
       </ul>
     </div>
 
 
 
     <div id="test1" class="col s12">
-
-          <br>
 
           <div class=" row">
 
@@ -56,8 +54,6 @@
           
 
             <div class="clearfix"></div>
-
-            <br>
 
             <div style="text-transform: capitalize;" class="row">
               <?php get_user_lodges($_SESSION["user-id"]);?>

@@ -18,12 +18,15 @@
 </div>
 
 <script type="text/javascript">
-	
-	$(".button-collapse").sideNav();
-  $('.modal').modal();
-    $('.scrollspy').scrollSpy();
-  $('.carousel.carousel-slider').carousel({fullWidth: true}); 
-    $('select').material_select();
+	$(function(){
+
+		$(".button-collapse").sideNav();
+	  $('.modal').modal();
+	    $('.scrollspy').scrollSpy();
+	  $('.carousel.carousel-slider').carousel({fullWidth: true}); 
+	    $('select').material_select();
+		
+	});
 
 
 </script>

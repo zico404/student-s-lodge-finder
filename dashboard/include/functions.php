@@ -50,7 +50,7 @@
 	function get_new_lodges($amount){
 
 		global $con;
-		$query = "SELECT * FROM lodge ORDER BY id DESC LIMIT $amount ";
+		$query = "SELECT * FROM lodge WHERE approved = '1' ORDER BY id DESC LIMIT $amount ";
 		$result = mysqli_query($con,$query);
 
 		if ( mysqli_num_rows($result) > 0 ){
@@ -59,6 +59,8 @@
 
 				$lodge_name = $row["lodge_name"];
 				$lodge_img = $row["lodge_img"];
+				$user_role = $row["user_role"];
+
 
 		?>
 
@@ -72,6 +74,11 @@
 
 <?php
 			}
+		}
+
+		else{
+
+			echo "No new lodge found !";
 		}
 
 	}
@@ -111,6 +118,57 @@
 		}
 
 	}
+
+
+	function get_popular_lodges($amount){
+
+
+		global $con;
+		$query = "SELECT * FROM likes WHERE like_amount >= (SELECT AVG(like_amount) FROM likes) ORDER BY like_amount DESC LIMIT $amount ";
+		$result = mysqli_query($con,$query);
+
+		if ( mysqli_num_rows($result) > 0 ){
+			
+			while($row = mysqli_fetch_assoc($result)) {
+
+				$lodge_id = $row["item_id"];
+
+						$query = "SELECT * FROM lodge WHERE lodge_id = '$lodge_id' LIMIT $amount ";
+		$result = mysqli_query($con,$query);
+
+		if (mysqli_num_rows($result) > 0) {
+
+
+			while ($row = mysqli_fetch_assoc($result)) {
+
+				$lodge_name = $row["lodge_name"];
+				$lodge_img = $row["lodge_img"];
+
+	?>
+
+
+				<div class="row">
+					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					<div class="col s6 truncate"><span><?php echo $lodge_name; ?></span></div>
+					<div class="col s3">
+						<a href="#" class="purple-text">View</a>
+					</div>
+				</div>
+
+
+<?php
+
+
+			}
+
+
+		}
+
+			}
+		}
+
+	}
+
 
 	function get_order_size($user){
 		global $con;
@@ -152,6 +210,23 @@
 				$meta =  $row["meta"];
 				
 		?>
+		   <!--  <div class="col s12 m4">
+		      <div class="card">
+		        <div class="card-image">
+				        <img src="../uploads/img/lodge/<?php echo $lodge_img; ?>" height="200">
+		          <span class="card-title purple-text text-darken-2"><b><?php echo $lodge_name; ?></b></span>
+		          <a class="btn-floating halfway-fab waves-effect waves-light grey darken-4"><i class="ion-android-more-vertical"></i></a>
+		        </div>
+		        <div class="card-content purple-text text-darken-4">
+		        	<p class="left-align">
+					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text text-darken-4"><i class="ion-location"></i> <?php echo $state; ?> -></span>
+					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text text-darken-4"><?php echo $lga; ?></span>
+					</p>
+
+					<p class="left-align truncate"><?php echo $meta; ?></p>
+		        </div>
+		      </div>
+		    </div> -->
 						 		
 			          		<div style="padding: 7px" class="row hide-on-small-and-down hoverable">
 
