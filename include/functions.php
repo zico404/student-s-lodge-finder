@@ -183,7 +183,7 @@
 
 		global $con;
 
-		$query = "SELECT * FROM lodge WHERE user_role = 'admin' ORDER BY id DESC LIMIT 8";
+		$query = "SELECT * FROM lodge WHERE user_role = 'admin' ORDER BY id DESC LIMIT 7";
 		$result = mysqli_query($con,$query);
 
 		if ( $result ){
@@ -207,9 +207,9 @@
 
 
 		  
-		    <div class="col s12 m4 l3 hoverable">
+		    <div class="col s12 m4">
 
-		      <div class="card">
+		      <div class="card hoverable">
 
 		        <div class="card-image">
 		          <img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="140">
@@ -221,7 +221,7 @@
 
 		          ?>
 
-		          <a class="btn-floating halfway-fab green darken-4 white-text"><i class="ion-ios-heart"></i></a>
+		          <a class="btn-floating btn-large halfway-fab white"><i class="ion-ios-heart text-darken-4 red-text"></i></a>
 		          <?php
 
 		          	}
@@ -230,7 +230,7 @@
 
 		          ?>
 
-		          <a href="#!" class="btn-floating halfway-fab purple darken-4 white-text"><i class="ion-ios-heart"></i></a>
+		          <a class="btn-floating btn-large halfway-fab white"><i class="ion-ios-heart text-darken-4 purple-text"></i></a>
 
 		          <?php
 
@@ -241,7 +241,7 @@
 
 		        </div>
 
-		        <div class="card-content grey darken-4 truncate">
+		        <div class="card-content purple darken-4 truncate">
 		        	<span style="font-size: 1em;text-transform: capitalize;" class="card-title activator white-text"><?php echo $lodge_name; ?></span>
 					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><i class="ion-location"></i> <?php echo $state; ?> -></span>
 					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><?php echo $lga; ?></span>
@@ -275,7 +275,7 @@
 
 		global $con;
 
-		$query = "SELECT * FROM lodge WHERE user_role = 'user' ORDER BY id DESC LIMIT 8";
+		$query = "SELECT * FROM lodge WHERE user_role = 'user' ORDER BY id DESC LIMIT 7";
 		$result = mysqli_query($con,$query);
 
 		if ( $result ){
@@ -300,9 +300,9 @@
 
 
 		  
-		    <div class="col s12 m4 l3 hoverable">
+		    <div class="col s12 m4 carousel" data-indicators="true">
 
-		      <div class="card">
+		      <div class="card hoverable">
 
 		        <div class="card-image">
 		          <img class="activator" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="140">
@@ -314,7 +314,7 @@
 
 		          ?>
 
-		          <a class="btn-floating halfway-fab green darken-4 white-text"><i class="ion-ios-heart"></i></a>
+		          <a class="btn-floating btn-large halfway-fab white"><i class="ion-ios-heart text-darken-4 red-text"></i></a>
 		          <?php
 
 		          	}
@@ -323,7 +323,7 @@
 
 		          ?>
 
-		          <a href="#!" class="btn-floating halfway-fab purple darken-4 white-text"><i class="ion-ios-heart"></i></a>
+		         <a class="btn-floating btn-large halfway-fab white"><i class="ion-ios-heart text-darken-4 purple-text"></i></a>
 
 		          <?php
 
@@ -334,7 +334,7 @@
 
 		        </div>
 
-		        <div class="card-content grey darken-4 truncate">
+		        <div class="card-content purple darken-4 truncate">
 		        	<span style="font-size: 1em;text-transform: capitalize;" class="card-title activator white-text"><?php echo $lodge_name; ?></span>
 					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><i class="ion-location"></i> <?php echo $state; ?> -></span>
 					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><?php echo $lga; ?></span>
@@ -432,7 +432,7 @@
 
 		        </div>
 
-		        <div class="card-content grey darken-4 truncate">
+		        <div class="card-content purple darken-4 truncate">
 		        	<span style="font-size: 1em;text-transform: capitalize;" class="card-title activator white-text"><?php echo $lodge_name; ?></span>
 					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><i class="ion-location"></i> <?php echo $state; ?> -></span>
 					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><?php echo $lga; ?></span>

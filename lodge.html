@@ -1,0 +1,87 @@
+<?php
+
+	require_once "include/header_start.php";
+
+?>
+
+	<title><?php echo page_title("Discover Campuses"); ?></title>
+
+<?php
+	
+	require_once "include/header_end.php";
+	require_once "include/index_main_header.php";
+
+
+?>
+
+<div class="row">
+
+		<br>
+
+
+	<div class="col l3 center hide-on-med-and-down scrollspy">
+
+		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+
+		<p>
+	      <input class="filled-in" type="checkbox" id="check1" />
+	      <label for="check1">Steady Electricity</label>
+	    </p>	
+
+		<p>
+	      <input class="filled-in" type="checkbox" id="check2" />
+	      <label for="check2">Within school</label>
+	    </p>
+
+		<p>
+	      <input class="filled-in" type="checkbox" id="check3" />
+	      <label for="check3">Near to school</label>
+	    </p>
+
+		<p>
+	      <input class="filled-in" type="checkbox" id="check4" />
+	      <label for="check4">Water</label>
+	    </p>	
+
+
+	    <br>
+
+
+	          <div class="input-field">
+				<select name="state">
+					<?php require_once "include/select_states.php"; ?>
+			    </select>
+	        </div>
+
+	          <div class="input-field">
+				<select name="state">
+					<option selected disabled>Max Price</option>
+					<option value="20">20,000</option>
+					<option value="20">30,000</option>
+					<option value="20">50,000</option>
+					<option value="100">100,000</option>
+			    </select>
+	        </div>
+
+
+	        <div class="input-field">
+				 <button id="btn_login" style="border-radius: 30px;" class="purple darken-4 hoverable btn waves-effect">Search</button>
+			</div>
+
+		</form>
+
+		
+	</div>
+	
+	<div class="col l9 center">
+
+		<h4 class="flow-text">Campus</h4>
+
+			 <?php get_admin_lodges(); ?>
+
+	</div>
+
+</div>
+
+
+	<?php require_once "include/footer.php"; ?>

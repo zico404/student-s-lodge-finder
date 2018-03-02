@@ -14,13 +14,9 @@
 			<?php require_once "include/index_main_header.php";?>
 
 			<div class="container center">
-				<h1 style="font-weight: bold;font-size: 80px;"> 
-					<i class="red-text text-darken-4 ion-alert-circled"></i> 
-				</h1>
 				
-				<h1 style="font-weight: bold;font-size: 30px;letter-spacing: -2px;" class="flow-text purple-text text-darken-4 large">
-				Oops! The page Is Either Incorrect Or Not Available</h1>
-				<h5 class="flow-text">Let's help you find your way back. </h5>
+				<h1 style="font-weight: bold;" class="grey-text text-darken-4 large">404!</h1>
+				<h5 class="flow-text">This page doesn't exist on this server.</h5>
 
 			</div>
 

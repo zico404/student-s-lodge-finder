@@ -7,11 +7,11 @@
 		
 		<div  style="padding: 0" class="col l2 fixed side-nav center">
 
-		<div style="padding: 10px" class="grey darken-4">
+		<div style="padding: 10px;background: url(../img/bg1.jpeg);background-repeat: no-repeat;background-size: cover;">
 
-			<img class="circle z-depth-2" src="../img/bg1.jpg" width="100" height="100">
+			<img class="circle" src="../img/bg1.jpg" width="100" height="100">
 
-				<span class="purple-text text-darken-4 truncate" style="text-transform: capitalize; font-size: 1em;">
+				<span class="white-text truncate" style="text-transform: capitalize; font-size: 1em;">
 					<?php echo get_full_username($_SESSION["user-id"]); ?>	
 				</span>
 				
@@ -78,12 +78,11 @@
 
 		<div style="padding: 0" class="col l2 fixed side-nav center">
 
+		<div style="padding: 10px;background: url(../img/bg1.jpeg);background-repeat: no-repeat;background-size: cover;">
 
-			<div style="padding: 10px" class="grey darken-4">
+			<img class="circle" src="../img/bg1.jpg" width="100" height="100">
 
-			<img class="circle z-depth-2" src="../img/bg1.jpg" width="100" height="100">
-
-				<span class="purple-text text-darken-4 truncate" style="text-transform: capitalize; font-size: 1em;">
+				<span class="white-text truncate" style="text-transform: capitalize; font-size: 1em;">
 					<?php echo get_full_username($_SESSION["user-id"]); ?>	
 				</span>
 				

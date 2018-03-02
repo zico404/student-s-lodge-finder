@@ -1,0 +1,57 @@
+<?php
+
+	require_once "include/header_start.php";
+
+?>
+
+	<title><?php echo page_title("Discover Campuses"); ?></title>
+
+<?php
+	
+	require_once "include/header_end.php";
+	require_once "include/index_main_header.php";
+
+
+?>
+
+<div class="row">
+
+		<br>
+
+	<div class="col l3 input-field center hide-on-med-and-down">
+
+		<div class="input-field">
+				
+	        <input name="search" value="<?php return_user_input('search');?>" maxlength="100" data-length="100" id="search" type="text" required>
+	        <label for="search">Campus Name</label>
+
+		</div>
+
+
+          <div class="input-field">
+			<select name="state">
+				<?php require_once "include/select_states.php"; ?>
+		    </select>
+        </div>
+
+	        <div class="input-field">
+				 <button id="btn_login" style="border-radius: 30px;" class="purple darken-4 hoverable btn waves-effect">Search</button>
+			</div>
+		
+	</div>
+	
+	<div class="col l9 center">
+
+		<h4 class="flow-text">Campus</h4>
+
+			 				<?php get_admin_lodges(); ?>
+
+	</div>
+
+</div>
+
+
+
+<script src="script/login_async.js" type="text/javascript"></script>
+
+	<?php require_once "include/footer.php"; ?>

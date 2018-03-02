@@ -18,6 +18,7 @@
 </div>
 
 <script type="text/javascript">
+	
 	$(function(){
 
 		$(".button-collapse").sideNav();

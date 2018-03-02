@@ -8,31 +8,39 @@
 						
 						<nav>
 							
-						<div class="nav-wrapper grey darken-4">
+						<div class="nav-wrapper purple darken-4">
 							
 							<a class="button-collapse" data-activates="mobile-menu"><i class="ion-android-menu"></i></a>
-							<a href="index.html" style="margin-left: 20px" class="brand-logo left"> </a>
+							<a href="index.html" style="margin-left: 20px;" class="brand-logo centerfont-effect-3d-float"></a>
 
+
+							<ul class="center hide-on-med-and-down">
+								
+								<li>
+									<a href="campus.html">Campus</a>
+								</li>
+
+								<li>
+									<a href="lodge.html">Lodge</a>
+								</li>
+
+								<li>
+									<a href="roommate.html">Room mate</a>
+								</li>
+
+								<li>
+									<a href="help.html">Help</a>
+								</li>
+
+
+							</ul>
 
 							<ul class="right hide-on-med-and-down">
 								
 								<li>
-									<a href="index.html">Home</a>
-								</li>
-
-								<li>
-									<a href="#">About Us</a>
-								</li>
-
-								<li>
-									<a href="search.html">Search</a>
-								</li>
-
-								<li>
 									<a class="dropdown-button" data-activates="dropdown1" href="#">My Account
 									<i style="font-size: 10px" class="right ion-chevron-down"></i></a>
 								</li>
-
 							</ul>
 
 							<!-- Dropdown Contents -->
@@ -116,33 +124,40 @@
 				
 				<nav>
 					
-					<div class="nav-wrapper grey darken-4">
+					<div class="nav-wrapper purple darken-4">
 						
 						<a class="button-collapse" data-activates="mobile-menu"><i class="ion-android-menu"></i></a>
-						<a href="index.html" style="margin-left: 20px" class="brand-logo left">  </a>
+							<a href="index.html" style="margin-left: 20px" class="brand-logo center font-effect-3d-float"></a>
 
 
-						<ul id="nav-mobile" class="right hide-on-med-and-down">
-							
-							<li>
-								<a href="index.html">Home</a>
-							</li>
+							<ul class="center hide-on-med-and-down">
+								
+								<li>
+									<a href="campus.html">Campus</a>
+								</li>
 
-							<li>
-								<a href="#">About Us</a>
-							</li>
+								<li>
+									<a href="lodge.html">Lodge</a>
+								</li>
 
-							<li>
-								<a href="search.html">Search</a>
-							</li>
+								<li>
+									<a href="roommate.html">Room mate</a>
+								</li>
 
-							<li>
-								<a class="dropdown-button" data-activates="dropdown2" href="#">Sign In
-								<i style="font-size: 10px" class="right ion-chevron-down"></i></a>
-							</li>
+								<li>
+									<a href="search.html">Help</a>
+								</li>
 
 						</ul>
 
+
+							<ul class="right hide-on-med-and-down">
+									
+								<li>
+									<a class="dropdown-button" data-activates="dropdown2">Sign In
+									<i style="font-size: 10px" class="right ion-chevron-down"></i></a>
+								</li>
+							</ul>
 
 						<!-- Dropdown Contents -->
 
@@ -170,29 +185,22 @@
 							<ul id="mobile-menu" class="side-nav purple-text text-darken-4">
 
 								<li>
-									<a class="purple-text text-darken-4 z-depth-1" href="index.html">
+									<a class="purple-text text-darken-4" href="index.html">
 										<i class="ion-android-home grey-text text-darken-4"></i> Home</a>
 								</li>
 
 								<li>
-									<a class="purple-text text-darken-4 z-depth-1" href="#">
+									<a class="purple-text text-darken-4" href="#">
 										<i class="ion-information-circled grey-text text-darken-4"></i> About Us</a>
 								</li>
 
 								<li>
-									<a class="purple-text text-darken-4 z-depth-1" href="search.html">
+									<a class="purple-text text-darken-4" href="search.html">
 										<i class="ion-ios-search grey-text text-darken-4"></i> Search</a>
 								</li>
 
-							<li>
-								<a class="dropdown-button purple-text text-darken-4" data-activates="mobile-dropdown-2" href="#">
-									<i class="ion-log-in grey-text text-darken-4"></i> Sign In
-								<i style="font-size: 10px" class="right ion-chevron-down grey-text text-darken-4"></i></a>
-							</li>
-
 						</ul>
 
-							</ul>
 
 						<ul id="mobile-dropdown-2" class="dropdown-content">
 							
