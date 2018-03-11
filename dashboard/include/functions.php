@@ -205,76 +205,69 @@
 				$user_id =  $row["user_id"];
 				$state =  $row["state"];
 				$lga = $row["lga"];
-				$price =  $row["price"];
-				$available = $row["available"];
 				$meta =  $row["meta"];
 				
 		?>
-		   <!--  <div class="col s12 m4">
-		      <div class="card">
-		        <div class="card-image">
-				        <img src="../uploads/img/lodge/<?php echo $lodge_img; ?>" height="200">
-		          <span class="card-title purple-text text-darken-2"><b><?php echo $lodge_name; ?></b></span>
-		          <a class="btn-floating halfway-fab waves-effect waves-light grey darken-4"><i class="ion-android-more-vertical"></i></a>
-		        </div>
-		        <div class="card-content purple-text text-darken-4">
-		        	<p class="left-align">
-					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text text-darken-4"><i class="ion-location"></i> <?php echo $state; ?> -></span>
-					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text text-darken-4"><?php echo $lga; ?></span>
-					</p>
-
-					<p class="left-align truncate"><?php echo $meta; ?></p>
-		        </div>
-		      </div>
-		    </div> -->
 						 		
 			          		<div style="padding: 7px" class="row hide-on-small-and-down hoverable">
 
-			          			<div class="col s6">
+			          			<div class="col s8">
 			          				
 	          					
 	          					<div class="col s2"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-	          					<div class="col s6 left-align"><b class="truncate"><?php echo $lodge_name; ?></b></div>
+	          					<div class="col s4 left-align"><b class="truncate"><?php echo $lodge_name; ?></b></div>
 	          					<div class="col s2 left-align"><span class="truncate"><?php echo $state; ?></span></div>
-	          					<div class="col s2 left-align"><span class="truncate"><?php echo $lga; ?></span></div>
+	          					<div class="col s4 left-align"><span class="truncate"><?php echo $lga; ?></span></div>
 
 
 			          			</div>
 
 			          			<div class="col s3 left-align"><span class="truncate"><?php echo $meta; ?></span></div>
 
-			          			<div class="col s3 truncate">
+			          			<div class="col s1 truncate"><!-- 
 			          				<a onclick="loader(<?php echo $lodge_id; ?>)" class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
-			          				<a id="<?php echo $lodge_id . '_del'; ?>" class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i> Delete</a>
+			          				<a id="<?php echo $lodge_id . '_del'; ?>" class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i> Delete</a> -->
+			          				<a class="dropdown-button" data-activates="<?php echo $lodge_id; ?>" href="#">
+			          					<i style="font-size: 20px;" class="ion-android-more-vertical grey-text text-darken-4"></i>
+			          				</a>
+					          		<ul id="<?php echo $lodge_id; ?>" class="dropdown-content">		
+
+										<li><a class="grey-text text-darken-4" href="#">Edit</a></li>
+										<li><a class="grey-text text-darken-4" href="#">Delete</a></li>
+
+									</ul>
 			          			</div>
 
 			          		</div>
 
 
-			          		<div style="padding: 7px" class="row hide-on-med-and-up">
+			          		
+			          			<a class="dropdown-button purple-text text-darken-4" data-activates="<?php echo $lodge_id; ?>" href="#">
+			          				<div style="padding: 7px" class="row hide-on-med-and-up">
 
-			          			<div class="col s9">
-			          				
-			          				<div class="row">
-			          					
-			          					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-			          					<div class="col s9"><b class="truncate"><?php echo $lodge_name; ?></b>
+					          			<div class="col s9">
+					          				
+					          				<div class="row">
+					          					
+					          					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					          					<div class="col s9"><b class="truncate"><?php echo $lodge_name; ?></b>
 
-			          						<span class="truncate grey-text text-darken-1"><?php echo $meta; ?></span>
+					          						<span class="truncate grey-text text-darken-1"><?php echo $meta; ?></span>
 
-			          					</div>
+					          					</div>
+
+					          				</div>
+
+					          			</div>
+
+
+					          			<div class="col s3 truncate">
+					          					<i style="font-size: 20px;" class="ion-android-more-vertical grey-text text-darken-4"></i>
+					          				
+					          			</div>
 
 			          				</div>
-
-			          			</div>
-
-
-			          			<div class="col s3 truncate">
-			          				<a class="purple-text text-darken-4" href="#!"><i style="font-size: 1.4em" class="ion-edit"></i></a> &nbsp;&nbsp;&nbsp;&nbsp;
-			          				<a class="purple-text text-darken-4" href="#!"><i style="font-size: 1.4em" class="ion-trash-b"></i></a>
-			          			</div>
-
-			          		</div>
+			          			</a>
 			         
 
 

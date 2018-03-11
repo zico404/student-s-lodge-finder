@@ -16,7 +16,7 @@
 			<div class="container center">
 				
 				<h1 style="font-weight: bold;" class="grey-text text-darken-4 large">404!</h1>
-				<h5 class="flow-text">This page doesn't exist on this server.</h5>
+				<p class="flow-text">This page doesn't exist on this server.</p>
 
 			</div>
 

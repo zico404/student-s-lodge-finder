@@ -75,6 +75,7 @@
 
 	}
 
+
 	function return_user_input($text){
 
 		if (isset($_REQUEST[$text])){
@@ -133,6 +134,23 @@
 		}
 	}
 
+	function get_user_img($user){
+		
+		global $con;
+
+		$query = "SELECT * FROM users WHERE uid = '$user' ";
+		$result = mysqli_query($con,$query);
+
+		if ( mysqli_num_rows($result) > 0 ){
+
+			while ($row = mysqli_fetch_assoc($result)) {
+				$data = $row["picture"];
+				return $data;
+			}
+		}
+
+	}
+
 	function get_full_username($user){
 
 		global $con;
@@ -183,8 +201,11 @@
 
 		global $con;
 
-		$query = "SELECT * FROM lodge WHERE user_role = 'admin' ORDER BY id DESC LIMIT 7";
+		$query = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id and user_role = 'admin' LIMIT 7; ";
 		$result = mysqli_query($con,$query);
+
+
+
 
 		if ( $result ){
 
@@ -196,9 +217,14 @@
 				$user_id =  $row["user_id"];
 				$state =  $row["state"];
 				$lga = $row["lga"];
-				$price =  $row["price"];
 				$available = $row["available"];
+				$approved = $row["approved"];
 				$meta =  $row["meta"];
+				$price = $row["price"];
+				$light =  $row["light"];
+				$water =  $row["water"];
+				$near_school =  $row["near_school"];
+				$within_school =  $row["within_school"];
 
 					if ($available !== "0"){
 				
@@ -230,7 +256,7 @@
 
 		          ?>
 
-		          <a class="btn-floating btn-large halfway-fab white"><i class="ion-ios-heart text-darken-4 purple-text"></i></a>
+		          <a class="btn-floating waves-effect btn-large halfway-fab white"><i class="ion-ios-heart text-darken-4 purple-text"></i></a>
 
 		          <?php
 
@@ -251,8 +277,50 @@
 						<p class="card-title purple-text text-darken-4">
 							<i class="ion-ios-close right red-text text-darken-4"></i>
 						</p>
-						<p><i class="ion-ios-information-outline left"></i><?php echo $meta; ?></p>
-						<p><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a></p>
+							<?php
+
+								if ($light == "on"){
+
+								echo '
+				                  <p class="left-align">
+				                      <input checked disabled type="checkbox" id="check1" />
+				                      <label for="check1">Light</label>
+				                    </p>
+				                   ';
+								}
+
+								if ($water == "on"){
+
+								echo '
+				                  <p class="left-align">
+				                      <input checked disabled type="checkbox" id="check2" />
+				                      <label for="check2">Water</label>
+				                    </p>
+				                   ';
+								}
+
+								if ($within_school == "on"){
+
+								echo '
+				                  <p class="left-align">
+				                      <input checked disabled type="checkbox" id="check3" />
+				                      <label for="check3">Within School</label>
+				                    </p>
+				                   ';
+								}
+
+								if ($near_school == "on"){
+
+								echo '
+				                  <p class="left-align">
+				                      <input checked disabled type="checkbox" id="check4" />
+				                      <label for="check4">Near School</label>
+				                    </p>
+				                   ';
+								}
+
+							?>
+						<p class="center"><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a></p>
 				</div>
 
 		      </div>
@@ -272,11 +340,13 @@
 	
 
 	function get_users_lodge(){
-
 		global $con;
 
-		$query = "SELECT * FROM lodge WHERE user_role = 'user' ORDER BY id DESC LIMIT 7";
+		$query = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id and user_role = 'user' LIMIT 7; ";
 		$result = mysqli_query($con,$query);
+
+
+
 
 		if ( $result ){
 
@@ -288,10 +358,14 @@
 				$user_id =  $row["user_id"];
 				$state =  $row["state"];
 				$lga = $row["lga"];
-				$price =  $row["price"];
 				$available = $row["available"];
 				$approved = $row["approved"];
 				$meta =  $row["meta"];
+				$price = $row["price"];
+				$light =  $row["light"];
+				$water =  $row["water"];
+				$near_school =  $row["near_school"];
+				$within_school =  $row["within_school"];
 
 					if ($available !== "0" and $approved !== "0"){
 				
@@ -323,7 +397,7 @@
 
 		          ?>
 
-		         <a class="btn-floating btn-large halfway-fab white"><i class="ion-ios-heart text-darken-4 purple-text"></i></a>
+		         <a class="btn-floating waves-effect btn-large halfway-fab white"><i class="ion-ios-heart text-darken-4 purple-text"></i></a>
 
 		          <?php
 
@@ -344,8 +418,50 @@
 						<p class="card-title purple-text text-darken-4">
 							<i class="ion-ios-close right red-text text-darken-4"></i>
 						</p>
-						<p><i class="ion-ios-information-outline left"></i><?php echo $meta; ?></p>
-						<p><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a></p>
+							<?php
+
+								if ($light == "on"){
+
+								echo '
+				                  <p class="left-align">
+				                      <input checked disabled type="checkbox" id="check1" />
+				                      <label for="check1">Light</label>
+				                    </p>
+				                   ';
+								}
+
+								if ($water == "on"){
+
+								echo '
+				                  <p class="left-align">
+				                      <input checked disabled type="checkbox" id="check2" />
+				                      <label for="check2">Water</label>
+				                    </p>
+				                   ';
+								}
+
+								if ($within_school == "on"){
+
+								echo '
+				                  <p class="left-align">
+				                      <input checked disabled type="checkbox" id="check3" />
+				                      <label for="check3">Within School</label>
+				                    </p>
+				                   ';
+								}
+
+								if ($near_school == "on"){
+
+								echo '
+				                  <p class="left-align">
+				                      <input checked disabled type="checkbox" id="check4" />
+				                      <label for="check4">Near School</label>
+				                    </p>
+				                   ';
+								}
+
+							?>
+						<p class="center"><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a></p>
 				</div>
 
 		      </div>

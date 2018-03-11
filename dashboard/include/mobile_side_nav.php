@@ -1,159 +1,51 @@
-<?php 
-	
-	if ( is_user_admin($_SESSION["user-id"]) == false ){
+							<ul id="mobile-menu" class="side-nav flow-text">
+								
+								<li>
+									<a href="index.html"><i class="ion-speedometer"></i>Dashboard</a>
+								</li>
+								
+								<li>
+									<a class="dropdown-button" data-activates="lodge" href="#"><i class="ion-android-home"></i>
+										Lodge <i style="font-size: 10px" class="right ion-chevron-down"></i>
+									</a>
+								</li>
 
+								<ul id="lodge" class="dropdown-content">
+									
+									<li><a class="grey-text text-darken-4" href="lodge.php">My Lodge</a></li>
+									<li><a class="grey-text text-darken-4" href="upload_lodge.php">Post Lodge</a></li>
 
-?>
-		
-		<div  style="padding: 0" class="col l2 fixed side-nav center">
+								</ul>
 
-		<div style="padding: 10px" class="grey darken-4">
+								<li>
+									<a class="dropdown-button" data-activates="room_mate" href="room_mate.php">
+										<i class="ion-person-stalker"></i>Room mate
+									 <i style="font-size: 10px" class="right ion-chevron-down"></i></a>
+								</li>
 
-			<img class="circle z-depth-2" src="../img/bg1.jpg" width="100" height="100">
+								<ul id="room_mate" class="dropdown-content">
+									
+									<li><a class="grey-text text-darken-4" href="lodge.php">Find</a></li>
+									<li><a class="grey-text text-darken-4" href="upload_lodge.php">Request
+									</a></li>
 
-				<span class="purple-text text-darken-4 truncate" style="text-transform: capitalize; font-size: 1em;">
-					<?php echo get_full_username($_SESSION["user-id"]); ?>	
-				</span>
-				
-			</div>
+								</ul>
 
-				<ul class="collapsible" data-collapsible="accordion">
+								<li>
+									<a href="settings.php"><i class="ion-gear-a"></i>Settings</a>
+								</li>
 
-				  <a class="grey-text text-darken-4" href="index.php">
-			  		<li>
-					    <div class="collapsible-header active"><i style="font-size: 17px" class="ion-speedometer"></i>
-					      Dashboard
-					  </div>
-			  		</li>
-				</a>
+								<li>
+									<a class="dropdown-button" data-activates="account" href="#"> <i class="ion-android-person"></i> My Account
+									<i style="font-size: 10px" class="right ion-chevron-down"></i></a>
+								</li>
 
-			  <li>
-			    <div class="collapsible-header">
-			      <i style="font-size: 17px" class="ion-android-home grey-text text-darken-4"></i>Lodge
-			  </div>
+								<ul id="account" class="dropdown-content">
+									
+									<li><a class="grey-text text-darken-4" href="#">Profile</a></li>
 
-			    <div class="collapsible-body">
+									<li><a class="grey-text text-darken-4" href="../logout.html?logout=true&uid=<?php echo $_SESSION['user-id'];?>">Log Out</a></li>
 
-			    	<a href="lodge.php" class="grey-text text-darken-4">
-				    	<div class="collapsible-header">
-				    			<i style="font-size: 17px" class="ion-android-person grey-text text-darken-4"></i>
-				    		My Lodge<span class="badge"><?php echo get_lodge_size($_SESSION["user-id"]);?></span>
-				    	</div>
-			    	</a>
+								</ul>
 
-			    	<a href="upload_lodge.php" class="grey-text text-darken-4">
-				    	<div class="collapsible-header">
-				    		<i style="font-size: 17px" class="ion-ios-cloud-upload grey-text text-darken-4"></i>Upload Lodge
-				    	</div>
-			    	</a>
-
-			    </div>
-			  </li>
-
-			 <a href="orders.php" class="grey-text text-darken-4">
-				  <li>
-				    <div class="collapsible-header">
-					      <i style="font-size: 17px" class="ion-card"></i>
-				      Orders</div>
-				  </li>
-			</a>
-
-			  <li>
-			    <div class="collapsible-header">
-			      <i style="font-size: 17px" class="ion-gear-a"></i>
-			      Settings</div>
-			  </li>
-
-			</ul>
-
-		</div>
-
-		<?php
-
-			}
-
-			else{
-
-		?>
-
-		<div style="padding: 0" class="col l2 fixed side-nav center">
-
-
-			<div style="padding: 10px" class="grey darken-4">
-
-			<img class="circle z-depth-2" src="../img/bg1.jpg" width="100" height="100">
-
-				<span class="purple-text text-darken-4 truncate" style="text-transform: capitalize; font-size: 1em;">
-					<?php echo get_full_username($_SESSION["user-id"]); ?>	
-				</span>
-				
-			</div>
-
-				<ul class="collapsible" data-collapsible="accordion">
-
-				  <a class="grey-text text-darken-4" href="index.php">
-			  		<li>
-					    <div class="collapsible-header active"><i style="font-size: 17px" class="ion-speedometer"></i>
-					     Dashboard
-					  </div>
-			  		</li>
-				</a>
-
-			  <li>
-			    <div class="collapsible-header">
-			      <i style="font-size: 17px" class="ion-android-home grey-text text-darken-4"></i>Lodge
-			  </div>
-
-			    <div class="collapsible-body">
-
-			    	<a href="lodge.php" class="grey-text text-darken-4">
-				    	<div class="collapsible-header">
-				    			<i style="font-size: 17px" class="ion-android-person grey-text text-darken-4"></i>
-				    		My Lodge<span class="badge"><?php echo get_lodge_size($_SESSION["user-id"]);?></span>
-				    	</div>
-			    	</a>
-
-			    	<a href="upload_lodge.php" class="grey-text text-darken-4">
-				    	<div class="collapsible-header">
-				    		<i style="font-size: 17px" class="ion-ios-cloud-upload grey-text text-darken-4"></i>Upload Lodge
-				    	</div>
-			    	</a>
-
-			    </div>
-			  </li>
-
-			 <a href="orders.php" class="grey-text text-darken-4">
-				  <li>
-				    <div class="collapsible-header">
-					      <i style="font-size: 17px" class="ion-card"></i>
-				      Orders</div>
-				  </li>
-			</a>
-
-			 <a href="orders.php" class="grey-text text-darken-4">
-				  <li>
-				    <div class="collapsible-header">
-					      <i style="font-size: 17px" class="ion-person-stalker"></i>
-				      Users</div>
-				  </li>
-			</a>
-
-
-			  <li>
-			    <div class="collapsible-header">
-			      <i style="font-size: 17px" class="ion-gear-a"></i>
-			      Settings</div>
-			  </li>
-
-			</ul>
-
-		</div>
-
-
-
-
-		<?php
-
-			}
-
-		?>
+							</ul>

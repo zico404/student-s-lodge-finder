@@ -33,6 +33,17 @@
 			letter-spacing: -1px;
 		}
 
+		.tabs .tab a,.tabs .tab a:hover{
+
+			color: #4a148c;
+		}
+
+		.tabs .tab a.active,.tabs .indicator{
+
+			border-bottom: 2px solid #4a148c;
+			color: #4a148c;
+		}
+
 	</style>
 
 

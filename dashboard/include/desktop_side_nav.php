@@ -9,7 +9,7 @@
 
 		<div style="padding: 10px;background: url(../img/bg1.jpeg);background-repeat: no-repeat;background-size: cover;">
 
-			<img class="circle" src="../img/bg1.jpg" width="100" height="100">
+			<img class="circle" src="../img/<?php echo get_user_img($_SESSION["user-id"]); ?>" width="100" height="100">
 
 				<span class="white-text truncate" style="text-transform: capitalize; font-size: 1em;">
 					<?php echo get_full_username($_SESSION["user-id"]); ?>	
@@ -43,20 +43,42 @@
 
 			    	<a href="upload_lodge.php" class="grey-text text-darken-4">
 				    	<div class="collapsible-header">
-				    		<i style="font-size: 17px" class="ion-ios-cloud-upload grey-text text-darken-4"></i>Upload Lodge
+				    		<i style="font-size: 17px" class="ion-compose grey-text text-darken-4"></i>Post Lodge
 				    	</div>
 			    	</a>
 
 			    </div>
 			  </li>
 
+			  <li>
+			    <div class="collapsible-header">
+			      <i style="font-size: 17px" class="ion-person-stalker grey-text text-darken-4"></i>Room Mate
+			  </div>
+
+			    <div class="collapsible-body">
+
+			    	<a href="room_mate.php" class="grey-text text-darken-4">
+				    	<div class="collapsible-header">
+				    			<i style="font-size: 17px" class="ion-android-search grey-text text-darken-4"></i>Find
+				    	</div>
+			    	</a>
+
+			    	<a href="upload_lodge.php" class="grey-text text-darken-4">
+				    	<div class="collapsible-header">
+				    		<i style="font-size: 17px" class="ion-compose grey-text text-darken-4"></i>Request
+				    	</div>
+			    	</a>
+
+			    </div>
+			  </li>
+<!-- 
 			 <a href="orders.php" class="grey-text text-darken-4">
 				  <li>
 				    <div class="collapsible-header">
 					      <i style="font-size: 17px" class="ion-card"></i>
 				      Orders</div>
 				  </li>
-			</a>
+			</a> -->
 
 			  <li>
 			    <div class="collapsible-header">
@@ -80,7 +102,7 @@
 
 		<div style="padding: 10px;background: url(../img/bg1.jpeg);background-repeat: no-repeat;background-size: cover;">
 
-			<img class="circle" src="../img/bg1.jpg" width="100" height="100">
+			<img class="circle" src="../img/<?php echo get_user_img($_SESSION["user-id"]); ?>" width="100" height="100">
 
 				<span class="white-text truncate" style="text-transform: capitalize; font-size: 1em;">
 					<?php echo get_full_username($_SESSION["user-id"]); ?>	
@@ -114,7 +136,7 @@
 
 			    	<a href="upload_lodge.php" class="grey-text text-darken-4">
 				    	<div class="collapsible-header">
-				    		<i style="font-size: 17px" class="ion-ios-cloud-upload grey-text text-darken-4"></i>Upload Lodge
+				    		<i style="font-size: 17px" class="ion-compose grey-text text-darken-4"></i>Post Lodge
 				    	</div>
 			    	</a>
 

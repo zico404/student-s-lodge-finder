@@ -14,7 +14,8 @@
 
 <div class="row">
   
-    <?php require_once "include/desktop_side_nav.php"; ?>    
+    <?php require_once "include/desktop_side_nav.php"; ?> 
+    <?php require_once "include/mobile_side_nav.php"; ?>    
 
   <div  style="padding: 0" class="col s12 l10 right">
 

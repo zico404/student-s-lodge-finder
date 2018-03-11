@@ -32,7 +32,7 @@
 											    </select>
 								            </div>
 
-								              <div class="input-field col s12 m4 hide-on-small-and-down">
+								              <div class="input-field col s12 m4">
 												<select name="price" class="white-text text-darken-4">
 											      <option value="" disabled selected>Max. Price Of Lodge</option>
 											      <option value="1">20,000</option>
@@ -41,7 +41,7 @@
 											    </select>
 								            </div>
 
-											 <div class="input-field col s12">
+											 <div class="input-field col s12 hide-on-small-and-down">
 
 						          				<i class="ion-ios-search prefix white-text text-darken-4"></i>
 								                <input class="white-text" name="search" value="<?php return_user_input('search');?>" maxlength="100" data-length="100" id="search" type="text" required>
@@ -84,8 +84,8 @@
 							  		
 							  		<div class="col s12 m4 center">
 							  			<div>
-							  				<i style="font-size: 90px;" class="ion-ios-cart yellow-text text-darken-2"></i>
-							  				<p><b>Feature 1</b></p>
+							  				<i style="font-size: 90px;" class="ion-ios-search yellow-text text-darken-2"></i>
+							  				<p><b>Find Lodge</b></p>
 							  			</div>
 							  			<div>
 							  				<p>
@@ -99,7 +99,7 @@
 							  		<div class="col s12 m4 center">
 							  			<div>
 							  				<i style="font-size: 90px;" class="ion-ios-cart blue-text text-darken-2"></i>
-							  				<p><b>Feature 2</b></p>
+							  				<p><b>Room mate</b></p>
 							  			</div>
 							  			<div>
 							  				<p>

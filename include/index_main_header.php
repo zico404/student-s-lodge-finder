@@ -69,18 +69,26 @@
 
 							<!-- Mobile Menu -->
 
-							<ul id="mobile-menu" class="side-nav">
-
+							<ul id="mobile-menu" class="side-nav flow-text">
+								
 								<li>
-									<a href="index.html"><i class="ion-android-home"></i> Home</a>
+									<a href="index.html"><i class="ion-ios-circle-filled"></i>Home</a>
+								</li>
+								
+								<li>
+									<a href="campus.html"><i class="ion-university"></i> Campus</a>
 								</li>
 
 								<li>
-									<a href="#"><i class="ion-information-circled"></i> About Us</a>
+									<a href="lodge.html"><i class="ion-android-home"></i>Lodge</a>
 								</li>
 
 								<li>
-									<a href="search.html"><i class="ion-ios-search"></i> Search</a>
+									<a href="roommate.html"><i class="ion-person-stalker"></i>Room mate</a>
+								</li>
+
+								<li>
+									<a href="help.html"><i class="ion-help-buoy"></i>Help</a>
 								</li>
 
 								<li>
@@ -183,20 +191,24 @@
 					<!-- Mobile Menu -->
 
 							<ul id="mobile-menu" class="side-nav purple-text text-darken-4">
-
 								<li>
-									<a class="purple-text text-darken-4" href="index.html">
-										<i class="ion-android-home grey-text text-darken-4"></i> Home</a>
+									<a href="index.html"><i class="ion-ios-circle-filled"></i>Home</a>
+								</li>
+								
+								<li>
+									<a href="campus.html"><i class="ion-university"></i> Campus</a>
 								</li>
 
 								<li>
-									<a class="purple-text text-darken-4" href="#">
-										<i class="ion-information-circled grey-text text-darken-4"></i> About Us</a>
+									<a href="lodge.html"><i class="ion-android-home"></i>Lodge</a>
 								</li>
 
 								<li>
-									<a class="purple-text text-darken-4" href="search.html">
-										<i class="ion-ios-search grey-text text-darken-4"></i> Search</a>
+									<a href="roommate.html"><i class="ion-person-stalker"></i>Room mate</a>
+								</li>
+
+								<li>
+									<a href="help.html"><i class="ion-help-buoy"></i>Help</a>
 								</li>
 
 						</ul>
