@@ -1,5 +1,5 @@
 	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
-	<link href="https://fonts.googleapis.com/css?family=Pacifico|Montserrat|Raleway" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico|Montserrat|Raleway|Rammetto+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/ionicon/css/ionicons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -29,7 +29,7 @@
 
 		h1,h2,h3,h4,h5,h6{
 
-			font-family: Pacifico;
+			font-family: "Rammetto+One";
 			letter-spacing: -1px;
 		}
 

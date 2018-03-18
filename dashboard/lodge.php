@@ -19,9 +19,7 @@
 
   <div  style="padding: 0" class="col s12 l10 right">
 
-      <?php require_once "include/header_main.php"; 
-
-      ?>
+      <?php require_once "include/header_main.php"; ?>
 
 
   <div class="row">
@@ -39,7 +37,7 @@
 
           <div class=" row">
 
-            <div class=" col s12 m4 input-field  right">
+            <div class=" col s6 m4 input-field  right">
               
                 <input id="search_lodge" class="validate" type="text" name="search_lodge">
                 <label for="search_lodge">Search Lodge</label>
@@ -66,8 +64,36 @@
 
 
 
-    <div id="test2" class="col s12">Test 2</div>
-    <div id="test4" class="col s12">Test 4</div>
+    <div id="test2" class="col s12">
+
+            <div class="center">
+          
+
+            <div class="clearfix"></div>
+
+            <div style="text-transform: capitalize;" class="row">
+              <?php get_pending_user_lodges($_SESSION["user-id"]);?>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div id="test4" class="col s12">    <div class="center">
+          
+
+            <div class="clearfix"></div>
+
+            <div style="text-transform: capitalize;" class="row">
+              <?php get_active_user_lodges($_SESSION["user-id"]);?>
+            </div>
+
+        </div>
+
+      </div>
+
+
   </div>
 
 

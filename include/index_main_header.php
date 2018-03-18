@@ -211,6 +211,11 @@
 									<a href="help.html"><i class="ion-help-buoy"></i>Help</a>
 								</li>
 
+								<li>
+									<a class="dropdown-button" data-activates="mobile-dropdown-2" href="#"> <i class="ion-android-person"></i> Sign In
+									<i style="font-size: 10px" class="right ion-chevron-down"></i></a>
+								</li>
+
 						</ul>
 
 

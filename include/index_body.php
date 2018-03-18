@@ -18,7 +18,7 @@
 
 								      		<div class="input-field col s12 m4">
 												<select name="state" class="white-text text-darken-4">
-													<?php require_once "include/select_states.php"; ?>
+													<?php require_once "include/select_school.php"; ?>
 											    </select>
 								            </div>
 
@@ -51,7 +51,7 @@
 							              <div class="input-field col s12">
 
 					          				
-							           		 <button id="btn_login" style="border-radius: 100px;" class="purple darken-4 hoverable btn btn btn-large waves-effect"> 
+							           		 <button onclick="search" id="btn_login" style="border-radius: 100px;" class="purple darken-4 hoverable btn btn btn-large waves-effect"> 
 							           		 	<i class="ion-ios-search left"></i> Search lodge</button>
 							              </div>
 						      				
@@ -129,10 +129,8 @@
 
 					    </section>
 
-			<div style="padding: 30px" class="advert-space purple-text text-darken-4 center z-depth-1">
-				<a href="#!" class="my_round_box purple darken-4 white-text btn btn-large pulse flow-text">Advertize</a>
-			</div>
 
+<!--  -->
 
 
 					    	<div style="padding: 30px;" class="container">
@@ -217,4 +215,6 @@
 					    	
 
 					    </section>
+
+					    <script src="" type="text/javascript"></script>
 

@@ -215,8 +215,7 @@
 				$lodge_id = $row["lodge_id"];
 				$lodge_img = $row["lodge_img"];
 				$user_id =  $row["user_id"];
-				$state =  $row["state"];
-				$lga = $row["lga"];
+				$school =  $row["school"];
 				$available = $row["available"];
 				$approved = $row["approved"];
 				$meta =  $row["meta"];
@@ -269,8 +268,11 @@
 
 		        <div class="card-content purple darken-4 truncate">
 		        	<span style="font-size: 1em;text-transform: capitalize;" class="card-title activator white-text"><?php echo $lodge_name; ?></span>
-					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><i class="ion-location"></i> <?php echo $state; ?> -></span>
-					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><?php echo $lga; ?></span>
+					<p style="font-size: 14px;text-transform: capitalize;">
+						<i class="ion-android-locate"></i> <?php echo $school; ?> 
+						<span class="right"> <i class="ion-cash"></i> <?php echo $price; ?></span>
+						 
+					</p>
 		        </div>
 
 				<div class="card-reveal">
@@ -320,7 +322,9 @@
 								}
 
 							?>
-						<p class="center"><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a></p>
+						<p class="center">
+							<a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a>
+						</p>
 				</div>
 
 		      </div>
@@ -356,8 +360,7 @@
 				$lodge_id = $row["lodge_id"];
 				$lodge_img = $row["lodge_img"];
 				$user_id =  $row["user_id"];
-				$state =  $row["state"];
-				$lga = $row["lga"];
+				$school =  $row["school"];
 				$available = $row["available"];
 				$approved = $row["approved"];
 				$meta =  $row["meta"];
@@ -410,8 +413,11 @@
 
 		        <div class="card-content purple darken-4 truncate">
 		        	<span style="font-size: 1em;text-transform: capitalize;" class="card-title activator white-text"><?php echo $lodge_name; ?></span>
-					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><i class="ion-location"></i> <?php echo $state; ?> -></span>
-					<span style="font-size: 14px;text-transform: capitalize;" class="grey-text"><?php echo $lga; ?></span>
+					<p style="font-size: 14px;text-transform: capitalize;">
+						<i class="ion-android-locate"></i> <?php echo $school; ?> 
+						<span class="right"> <i class="ion-cash"></i> <?php echo $price; ?></span>
+						 
+					</p>
 		        </div>
 
 				<div class="card-reveal">
@@ -478,11 +484,11 @@
 	}
 
 
-	function search_results($search,$state,$typeof){
+	function get_lodge($campus,$price,$within_school,$near_school,$light,$water){
 
 		global $con;
 
-		if (!empty($search) and !empty($state) and !empty($typeof) ){
+		if (!isset($within_school) or !isset($near_school)and !empty($typeof) ){
 
 			$search = filter_var( htmlspecialchars($search) , FILTER_SANITIZE_STRING );
 			$type = $typeof;

@@ -1,5 +1,63 @@
 <?php
 
+function log_time($time_stamp){
+
+        $time_subtract = time() - $time_stamp;
+
+
+        $logText ="";
+        $time = null;
+        $minute = $time_subtract / 60;
+
+
+         if ($minute < 1){
+
+            $time = null;
+            $logText = "Few seconds";
+
+        }
+
+
+        else if ($minute <= 60 and $minute > 0){
+
+            $time = floor($minute);
+            $logText = "minute(s)";
+
+        }
+
+        else if ($minute >= 60 and $minute < (60 * 24)){
+
+            $time = floor($time_subtract / (60 * 60));
+            $logText = "hour(s)";
+
+        }
+
+        else if ($minute >= (60 * 24) and $minute < (60 * 24) * 7 ){
+
+            $time = floor($time_subtract / 86400);
+            $logText = "day(s)";
+
+        }
+
+        else if ($minute >= ((60 * 24) * 7) and $minute < ((60 * 24) * 28)){
+
+            $time = floor($time_subtract / (86400 * 7));
+            $logText = "week(s)";
+
+        }
+
+        else if ($minute >= ((60 * 24) * 28 )){
+
+            $time = floor($time_subtract / (86400 * 28));
+            $logText = "month(s)";
+
+        }
+
+
+        echo $time . " ". $logText;
+
+}
+
 
 	function get_user_count(){
 		global $con;
@@ -203,30 +261,32 @@
 				$lodge_img = $row["lodge_img"];
 				$lodge_id =  $row["lodge_id"];
 				$user_id =  $row["user_id"];
-				$state =  $row["state"];
-				$lga = $row["lga"];
+				$school =  $row["school"];
+				$time = $row["upload_time"];
 				$meta =  $row["meta"];
 				
 		?>
 						 		
-			          		<div style="padding: 7px" class="row hide-on-small-and-down hoverable">
+			          		<div  style="padding: 7px;margin-top: 20px;margin-bottom: 0px;" class="row hide-on-small-and-down hoverable">
 
-			          			<div class="col s8">
+			          			<div class="col s6">
 			          				
 	          					
 	          					<div class="col s2"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-	          					<div class="col s4 left-align"><b class="truncate"><?php echo $lodge_name; ?></b></div>
-	          					<div class="col s2 left-align"><span class="truncate"><?php echo $state; ?></span></div>
-	          					<div class="col s4 left-align"><span class="truncate"><?php echo $lga; ?></span></div>
+	          					<div class="col s5 left-align"><b class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></b></div>
+	          					<div class="col s5 left-align"><span class="truncate"><?php echo $school; ?></span></div>
 
 
 			          			</div>
 
-			          			<div class="col s3 left-align"><span class="truncate"><?php echo $meta; ?></span></div>
+			          			<div class="col s3 left-align"><span class="truncate"><?php echo $meta; ?></span>
+			          			</div>
 
-			          			<div class="col s1 truncate"><!-- 
-			          				<a onclick="loader(<?php echo $lodge_id; ?>)" class="purple-text text-darken-4" href="#!"><i class="ion-edit"></i> Edit</a> &nbsp;&nbsp;&nbsp;&nbsp;
-			          				<a id="<?php echo $lodge_id . '_del'; ?>" class="purple-text text-darken-4" href="#!"><i class="ion-trash-b"></i> Delete</a> -->
+			          			<div style="text-transform: lowercase;" class="col s2 left-align">
+			          				<span class="truncate"></span><?php log_time($row["upload_time"]);echo " ago";?>
+			          			</div>
+
+			          			<div class="col s1">
 			          				<a class="dropdown-button" data-activates="<?php echo $lodge_id; ?>" href="#">
 			          					<i style="font-size: 20px;" class="ion-android-more-vertical grey-text text-darken-4"></i>
 			          				</a>
@@ -245,14 +305,12 @@
 			          			<a class="dropdown-button purple-text text-darken-4" data-activates="<?php echo $lodge_id; ?>" href="#">
 			          				<div style="padding: 7px" class="row hide-on-med-and-up">
 
-					          			<div class="col s9">
+					          			<div class="col s10">
 					          				
 					          				<div class="row">
 					          					
-					          					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-					          					<div class="col s9"><b class="truncate"><?php echo $lodge_name; ?></b>
-
-					          						<span class="truncate grey-text text-darken-1"><?php echo $meta; ?></span>
+					          					<div class="col s4"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					          					<div class="col s8 left-align"><b class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></b>
 
 					          					</div>
 
@@ -261,7 +319,7 @@
 					          			</div>
 
 
-					          			<div class="col s3 truncate">
+					          			<div class="col s2 truncate">
 					          					<i style="font-size: 20px;" class="ion-android-more-vertical grey-text text-darken-4"></i>
 					          				
 					          			</div>
@@ -294,5 +352,162 @@
 				return false;
 			}
 		}
+
+		function get_pending_user_lodges($user){
+
+		global $con;
+		$lodge_id = "";
+
+
+		$query = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id WHERE user_id = '$user' and approved = '0' LIMIT 10; ";
+		$result = mysqli_query($con,$query);
+
+		if ( $result ){
+
+			while ($row = mysqli_fetch_assoc($result)) {
+
+				$lodge_name = $row["lodge_name"];
+				$lodge_img = $row["lodge_img"];
+				$lodge_id =  $row["lodge_id"];
+				$user_id =  $row["user_id"];
+				$school =  $row["school"];
+				$lga = $row["lga"];
+				$meta =  $row["meta"];
+				
+		?>
+			          			
+			          		<div style="padding: 7px;margin-top: 20px;margin-bottom: 0px;" class="row hide-on-small-and-down hoverable">
+
+			          			<div class="col s6">
+			          				
+	          					
+		          					<div class="col s2">
+		          						<img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>">
+		          					</div>
+
+		          					<div class="col s5 left-align"><b class="truncate purple-text text-darken-4">
+		          						<?php echo $lodge_name; ?></b>
+		          					</div>
+
+		          					<div class="col s5 left-align">
+		          						<span class="truncate"><?php echo $school; ?></span>
+		          					</div>
+
+
+			          			</div>
+
+			          			<div class="col s4 left-align"><span class="truncate"><?php echo $meta; ?></span></div>
+
+			          			<div style="text-transform: lowercase;" class="col s2 left-align">
+			          				<span class="truncate"></span><?php log_time($row["upload_time"]);echo " ago";?>
+			          			</div>
+
+			          		</div>
+
+
+			          		
+			          				<div style="padding: 7px" class="row hide-on-med-and-up">
+
+					          			<div class="col s12">
+					          				
+					          				<div class="row">
+					          					
+					          					<div class="col s1"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					          					<div class="col s11"><b class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></b>
+
+					          					</div>
+
+					          				</div>
+
+					          			</div>
+
+			          				</div>
+
+	<?php
+
+			}
+
+		}
+	}
+
+	function get_active_user_lodges($user){
+
+		global $con;
+		$lodge_id = "";
+
+
+		$query = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id WHERE user_id = '$user' and approved = '1' and available = '1' LIMIT 10; ";
+		$result = mysqli_query($con,$query);
+
+		if ( $result ){
+
+			while ($row = mysqli_fetch_assoc($result)) {
+
+				$lodge_name = $row["lodge_name"];
+				$lodge_img = $row["lodge_img"];
+				$lodge_id =  $row["lodge_id"];
+				$user_id =  $row["user_id"];
+				$school =  $row["school"];
+				$lga = $row["lga"];
+				$meta =  $row["meta"];
+				
+		?>
+						
+			          			
+			          		<div style="padding: 7px;margin-top: 20px;margin-bottom: 0px;" class="row hide-on-small-and-down hoverable">
+
+			          			<div class="col s6">
+			          				
+	          					
+		          					<div class="col s2">
+		          						<img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>">
+		          					</div>
+
+		          					<div class="col s5 left-align"><b class="truncate purple-text text-darken-4">
+		          						<?php echo $lodge_name; ?></b>
+		          					</div>
+
+		          					<div class="col s5 left-align">
+		          						<span class="truncate"><?php echo $school; ?></span>
+		          					</div>
+
+
+			          			</div>
+
+			          			<div class="col s4 left-align"><span class="truncate"><?php echo $meta; ?></span></div>
+
+			          			<div style="text-transform: lowercase;" class="col s2 left-align">
+			          				<span class="truncate"></span><?php log_time($row["upload_time"]);echo " ago";?>
+			          			</div>
+
+			          		</div>
+
+
+			          		
+			          				<div style="padding: 7px" class="row hide-on-med-and-up">
+
+					          			<div class="col s12">
+					          				
+					          				<div class="row">
+					          					
+					          					<div class="col s1"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					          					<div class="col s11"><b class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></b>
+
+					          					</div>
+
+					          				</div>
+
+					          			</div>
+
+			          				</div>
+	<?php
+
+			}
+
+		}
+	}
+
+
+
 
 ?>

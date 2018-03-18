@@ -42,15 +42,13 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
           //check if all fields are empty
-            if (!empty($_REQUEST["lodge_name"]) and 
-              !empty($_REQUEST["lga"]) and
+            if (!empty($_REQUEST["lodge_name"]) and
                !empty($_REQUEST["meta"]) and 
-               !empty($_REQUEST["state"]) and 
+               !empty($_REQUEST["school"]) and 
                !empty($_REQUEST["price"]) and 
                !empty($_FILES["picture"]) and 
                !empty($_REQUEST["typeof"]) )
             {
-
 
                   if (isset($_REQUEST["within_school"]) or 
                     isset($_REQUEST["near_scghool"]) or 
@@ -71,8 +69,7 @@
 
 
                 $lodge_name = $_REQUEST["lodge_name"];
-                $lga = $_REQUEST["lga"];
-                $state = $_REQUEST["state"];
+                $school = $_REQUEST["school"];
                 $typeof = $_REQUEST["typeof"];
                 $user_id = $_SESSION["user-id"];
                 $meta = $_REQUEST["meta"];
@@ -117,7 +114,7 @@
 
                  if ( $error !== 1){
 
-                        $query = "INSERT INTO lodge (lodge_name,lodge_id,lodge_img,lga,state,type_of,user_id,user_role,meta,upload_time) VALUES ('{$lodge_name}','{$lodge_id}','{$lodge_img}','{$lga}','{$state}','{$typeof}','{$user_id}','{$user_role}','{$meta}','{$time}');";
+                        $query = "INSERT INTO lodge (lodge_name,lodge_id,lodge_img,school,type_of,user_id,user_role,meta,upload_time) VALUES ('{$lodge_name}','{$lodge_id}','{$lodge_img}','{$school}','{$typeof}','{$user_id}','{$user_role}','{$meta}','{$time}');";
 
                         $query .= "INSERT INTO lodge_meta (lodge_id,light,water,within_school,near_school,price) VALUES('$lodge_id','$light','$water','$within_school','$near_school','$price' );";
                         $result = mysqli_multi_query($con,$query);
@@ -131,13 +128,6 @@
                               }
 
                         }
-
-                       else{
-
-                            $error_text = '<li class="red-text text-darken-3">'. mysqli_error($con) .'</li>';
-                            $error = 1;
-                        
-                       }
 
 
                  }
@@ -176,8 +166,9 @@
                 </div>
 
                   <div class="input-field col s12 m6">
-                    <select name="state">
-                    <?php require_once "../include/select_states.php"; ?>
+                    <select name="school">
+                    <option class="purple-text" disabled selected>Close to which school?</option>
+                    <?php require_once "../include/select_school.php"; ?>
                     </select>
                 </div>
 
@@ -196,14 +187,10 @@
                     <label for="price" class="active">Price</label>
                 </div>
 
-                  <div class="input-field col s12 m6">
-                    <input name="lga" value="<?php return_user_input('lga');?>" maxlength="20" data-length="20" id="lga" type="text" required>
-                    <label for="lga" class="active">Local Government</label>
-                </div>
 
                 <div class="clear-fix"></div>
 
-            <div class="file-field input-field col s12">
+            <div class="file-field input-field col s6">
                   <div class="btn btn-flat z-depth-2 purple darken-4 white-text waves-effect waves-light">
                     <span><i class="ion-android-camera"></i></span>
                     <input name="picture" type="file" required>
@@ -251,7 +238,7 @@
 
                   <div class="input-field col s12 m12">          
                    <button name="submit" id="btn_login" style="border-radius: 100px;" class="hoverable btn btn-large waves-effect purple darken-4"> 
-                    <i class="ion-android-upload left"></i>Post Lodge</button>
+                    <i class="ion-android-upload left"></i>Post</button>
                   </div>
 
 

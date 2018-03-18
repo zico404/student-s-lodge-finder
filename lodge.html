@@ -11,6 +11,24 @@
 	require_once "include/header_end.php";
 	require_once "include/index_main_header.php";
 
+	if ( isset($_REQUEST["water"]) or 
+		isset($_REQUEST["light"]) or 
+		isset($_REQUEST["within_school"]) or 
+		isset($_REQUEST["near_school"]) or 
+		isset($_REQUEST["price"]) or 
+		isset($_REQUEST["campus"]) or 
+		isset($_REQUEST["search"]) )
+	{
+
+		$water = $_REQUEST["water"];
+		$light = $_REQUEST["light"];
+		$within_school = $_REQUEST["within_school"];
+		$near_school = $_REQUEST["near_school"];
+		$price = $_REQUEST["price"];
+		$campus = $_REQUEST["campus"];
+		$text = filter_var( htmlspecialchars($_REQUEST["search"]) , FILTER_SANITIZE_STRING )
+
+	}
 
 ?>
 
@@ -19,65 +37,83 @@
 		<br>
 
 
-	<div class="col l3 center hide-on-med-and-down scrollspy">
+	<div class="col s12 l3">
 
 		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
 
-		<p>
-	      <input class="filled-in" type="checkbox" id="check1" />
-	      <label for="check1">Steady Electricity</label>
-	    </p>	
+			<div class="row">
+				
+				<p class="col s6 switch">
+				    <label>
+				      <input name="water" id="water" type="checkbox">
+				      <span class="lever"></span>
+				      Water
+				    </label>
+				  </p>
 
-		<p>
-	      <input class="filled-in" type="checkbox" id="check2" />
-	      <label for="check2">Within school</label>
-	    </p>
+				 <p class="col s6 switch">
+				    <label>
+				      <input name="light" id="light" type="checkbox">
+				      <span class="lever"></span>
+				      Light
+				    </label>
+				  </p>	
 
-		<p>
-	      <input class="filled-in" type="checkbox" id="check3" />
-	      <label for="check3">Near to school</label>
-	    </p>
+				 <p  class="col s12 switch">
+				    <label>
+				      <input name="within_school" id="within_school" type="checkbox">
+				      <span class="lever"></span>
+				      Within School
+				    </label>
+				  </p>	
 
-		<p>
-	      <input class="filled-in" type="checkbox" id="check4" />
-	      <label for="check4">Water</label>
-	    </p>	
-
-
-	    <br>
-
-
-	          <div class="input-field">
-				<select name="state">
-					<?php require_once "include/select_states.php"; ?>
-			    </select>
-	        </div>
-
-	          <div class="input-field">
-				<select name="state">
-					<option selected disabled>Max Price</option>
-					<option value="20">20,000</option>
-					<option value="20">30,000</option>
-					<option value="20">50,000</option>
-					<option value="100">100,000</option>
-			    </select>
-	        </div>
+				 <p class="col s12 switch">
+				    <label>
+				      <input name="near_school" id="near_school" type="checkbox">
+				      <span class="lever"></span>
+				      Near School
+				    </label>
+				  </p>	
 
 
-	        <div class="input-field">
-				 <button id="btn_login" style="border-radius: 30px;" class="purple darken-4 hoverable btn waves-effect">Search</button>
 			</div>
 
+			 
+		          <div class="input-field">
+					<select name="campus" id="campus">
+						<option selected disabled>Campus</option>
+						<?php require_once "include/select_school.php"; ?>
+				    </select>
+		        </div>
+
+		          <div class="input-field">
+					<select name="price" id="price">
+						<option selected disabled>Max Price</option>
+						<option value="20">20,000</option>
+						<option value="20">30,000</option>
+						<option value="20">50,000</option>
+						<option value="100">100,000</option>
+				    </select>
+		        </div>
+
+
+		        <div class="input-field">
+					 <button class="purple darken-4 hoverable btn waves-effect">Search</button>
+				</div>
+
 		</form>
+
+
 
 		
 	</div>
 	
-	<div class="col l9 center">
+	<div class="col s12 l9">
 
-		<h4 class="flow-text">Campus</h4>
+		<div class="center"><h4 style="font-weight: bold;" class="hide-on-med-and-down">Lodge</h4></div>
+		
+		<br><br>
 
-			 <?php get_admin_lodges(); ?>
 
 	</div>
 

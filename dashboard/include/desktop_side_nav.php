@@ -63,9 +63,9 @@
 				    	</div>
 			    	</a>
 
-			    	<a href="upload_lodge.php" class="grey-text text-darken-4">
+			    	<a href="post_roommate.php" class="grey-text text-darken-4">
 				    	<div class="collapsible-header">
-				    		<i style="font-size: 17px" class="ion-compose grey-text text-darken-4"></i>Request
+				    		<i style="font-size: 17px" class="ion-compose grey-text text-darken-4"></i>Post
 				    	</div>
 			    	</a>
 

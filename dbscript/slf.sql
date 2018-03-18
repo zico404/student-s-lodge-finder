@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2018 at 02:46 AM
+-- Generation Time: Mar 17, 2018 at 12:46 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -62,11 +62,7 @@ CREATE TABLE `likes` (
 --
 
 INSERT INTO `likes` (`id`, `typeof`, `item_id`, `user_id`, `like_amount`) VALUES
-(1, 'lodge', '4X7lSo6239', '123ayyyy', 1),
-(2, 'lodge', 'Pp72UN8460', '123ayyyy', 10),
-(3, 'lodge', 'Aal7UI2017', '123ayyyy', 4),
-(4, 'lodge', 'FUXCWD0548', '123ayyyy', 23),
-(5, 'lodge', 'MuQSN4702', '123ayyyy', 11);
+(6, 'lodge', '0nzgkZ2410', '123ayyyy', 1);
 
 -- --------------------------------------------------------
 
@@ -82,29 +78,55 @@ CREATE TABLE `lodge` (
   `type_of` varchar(70) NOT NULL,
   `user_id` varchar(12) NOT NULL,
   `user_role` varchar(10) NOT NULL DEFAULT 'user',
-  `state` varchar(20) NOT NULL,
+  `school` varchar(20) NOT NULL,
   `lga` varchar(30) NOT NULL,
-  `approved` int(2) NOT NULL DEFAULT '0',
-  `price` int(8) NOT NULL,
-  `available` tinyint(1) NOT NULL DEFAULT '1',
   `meta` varchar(200) NOT NULL,
-  `upload_time` timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6)
+  `upload_time` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `lodge`
 --
 
-INSERT INTO `lodge` (`id`, `lodge_id`, `lodge_name`, `lodge_img`, `type_of`, `user_id`, `user_role`, `state`, `lga`, `approved`, `price`, `available`, `meta`, `upload_time`) VALUES
-(9, 'jpPuen5561', 'My lodge 1', '2017_3$largeimg23_Mar_2017_120735618.jpg', '1room', '123ayyyy', 'admin', 'abia', 'Aba North', 0, 0, 1, '1 bedroom,1 toilet and kitchen', '2018-02-16 02:07:35.483477'),
-(10, '4X7lSo6239', 'My lodge 2', '16704349.jpg', 'selfcon', '123ayyyy', 'admin', 'umuahia', 'Aba North', 1, 0, 1, '1 bedroom,1 toilet and kitchen', '2018-02-16 02:07:35.483477'),
-(11, '9uX0HC2519', 'beauty lodge', 'static1.squarespace.com.jpg', 'selfcon', '123ayyyy', 'admin', 'abuja', 'abuja north', 1, 0, 1, '2 bedroom apartment', '2018-02-16 02:07:35.483477'),
-(12, 'Pp72UN8460', 'prestige lodge', '7-future-lynx.jpg', '1room', '123ayyyy', 'admin', 'owerri', 'owerri municipal', 1, 0, 1, '1 room, hospitable environment etc.', '2018-02-16 02:07:35.483477'),
-(13, 'hQf9Yj1241', 'Good news lodge', 'nature-beautiful-grapes-high-definition-full-screen-wallpaper-image-download.jpg', '1room', '123ayyyy', 'admin', 'umuahia', 'ibeku', 1, 0, 1, '1 beautiful room', '2018-02-16 02:07:35.483477'),
-(14, 'Aal7UI2017', 'Mamador lodge', '21682140-fdi-foreign-direct-investment-concept.jpg', 'selfcon', '123ayyyy', 'admin', 'abia', 'aba owerri', 1, 0, 1, 'Beautiful self contain lodge', '2018-02-16 02:07:35.483477'),
-(15, 'H3GLol7529', 'lodge1', '102701709-472995504.530x298.jpg', 'selfcon', '123ayyyy', 'admin', 'abia', 'ideato', 0, 0, 0, '2 rooms and parlour', '2018-02-16 02:07:35.483477'),
-(16, 'FUXCWD0548', 'florida lodge', 'FDI.jpg', '1room', 'Yp76H27853', 'user', 'abia', 'osisioma', 0, 0, 0, 'Hello there this is a little description of my lodge, it is a fine lodge and i hope you will love it', '2018-02-16 02:07:35.483477'),
-(17, 'MuQSN47027', 'kosy lodge', '56292f_4b701296d2574f54b22357cbcb9f4bb2.jpg', '1room', 'Yp76H27853', 'user', 'owerri', 'owerri west', 0, 0, 0, 'best lodge in owerri', '2018-02-16 02:07:35.483477');
+INSERT INTO `lodge` (`id`, `lodge_id`, `lodge_name`, `lodge_img`, `type_of`, `user_id`, `user_role`, `school`, `lga`, `meta`, `upload_time`) VALUES
+(21, 'FsehJH8714', 'dfff', '56292f_4b701296d2574f54b22357cbcb9f4bb2.jpg', '1room', 'Yp76H27853', 'user', 'abia', 'dre', 'ry5y5y5', 1520668714),
+(22, 'SHixvM9985', 'st. michael lodge', '102701709-472995504.530x298.jpg', '1room', 'Yp76H27853', 'user', 'abia', 'Aba North', 'ghthtt', 1520669985),
+(23, '0nzgkZ2410', 'azikiwe lodge', 'Screenshot-2018-1-31 Miss Ultimate Universe.png', 'selfcon', '123ayyyy', 'admin', 'anambra', 'nnewi', 'this is a very beautiful lodge', 1520672410),
+(24, '3ICONK4565', 'twelve lodge', 'contact-us-professional-site-web-designer-ch-1.jpg', '1room', '123ayyyy', 'admin', 'imo', 'owerri', 'beautiful', 1520674565),
+(25, 'PNIlBm8850', 'otueke lodge', '21682140-fdi-foreign-direct-investment-concept.jpg', 'selfcon', 'Yp76H27853', 'user', 'delta', 'iwoke', 'has a big room', 1520738850),
+(26, 'BeA2qV6658', 'zicomighty lodge', 'FDI.jpg', '1room', 'Yp76H27853', 'user', 'abia_poly', '', 'hello world', 1520936658),
+(27, 'QLbRVX7890', 'abam lodge', 'NDdrone.png', '1room', 'Yp76H27853', 'user', 'abia poly', '', 'holla', 1520977890);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lodge_meta`
+--
+
+CREATE TABLE `lodge_meta` (
+  `id` int(6) NOT NULL,
+  `lodge_id` varchar(20) NOT NULL,
+  `views` int(6) NOT NULL DEFAULT '0',
+  `light` varchar(3) NOT NULL,
+  `within_school` varchar(3) NOT NULL,
+  `near_school` varchar(3) NOT NULL,
+  `water` varchar(3) NOT NULL,
+  `approved` int(2) NOT NULL DEFAULT '0',
+  `available` int(2) NOT NULL DEFAULT '1',
+  `price` int(2) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `lodge_meta`
+--
+
+INSERT INTO `lodge_meta` (`id`, `lodge_id`, `views`, `light`, `within_school`, `near_school`, `water`, `approved`, `available`, `price`) VALUES
+(2, 'SHixvM9985', 0, 'on', 'on', '', 'on', 1, 1, 20000),
+(3, '0nzgkZ2410', 0, 'on', '', 'on', '', 0, 1, 55000),
+(4, '3ICONK4565', 0, 'on', '', 'on', 'on', 0, 1, 30000),
+(5, 'PNIlBm8850', 0, 'on', '', 'on', 'on', 0, 1, 40000),
+(6, 'BeA2qV6658', 0, 'on', '', 'on', 'on', 0, 1, 40000),
+(7, 'QLbRVX7890', 0, 'on', '', 'on', 'on', 0, 1, 33000);
 
 -- --------------------------------------------------------
 
@@ -116,6 +138,19 @@ CREATE TABLE `orders` (
   `id` int(7) NOT NULL,
   `order_id` varchar(12) NOT NULL,
   `user_id` varchar(12) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `room_mate`
+--
+
+CREATE TABLE `room_mate` (
+  `id` int(6) NOT NULL,
+  `user_id` int(12) NOT NULL,
+  `school` varchar(30) NOT NULL,
+  `department` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -153,7 +188,7 @@ CREATE TABLE `users` (
   `phone` varchar(20) NOT NULL,
   `address` varchar(40) NOT NULL,
   `password` varchar(70) NOT NULL,
-  `picture` varchar(17) NOT NULL DEFAULT 'default.jpg',
+  `picture` varchar(17) NOT NULL DEFAULT 'default.png',
   `role` varchar(10) NOT NULL,
   `user_ip` varchar(20) NOT NULL,
   `validated` varchar(7) NOT NULL DEFAULT 'false',
@@ -165,16 +200,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `uid`, `firstname`, `lastname`, `email`, `gender`, `phone`, `address`, `password`, `picture`, `role`, `user_ip`, `validated`, `reg_time`) VALUES
-(1, '123ayyyy', 'ezim', 'chukwuebuka', 'zicomighty@gmail.com', 'male', '070329438777', '3 saviours str', '688981fe5042d9d30fd1ed0c8473a8ed1f782281', '', 'admin', '', 'true', 0),
-(11, '7EGhcM9061', 'amaka', 'james', 'zicomighty3@gmail.com', 'female', '09802920101', 'abia', '474ba67bdb289c6263b36dfd8a7bed6c85b04943', '7EGhcM9061.jpg', 'user', '::1', '', 1517469061),
-(12, 'Yp76H27853', 'zico', 'bliss', 'zicomighteye@gmail.com', 'male', '0292028220', 'imo', '688981fe5042d9d30fd1ed0c8473a8ed1f782281', '', 'user', '::1', 'false', 1517607853),
-(13, '4xz8b20974', 'ezim', 'chinedu', 'ezimchinedu@gmail.com', 'male', '0808929202820', 'abia', '79ec072e0e48791aeeedd8d5b2d7a3881e4dfd68', 'default.jpg', 'user', '::1', 'false', 1517610974),
-(14, '6rYwht8627', '', '', 'zicomightyhgfhg@gmail.com', 'male', '12332444', 'rwrrwrwr', '688981fe5042d9d30fd1ed0c8473a8ed1f782281', 'default.jpg', 'user', '::1', 'false', 1517618627),
-(15, 'TISlz82195', 'chris', 'jericho', 'chrisjerico@yahoo.com', 'male', '0803247834', 'sokoto', '688981fe5042d9d30fd1ed0c8473a8ed1f782281', 'default.jpg', 'user', '127.0.0.1', 'false', 1517712195),
-(16, 'OQ0FSm6031', 'bvbv', 'hvhbv&#39;', 'zicomighty47@gmail.com', 'female', '77', 'hghuhuhi', '688981fe5042d9d30fd1ed0c8473a8ed1f782281', 'default.jpg', 'user', '127.0.0.1', 'false', 1517716031),
-(17, 'gqhO4K8093', 'anita', 'orji', 'anitaorji@yahoo.com', 'female', '08039423822', 'abia', 'd56c82a0ab1c536999c31ae5e2c0dab85f47a331', 'default.jpg', 'user', '::1', 'false', 1517778093),
-(18, 'BDNmE93339', 'joe', 'west', 'joe@gmail.com', 'male', '09043423', 'imo', '16a9a54ddf4259952e3c118c763138e83693d7fd', 'default.jpg', 'user', '127.0.0.1', 'false', 1517793339),
-(19, '0sFJnq6537', 'prince', 'james', 'princejames@yahoo.com', 'male', '097090494393', 'imo', 'a47b5cc8f06168f0ec3832a99894834e1d27f744', 'default.jpg', 'user', '::1', 'false', 1517956537);
+(1, '123ayyyy', 'ezim', 'chukwuebuka', 'zicomighty@gmail.com', 'male', '070329438777', '3 saviours str', '688981fe5042d9d30fd1ed0c8473a8ed1f782281', 'default.png', 'admin', '', 'true', 0),
+(12, 'Yp76H27853', 'zico', 'bliss', 'zicomighteye@gmail.com', 'male', '0292028220', 'imo', '688981fe5042d9d30fd1ed0c8473a8ed1f782281', 'default.png', 'user', '::1', 'false', 1517607853);
 
 -- --------------------------------------------------------
 
@@ -214,6 +241,12 @@ ALTER TABLE `lodge`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `lodge_meta`
+--
+ALTER TABLE `lodge_meta`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
@@ -250,12 +283,17 @@ ALTER TABLE `guest`
 -- AUTO_INCREMENT for table `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `lodge`
 --
 ALTER TABLE `lodge`
-  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(8) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+--
+-- AUTO_INCREMENT for table `lodge_meta`
+--
+ALTER TABLE `lodge_meta`
+  MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `orders`
 --
@@ -270,7 +308,7 @@ ALTER TABLE `site_temp`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(7) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `user_login`
 --
