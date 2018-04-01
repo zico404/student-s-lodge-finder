@@ -1,5 +1,5 @@
 	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
-	<link href="https://fonts.googleapis.com/css?family=Catamaran|Montserrat|Concert+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Handlee|Montserrat|Signika+Negative" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/ionicon/css/ionicons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -9,7 +9,8 @@
 		
 		html{
 
-			font-family:Catamaran;
+			font-family:Handlee;
+			font-size: 1.02em;
 		}
 
 		.my_round_box{
@@ -29,7 +30,7 @@
 
 		h1,h2,h3,h4,h5,h6{
 
-			font-family:"Concert One",cursive;
+			font-family: 'Signika Negative', sans-serif;
 			letter-spacing: -1px;
 		}
 

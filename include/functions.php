@@ -134,6 +134,65 @@
 		}
 	}
 
+	function time_stamp($time_stamp){
+
+        $time_subtract = time() - $time_stamp;
+
+
+        $logText ="";
+        $time = null;
+        $minute = $time_subtract / 60;
+
+
+         if ($minute < 1){
+
+            $time = null;
+            $logText = "Few seconds";
+
+        }
+
+
+        else if ($minute <= 60 and $minute > 0){
+
+            $time = floor($minute);
+            $logText = "minute(s)";
+
+        }
+
+        else if ($minute >= 60 and $minute < (60 * 24)){
+
+            $time = floor($time_subtract / (60 * 60));
+            $logText = "hour(s)";
+
+        }
+
+        else if ($minute >= (60 * 24) and $minute < (60 * 24) * 7 ){
+
+            $time = floor($time_subtract / 86400);
+            $logText = "day(s)";
+
+        }
+
+        else if ($minute >= ((60 * 24) * 7) and $minute < ((60 * 24) * 28)){
+
+            $time = floor($time_subtract / (86400 * 7));
+            $logText = "week(s)";
+
+        }
+
+        else if ($minute >= ((60 * 24) * 28 )){
+
+            $time = floor($time_subtract / (86400 * 28));
+            $logText = "month(s)";
+
+        }
+
+
+        echo $time . " ". $logText;
+
+}
+
+
 	function get_user_img($user){
 		
 		global $con;

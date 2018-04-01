@@ -28,8 +28,6 @@
 				$lodge_img = $row["lodge_img"];
 				$user_id =  $row["user_id"];
 				$school =  $row["school"];
-				$available = $row["available"];
-				$approved = $row["approved"];
 				$meta =  $row["meta"];
 				$price = $row["price"];
 				$light =  $row["light"];
@@ -39,6 +37,7 @@
 				$user = $row["firstname"] . " " . $row["lastname"];
 				$mail = $row["email"];
 				$phone = $row["phone"];
+				$reg_time = $row["reg_time"];
 				
 	?>
 
@@ -77,9 +76,44 @@
 									<p>
 										<i class="ion-android-mail left"></i><?php echo $mail; ?>
 									</p>
+
+									<p class="purple-text text-darken-4">
+										Member since <?php time_stamp($reg_time); ?> ago.
+									</p>
+
+		          				<a class="btn-floating waves-effect btn-large halfway-fab white z-depth-2 hoverable">
+		          					<i style="margin-top: 5px;" class="ion-chatbubbles text-darken-4 purple-text"></i></a>
 								</div>
+
 			                	
 			                </div>
+
+			              </li>
+			            </ul>
+
+			            <br>
+
+			           <ul class="collapsible" data-collapsible="accordion">
+			              <li>
+			                <div class="collapsible-header z-depth-2 text-darken-4 purple-text active waves-effect waves-light">
+			                	<i style="font-size: 1em;" class="ion-android-home"></i> <b>Lodge Info</b> </div>
+			                <div style="padding: 0;border: none;" class="collapsible-body">
+
+								<div style="padding: 20px;" class="card">
+									<i class="ion-edit left"></i><?php echo $lodge_name; ?>
+
+									<p>
+										<i class="ion-ios-location left"></i><?php echo $school; ?>
+									</p>
+
+									<p>
+										<i class="ion-cash left"></i><?php echo $price; ?>
+									</p>
+								</div>
+
+			                	
+			                </div>
+
 			              </li>
 			            </ul>
 					
@@ -98,7 +132,7 @@
 
 	else{
 
-		//header("location:index.html");
+		header("location:index.html");
 	}
 
 }
@@ -108,7 +142,7 @@
 
 
 
-<br><br><br>
+<br>
 
 
 
