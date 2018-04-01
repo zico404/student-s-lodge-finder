@@ -304,7 +304,7 @@
 							?>
 
 						<p class="center">
-							<a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a>
+							<a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="view.html?lid=<?php echo $lodge_id; ?>">View Lodge</a
 						</p>
 				</div>
 
@@ -418,7 +418,7 @@
 
 							?>
 
-						<p class="center"><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a></p>
+						<p class="center"><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="view.html?lid=<?php echo $lodge_id; ?>">View Lodge</a></p>
 				</div>
 
 		      </div>
@@ -438,8 +438,8 @@
 
 	function search_lodge(){
 
-	if (!empty($_REQUEST["price"]) and 
-		!empty($_REQUEST["campus"]) )
+	if (!empty(htmlspecialchars($_REQUEST["price"])) and 
+		!empty(htmlspecialchars($_REQUEST["campus"])) )
 	{
 
 		$max_price = $_REQUEST["price"];
@@ -508,7 +508,8 @@
 
 							?>
 
-						<p class="center"><a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="#!">View Lodge</a></p>
+						<p class="center">
+							<a class="btn white flat-btn purple-text text-darken-4 hoverable waves-effect" href="view.html?lid=<?php echo $lodge_id; ?>">View Lodge</a></p>
 				</div>
 
 		      </div>
@@ -598,7 +599,6 @@
 			}
 		}
 	}
-
 
 	
 
