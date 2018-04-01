@@ -43,6 +43,10 @@
 			border-bottom: 2px solid #4a148c;
 			color: #4a148c;
 		}
+		.select-dropdown li span{
+
+			color: #333;
+		}
 
 	</style>
 

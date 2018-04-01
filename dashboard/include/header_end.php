@@ -38,6 +38,10 @@
 			color: #fff;
 		}
 
+		.row{
+			margin-bottom: 0px;
+		}
+
 	</style>
 
 

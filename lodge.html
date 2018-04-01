@@ -4,31 +4,13 @@
 
 ?>
 
-	<title><?php echo page_title("Discover Campuses"); ?></title>
+	<title><?php echo page_title("Find Lodge"); ?></title>
 
 <?php
 	
 	require_once "include/header_end.php";
 	require_once "include/index_main_header.php";
 
-	if ( isset($_REQUEST["water"]) or 
-		isset($_REQUEST["light"]) or 
-		isset($_REQUEST["within_school"]) or 
-		isset($_REQUEST["near_school"]) or 
-		isset($_REQUEST["price"]) or 
-		isset($_REQUEST["campus"]) or 
-		isset($_REQUEST["search"]) )
-	{
-
-		$water = $_REQUEST["water"];
-		$light = $_REQUEST["light"];
-		$within_school = $_REQUEST["within_school"];
-		$near_school = $_REQUEST["near_school"];
-		$price = $_REQUEST["price"];
-		$campus = $_REQUEST["campus"];
-		$text = filter_var( htmlspecialchars($_REQUEST["search"]) , FILTER_SANITIZE_STRING )
-
-	}
 
 ?>
 
@@ -39,46 +21,8 @@
 
 	<div class="col s12 l3">
 
-		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+		<form class="hide-on-med-and-down" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
 
-			<div class="row">
-				
-				<p class="col s6 switch">
-				    <label>
-				      <input name="water" id="water" type="checkbox">
-				      <span class="lever"></span>
-				      Water
-				    </label>
-				  </p>
-
-				 <p class="col s6 switch">
-				    <label>
-				      <input name="light" id="light" type="checkbox">
-				      <span class="lever"></span>
-				      Light
-				    </label>
-				  </p>	
-
-				 <p  class="col s12 switch">
-				    <label>
-				      <input name="within_school" id="within_school" type="checkbox">
-				      <span class="lever"></span>
-				      Within School
-				    </label>
-				  </p>	
-
-				 <p class="col s12 switch">
-				    <label>
-				      <input name="near_school" id="near_school" type="checkbox">
-				      <span class="lever"></span>
-				      Near School
-				    </label>
-				  </p>	
-
-
-			</div>
-
-			 
 		          <div class="input-field">
 					<select name="campus" id="campus">
 						<option selected disabled>Campus</option>
@@ -89,10 +33,10 @@
 		          <div class="input-field">
 					<select name="price" id="price">
 						<option selected disabled>Max Price</option>
-						<option value="20">20,000</option>
-						<option value="20">30,000</option>
-						<option value="20">50,000</option>
-						<option value="100">100,000</option>
+						<option value="20000">20,000</option>
+						<option value="30000">30,000</option>
+						<option value="50000">50,000</option>
+						<option value="100000">100,000</option>
 				    </select>
 		        </div>
 
@@ -104,15 +48,57 @@
 		</form>
 
 
+            <ul class="collapsible hide-on-med-and-up" data-collapsible="accordion">
+              <li>
+                <div class="collapsible-header z-depth-2 text-darken-4 purple-text active waves-effect waves-light">
+                	<i style="font-size: 1em;" class="ion-android-funnel"></i> <b>Filter</b> </div>
+                <div class="collapsible-body">
+                		<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="get">
+
+						          <div class="input-field">
+									<select name="campus" id="campus">
+										<option selected disabled>Campus</option>
+										<?php require "include/select_school.php"; ?>
+								    </select>
+						        </div>
+
+						          <div class="input-field">
+									<select name="price" id="price">
+										<option selected disabled>Max Price</option>
+										<option value="20000">20,000</option>
+										<option value="30000">30,000</option>
+										<option value="50000">50,000</option>
+										<option value="100000">100,000</option>
+								    </select>
+						        </div>
+
+
+						        <div class="input-field">
+									 <button class="purple darken-4 hoverable btn waves-effect">Search</button>
+								</div>
+
+						</form>
+                </div>
+              </li>
+            </ul>
+
+
 
 		
 	</div>
 	
 	<div class="col s12 l9">
 
-		<div class="center"><h4 style="font-weight: bold;" class="hide-on-med-and-down">Lodge</h4></div>
+		<!-- <div class="center"><h4 style="font-weight: bold;" class="hide-on-med-and-down">Lodge</h4></div> -->
 		
-		<br><br>
+		<div class="row">
+
+
+			<br>
+			
+			<?php  search_lodge(); ?>
+
+		</div>
 
 
 	</div>

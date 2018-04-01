@@ -13,39 +13,24 @@
 
 						      		<div class="row center">
 
-						      			<form action="search_result.html" method="get">
+						      			<form action="lodge.html" method="get">
 
 
-								      		<div class="input-field col s12 m4">
-												<select name="state" class="white-text text-darken-4">
+								      		<div class="input-field col s12 m6">
+												<select name="campus" class="white-text text-darken-4">
+													<option selected disabled>Campus</option>
 													<?php require_once "include/select_school.php"; ?>
 											    </select>
 								            </div>
 
-								              <div class="input-field col s12 m4">
-												<select name="typeof"  class="white-text text-darken-4">
-											      <option value="" disabled selected>Type Of Lodge</option>
-											      <option value="1room">Single Room</option>
-											      <option value="selfcon">Self Contain</option>
-											      <option value="1bdflat">1 Bedroom Flat</option>
-											      <option value="2bdflat">2 Bedroom Flat</option>
-											    </select>
-								            </div>
-
-								              <div class="input-field col s12 m4">
+								              <div class="input-field col s12 m6">
 												<select name="price" class="white-text text-darken-4">
-											      <option value="" disabled selected>Max. Price Of Lodge</option>
-											      <option value="1">20,000</option>
-											      <option value="2">40,000</option>
-											      <option value="3">70,000</option>
+													<option selected disabled>Max Price</option>
+													<option value="20000">20,000</option>
+													<option value="30000">30,000</option>
+													<option value="50000">50,000</option>
+													<option value="100000">100,000</option>
 											    </select>
-								            </div>
-
-											 <div class="input-field col s12 hide-on-small-and-down">
-
-						          				<i class="ion-ios-search prefix white-text text-darken-4"></i>
-								                <input class="white-text" name="search" value="<?php return_user_input('search');?>" maxlength="100" data-length="100" id="search" type="text" required>
-								                <label for="search" class="active white-text text-darken-4">Search Lodge</label>
 								            </div>
 
 							              <div class="input-field col s12">
@@ -74,7 +59,7 @@
 					    	<div class="container">
 
 							  <h2 id="listing" style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4 center-align">
-							  	Why choose Us?
+							  	We Offer
 							  	</h2>
 					    		
 					    	</div>
@@ -135,7 +120,7 @@
 
 					    	<div style="padding: 30px;" class="container">
 
-							    <h2 id="listing" style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4 center-align">Recommended</h2>
+							    <h2 id="listing" style="font-weight: bold;letter-spacing: -2px;" class="purple-text text-darken-4 center-align">Our Listing</h2>
 							    	<!-- <hr style="border-bottom: 4px solid #4a148c; width: 20%;margin: 0px auto;">
  -->							    	
 							    		<div class="container">	
@@ -183,7 +168,7 @@
 					
 				 			<div class="row">
 
-				 				<?php get_users_lodge(); ?>
+				 				<?php get_users_lodge(8); ?>
 
 				        	</div>
 
@@ -208,13 +193,27 @@
 							  	</div>
 
 
-							    <div id="test1" class="col s12">Test 1</div>
-							    <div id="test2" class="col s12">Test 2</div>
-							    <div id="test3" class="col s12">Test 3</div>
-							    <div id="test4" class="col s12">Test 4</div>
 					    	
 
 					    </section>
+
+							    <div id="test1" class="col s12">
+
+							    	<div class="row"><?php get_category("1room",4);?></div>
+							    </div>
+
+							    <div id="test2" class="col s12">
+							    	<div class="row"><?php get_category("selfcon",4);?></div>
+							    </div>
+
+							    <div id="test3" class="col s12"
+							    	<div class="row"><?php get_category("1bdflat",4);?></div>
+							    </div>
+
+							    <div id="test4" class="col s12">
+							    	<div class="row"><?php get_category("2bdflat",4);?></div>
+							    </div>
+
 
 					    <script src="" type="text/javascript"></script>
 

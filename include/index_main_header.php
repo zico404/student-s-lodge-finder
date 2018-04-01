@@ -16,9 +16,6 @@
 
 							<ul class="center hide-on-med-and-down">
 								
-								<li>
-									<a href="campus.html">Campus</a>
-								</li>
 
 								<li>
 									<a href="lodge.html">Lodge</a>
@@ -73,10 +70,6 @@
 								
 								<li>
 									<a href="index.html"><i class="ion-ios-circle-filled"></i>Home</a>
-								</li>
-								
-								<li>
-									<a href="campus.html"><i class="ion-university"></i> Campus</a>
 								</li>
 
 								<li>
@@ -139,10 +132,6 @@
 
 
 							<ul class="center hide-on-med-and-down">
-								
-								<li>
-									<a href="campus.html">Campus</a>
-								</li>
 
 								<li>
 									<a href="lodge.html">Lodge</a>
@@ -193,10 +182,6 @@
 							<ul id="mobile-menu" class="side-nav purple-text text-darken-4">
 								<li>
 									<a href="index.html"><i class="ion-ios-circle-filled"></i>Home</a>
-								</li>
-								
-								<li>
-									<a href="campus.html"><i class="ion-university"></i> Campus</a>
 								</li>
 
 								<li>

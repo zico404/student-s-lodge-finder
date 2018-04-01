@@ -35,14 +35,7 @@
 
     <div id="test1" class="col s12">
 
-          <div class=" row">
-
-            <div class=" col s6 m4 input-field  right">
-              
-                <input id="search_lodge" class="validate" type="text" name="search_lodge">
-                <label for="search_lodge">Search Lodge</label>
-
-            </div>    
+          <div class=" row">  
 
           </div>
         
@@ -54,6 +47,7 @@
             <div class="clearfix"></div>
 
             <div style="text-transform: capitalize;" class="row">
+              <br>
               <?php get_user_lodges($_SESSION["user-id"]);?>
             </div>
 
@@ -72,6 +66,7 @@
             <div class="clearfix"></div>
 
             <div style="text-transform: capitalize;" class="row">
+               <br>
               <?php get_pending_user_lodges($_SESSION["user-id"]);?>
             </div>
 
@@ -86,6 +81,7 @@
             <div class="clearfix"></div>
 
             <div style="text-transform: capitalize;" class="row">
+               <br>
               <?php get_active_user_lodges($_SESSION["user-id"]);?>
             </div>
 

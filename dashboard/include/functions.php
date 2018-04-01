@@ -303,14 +303,14 @@ function log_time($time_stamp){
 
 			          		
 			          			<a class="dropdown-button purple-text text-darken-4" data-activates="<?php echo $lodge_id; ?>" href="#">
-			          				<div style="padding: 7px" class="row hide-on-med-and-up">
+			          				<div style="padding: 7px;padding-left: 0px;margin: 0px;" class="row hide-on-med-and-up">
 
 					          			<div class="col s10">
 					          				
 					          				<div class="row">
 					          					
-					          					<div class="col s4"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-					          					<div class="col s8 left-align"><b class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></b>
+					          					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					          					<div class="col s9 left-align"><span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
 
 					          					</div>
 
@@ -413,7 +413,7 @@ function log_time($time_stamp){
 					          				<div class="row">
 					          					
 					          					<div class="col s1"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-					          					<div class="col s11"><b class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></b>
+					          					<div class="col s11"><span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
 
 					          					</div>
 
@@ -491,7 +491,7 @@ function log_time($time_stamp){
 					          				<div class="row">
 					          					
 					          					<div class="col s1"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-					          					<div class="col s11"><b class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></b>
+					          					<div class="col s11"><span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
 
 					          					</div>
 
