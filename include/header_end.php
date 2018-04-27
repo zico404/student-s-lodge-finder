@@ -1,5 +1,5 @@
 	<link rel="stylesheet" type="text/css" href="materialize/css/materialize.css">
-	<link href="https://fonts.googleapis.com/css?family=Handlee|Montserrat|Signika+Negative" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito|Montserrat|Raleway" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/ionicon/css/ionicons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -9,7 +9,7 @@
 		
 		html{
 
-			font-family:Handlee;
+			font-family:nunito;
 			font-size: 1.02em;
 		}
 
@@ -28,11 +28,6 @@
 			z-index: 200;
 		}
 
-		h1,h2,h3,h4,h5,h6{
-
-			font-family: 'Signika Negative', sans-serif;
-			letter-spacing: -1px;
-		}
 
 		.tabs .tab a,.tabs .tab a:hover{
 

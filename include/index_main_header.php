@@ -18,6 +18,10 @@
 								
 
 								<li>
+									<a href="index.html">Home</a>
+								</li>
+
+								<li>
 									<a href="lodge.html">Lodge</a>
 								</li>
 
@@ -31,6 +35,8 @@
 
 
 							</ul>
+
+							<a style="font-weight:bold;letter-spacing: -2px;" href="index.html" class="brand-logo center">logo</a>
 
 							<ul class="right hide-on-med-and-down">
 								
@@ -133,6 +139,11 @@
 
 							<ul class="center hide-on-med-and-down">
 
+
+								<li>
+									<a href="index.html">Home</a>
+								</li>
+
 								<li>
 									<a href="lodge.html">Lodge</a>
 								</li>
@@ -146,6 +157,8 @@
 								</li>
 
 						</ul>
+
+							<a style="font-weight:bold;letter-spacing: -2px;" href="index.html" class="brand-logo center">slf.com</a>
 
 
 							<ul class="right hide-on-med-and-down">

@@ -161,7 +161,7 @@
                   <div><?php display_error();?></div>
 
                   <div class="input-field col s12 m12">
-                    <input name="lodge_name" value="<?php return_user_input('lodge_name');?>" maxlength="100" data-length="100" id="lodge_name" type="text" required>
+                    <input name="lodge_name" value="<?php return_user_input('lodge_name');?>" maxlength="30" data-length="30" id="lodge_name" type="text" required>
                     <label for="lodge_name" class="active">Lodge Name</label>
                 </div>
 
@@ -190,19 +190,19 @@
 
                 <div class="clear-fix"></div>
 
-            <div class="file-field input-field col s6">
+            <div class="file-field input-field col s12 m6">
                   <div class="btn btn-flat z-depth-2 purple darken-4 white-text waves-effect waves-light">
                     <span><i class="ion-android-camera"></i></span>
                     <input name="picture" type="file" required>
                   </div>
                   <div class="file-path-wrapper">
-                    <input disabled class="file-path validate" type="text">
+                    <input disabled class="file-path" type="text">
                   </div>
                 </div>
 
 
                  <div class="file-field input-field col s12 m12">                          
-                    <textarea maxlength="200" data-length="200" required name="meta" id="meta" class="materialize-textarea"><?php return_user_input('meta');?></textarea>
+                    <textarea maxlength="400" data-length="400" required name="meta" id="meta" class="materialize-textarea"><?php return_user_input('meta');?></textarea>
                     <label for="meta">Lodge Description</label>
                 </div>
 

@@ -101,14 +101,4 @@
 
 <?php require_once "include/footer.php"; ?>
 
-<script type="text/javascript">
-  $(document).ready(function){
-
-    alert("ddd");
-  });
-
-
-
-</script>
-
 

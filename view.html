@@ -38,6 +38,7 @@
 				$mail = $row["email"];
 				$phone = $row["phone"];
 				$reg_time = $row["reg_time"];
+				$upload_time = $row["upload_time"];
 				
 	?>
 
@@ -108,6 +109,65 @@
 
 									<p>
 										<i class="ion-cash left"></i><?php echo $price; ?>
+									</p>
+
+									<?php
+
+										if ($within_school == "on"){
+
+											?>
+
+									<p>
+										<i class="ion-android-checkbox-outline left"></i> Within School.
+									</p>
+
+									<?php
+
+
+										}
+
+										if ($near_school == "on"){
+
+											?>
+
+									<p>
+										<i class="ion-android-checkbox-outline left"></i>Near School.
+									</p>
+
+									<?php
+
+
+										}
+										if ($water == "on"){
+
+											?>
+
+									<p>
+										<i class="ion-android-checkbox-outline left"></i> Has Water.
+									</p>
+
+									<?php
+
+
+										}
+
+										if ($light == "on"){
+
+											?>
+
+									<p>
+										<i class="ion-android-checkbox-outline left"></i> Has steady Electricity.
+									</p>
+
+									<?php
+
+
+										}
+
+
+									?>
+									<p class="purple-text text-darken-4">
+										Uploaded <?php time_stamp($upload_time); ?> ago.
 									</p>
 								</div>
 

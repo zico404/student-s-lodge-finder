@@ -296,6 +296,21 @@ function log_time($time_stamp){
 										<li><a class="grey-text text-darken-4" href="#">Delete</a></li>
 
 									</ul>
+
+									<ul id="<?php echo $lodge_id . '_pending'; ?>" class="dropdown-content">		
+
+										<li><a class="grey-text text-darken-4" href="#">Edit</a></li>
+										<li><a class="grey-text text-darken-4" href="#">Delete</a></li>
+
+									</ul>
+						
+	          						<ul id="<?php echo $lodge_id . '_active'; ?>" class="dropdown-content">		
+
+										<li><a class="grey-text text-darken-4" href="#">Edit</a></li>
+										<li><a class="grey-text text-darken-4" href="#">Delete</a></li>
+
+									</ul>
+
 			          			</div>
 
 			          		</div>
@@ -305,12 +320,17 @@ function log_time($time_stamp){
 			          			<a class="dropdown-button purple-text text-darken-4" data-activates="<?php echo $lodge_id; ?>" href="#">
 			          				<div style="padding: 7px;padding-left: 0px;margin: 0px;" class="row hide-on-med-and-up">
 
-					          			<div class="col s10">
+					          			<div style="padding: 0;" class="col s10">
 					          				
 					          				<div class="row">
 					          					
-					          					<div class="col s3"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-					          					<div class="col s9 left-align"><span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
+					          					<div class="col s3"><img height="50" width="50" class="circle materialboxed" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					          					<div class="col s9 left-align">
+					          						<span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
+
+					          						<p style="margin-top:5px;" class="grey-text text-darken-4">
+					          							<span class="truncate"></span><?php log_time($row["upload_time"]);echo " ago";?>
+					          						</p>
 
 					          					</div>
 
@@ -320,7 +340,7 @@ function log_time($time_stamp){
 
 
 					          			<div class="col s2 truncate">
-					          					<i style="font-size: 20px;" class="ion-android-more-vertical grey-text text-darken-4"></i>
+					          					<i style="font-size: 20px;margin-top: 10px;" class="ion-android-more-vertical grey-text text-darken-4"></i>
 					          				
 					          			</div>
 
@@ -406,14 +426,20 @@ function log_time($time_stamp){
 
 
 			          		
-			          				<div style="padding: 7px" class="row hide-on-med-and-up">
+			          			<a class="dropdown-button purple-text text-darken-4" data-activates="<?php echo $lodge_id . '_pending'; ?>" href="#">
+			          				<div style="padding: 7px;padding-left: 0px;margin: 0px;" class="row hide-on-med-and-up">
 
-					          			<div class="col s12">
+					          			<div style="padding: 0;" class="col s10">
 					          				
 					          				<div class="row">
 					          					
-					          					<div class="col s1"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-					          					<div class="col s11"><span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
+					          					<div class="col s3"><img height="50" width="50" class="circle materialboxed" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					          					<div class="col s9 left-align">
+					          						<span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
+
+					          						<p style="margin-top:5px;" class="grey-text text-darken-4">
+					          							<span class="truncate"></span><?php log_time($row["upload_time"]);echo " ago";?>
+					          						</p>
 
 					          					</div>
 
@@ -421,7 +447,15 @@ function log_time($time_stamp){
 
 					          			</div>
 
+
+					          			<div class="col s2 truncate">
+					          					<i style="font-size: 20px;margin-top: 10px;" class="ion-android-more-vertical grey-text text-darken-4"></i>
+							          		
+					          				
+					          			</div>
+
 			          				</div>
+			          			</a>
 
 	<?php
 
@@ -484,14 +518,22 @@ function log_time($time_stamp){
 
 
 			          		
-			          				<div style="padding: 7px" class="row hide-on-med-and-up">
+			          				
+			          		
+			          			<a class="dropdown-button purple-text text-darken-4" data-activates="<?php echo $lodge_id . '_active'; ?>" href="#">
+			          				<div style="padding: 7px;padding-left: 0px;margin: 0px;" class="row hide-on-med-and-up">
 
-					          			<div class="col s12">
+					          			<div style="padding: 0;" class="col s10">
 					          				
 					          				<div class="row">
 					          					
-					          					<div class="col s1"><img height="30" width="30" class="circle" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
-					          					<div class="col s11"><span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
+					          					<div class="col s3"><img height="50" width="50" class="circle materialboxed" src="../uploads/img/lodge/<?php echo $lodge_img; ?>"></div>
+					          					<div class="col s9 left-align">
+					          						<span class="truncate purple-text text-darken-4"><?php echo $lodge_name; ?></span>
+
+					          						<p style="margin-top:5px;" class="grey-text text-darken-4">
+					          							<span class="truncate"></span><?php log_time($row["upload_time"]);echo " ago";?>
+					          						</p>
 
 					          					</div>
 
@@ -499,7 +541,15 @@ function log_time($time_stamp){
 
 					          			</div>
 
+
+					          			<div class="col s2 truncate">
+					          					<i style="font-size: 20px;margin-top: 10px;" class="ion-android-more-vertical grey-text text-darken-4"></i>
+					          				
+					          			</div>
+
+
 			          				</div>
+			          			</a>
 	<?php
 
 			}

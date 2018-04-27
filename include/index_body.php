@@ -18,25 +18,20 @@
 
 								      		<div class="input-field col s12 m6">
 												<select name="campus" class="white-text text-darken-4">
-													<option selected disabled>Campus</option>
+													<option selected disabled>Choose a School</option>
 													<?php require_once "include/select_school.php"; ?>
 											    </select>
 								            </div>
 
 								              <div class="input-field col s12 m6">
-												<select name="price" class="white-text text-darken-4">
-													<option selected disabled>Max Price</option>
-													<option value="20000">20,000</option>
-													<option value="30000">30,000</option>
-													<option value="50000">50,000</option>
-													<option value="100000">100,000</option>
-											    </select>
+								                    <input class="white-text" name="price" value="<?php return_user_input('price');?>" maxlength="6" data-length="6" id="lga" type="number" required>
+								                    <label for="price" class="active white-text">Your Budget</label>
 								            </div>
 
 							              <div class="input-field col s12">
 
 					          				
-							           		 <button onclick="search" id="btn_login" style="border-radius: 100px;" class="purple darken-4 hoverable btn btn btn-large waves-effect"> 
+							           		 <button id="btn_login" style="border-radius: 100px;" class="purple darken-4 hoverable btn btn btn-large waves-effect"> 
 							           		 	<i class="ion-ios-search left"></i> Search lodge</button>
 							              </div>
 						      				

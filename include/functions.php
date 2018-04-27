@@ -272,7 +272,7 @@
 
 		global $con;
 
-		$query = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id and user_role = 'admin' LIMIT 7; ";
+		$query = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id and user_role = 'admin' ORDER BY lodge_meta.id DESC LIMIT 7; ";
 		$result = mysqli_query($con,$query);
 
 
@@ -341,7 +341,7 @@
 		        	<span style="font-size: 1em;text-transform: capitalize;" class="card-title activator purple-text text-darken-4"><?php echo $lodge_name; ?></span>
 					<p style="font-size: 14px;text-transform: capitalize;">
 						<span class="left"><i class="ion-android-locate"></i> <?php echo $school; ?> </span>
-						<span class="right"> <i class="ion-cash"></i> <?php echo $price; ?></span>
+						<span class="right"> ₦ <?php echo $price; ?></span>
 						 
 					</p>
 		        </div>
@@ -386,7 +386,7 @@
 	function get_users_lodge($limit){
 		global $con;
 
-		$query = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id and user_role = 'user' LIMIT $limit; ";
+		$query = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id and user_role = 'user' ORDER BY lodge_meta.id DESC LIMIT $limit; ";
 		$result = mysqli_query($con,$query);
 
 
@@ -455,7 +455,7 @@
 		        	<span style="font-size: 1em;text-transform: capitalize;" class="card-title activator purple-text text-darken-4"><?php echo $lodge_name; ?></span>
 					<p style="font-size: 14px;text-transform: capitalize;">
 						<span class="left"><i class="ion-android-locate"></i> <?php echo $school; ?> </span>
-						<span class="right"> <i class="ion-cash"></i> <?php echo $price; ?></span>
+						<span class="right">₦ <?php echo $price; ?></span>
 						 
 					</p>
 		        </div>
@@ -500,10 +500,22 @@
 	if (!empty(htmlspecialchars($_REQUEST["price"])) and 
 		!empty(htmlspecialchars($_REQUEST["campus"])) )
 	{
+		//Records per page
+$per_page = 30;
+
+if (isset($_REQUEST["p"])) {
+$page = $_REQUEST["p"];
+}
+else {
+$page = 1;
+}
+
+// Page will start from 0 and Multiple by Per Page
+$start_from = ($page-1) * $per_page;
 
 		$max_price = $_REQUEST["price"];
 		$campus = $_REQUEST["campus"];
-		$sql = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id WHERE school = '$campus' and price <= '$max_price' ORDER BY school ASC LIMIT 30";
+		$sql = " SELECT * FROM lodge_meta INNER JOIN lodge ON lodge_meta.lodge_id=lodge.lodge_id WHERE school = '$campus' and price <= '$max_price' ORDER BY school ASC LIMIT $start_from , $per_page";
 
 		global $con;
 
@@ -545,7 +557,7 @@
 		        	<span style="font-size: 1em;text-transform: capitalize;" class="card-title activator purple-text text-darken-4"><?php echo $lodge_name; ?></span>
 					<p style="font-size: 14px;text-transform: capitalize;">
 						<span class="left"><i class="ion-android-locate"></i> <?php echo $school; ?> </span>
-						<span class="right"> <i class="ion-cash"></i> <?php echo $price; ?></span>
+						<span class="right">₦ <?php echo $price; ?></span>
 						 
 					</p>
 		        </div>
@@ -574,6 +586,26 @@
 		      </div>
 		      
 		    </div>
+
+<ul class="pagination">
+
+<?php
+
+$query = "SELECT count(*) FROM lodge";
+$result = mysqli_query($con, $query);
+
+while ($row = mysqli_fetch_assoc($result)) {
+
+	$totalPages = 28; //replace with database value
+	
+}
+$currentPage = isset($_GET['p']) ? (int)$_GET['p'] : 1;
+$numPagesToShow = 10;
+
+?>
+
+</ul>
+
             
             
 <?php	
@@ -583,7 +615,7 @@
 
 			else{
 
-				echo '<div class="center"><h5>No result found</h5></div>';
+				echo '<div class="center flow-text"><h5>No result found</h5></div>';
 			}
 
 		}
@@ -641,7 +673,9 @@
 
 		        <div class="card-image">
 		          <img class="materialboxed" src="uploads/img/lodge/<?php echo $lodge_img; ?>" height="150">
-		         <span style="font-size: 1em;font-weight:bold;text-transform: capitalize;" class="card-title white-text text-darken-4"><?php echo $lodge_name; ?></span>
+		          <a href="view.html?lid=<?php echo $lodge_id; ?>">
+		         	<span style="font-size: 1em;font-weight:bold;text-transform: capitalize;" class="card-title white-text text-darken-4"><?php echo $lodge_name; ?></span>
+		         </a>
 
 		        </div>
 
@@ -659,7 +693,7 @@
 		}
 	}
 
-	
+
 
 ?>
 

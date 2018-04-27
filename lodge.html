@@ -25,19 +25,14 @@
 
 		          <div class="input-field">
 					<select name="campus" id="campus">
-						<option selected disabled>Campus</option>
+						<option selected disabled>Choose a School</option>
 						<?php require_once "include/select_school.php"; ?>
 				    </select>
 		        </div>
 
-		          <div class="input-field">
-					<select name="price" id="price">
-						<option selected disabled>Max Price</option>
-						<option value="20000">20,000</option>
-						<option value="30000">30,000</option>
-						<option value="50000">50,000</option>
-						<option value="100000">100,000</option>
-				    </select>
+		          <div class="input-field">					
+                    <input name="price" value="<?php return_user_input('price');?>" maxlength="6" data-length="6" id="lga" type="number" required>
+                    <label for="price" class="active">Your Budget</label>
 		        </div>
 
 
@@ -57,19 +52,14 @@
 
 						          <div class="input-field">
 									<select name="campus" id="campus">
-										<option selected disabled>Campus</option>
+										<option selected disabled>Choose a School</option>
 										<?php require "include/select_school.php"; ?>
 								    </select>
 						        </div>
 
-						          <div class="input-field">
-									<select name="price" id="price">
-										<option selected disabled>Max Price</option>
-										<option value="20000">20,000</option>
-										<option value="30000">30,000</option>
-										<option value="50000">50,000</option>
-										<option value="100000">100,000</option>
-								    </select>
+						          <div class="input-field">		
+				                    <input name="price" value="<?php return_user_input('price');?>" maxlength="6" data-length="6" id="lga" type="number" required>
+				                    <label for="price" class="active">Your Budget</label>
 						        </div>
 
 
@@ -97,6 +87,7 @@
 			<br>
 			
 			<?php  search_lodge(); ?>
+			<div class="clearfix"></div>
 
 		</div>
 
