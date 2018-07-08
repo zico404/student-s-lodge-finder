@@ -1,0 +1,13 @@
+$(function(){
+    M.AutoInit();
+    $('.dropdown-trigger').dropdown();
+    $('.slider').slider();
+    $('.parallax').parallax();
+    $('.materialboxed').materialbox();
+    $('.modal').modal();
+    $('.scrollspy').scrollSpy();
+    $('.datepicker').datepicker();
+    $('.tabs').tabs();
+    $('.timepicker').timepicker();
+    $('.tooltipped').tooltip();
+});

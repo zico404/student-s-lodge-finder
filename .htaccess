@@ -1,3 +1,12 @@
+Options -indexes
+Options -multiviews
+
 RewriteEngine On
-ErrorDocument 404 /slf/404.404
-AddType application/x-httpd-php .html .404
+RewriteRule "^login$" "login.php" [QSA,L]
+RewriteRule "^signup$" "signup.php" [QSA,L]
+RewriteRule "^verify$" "verify.php" [QSA,L]
+RewriteRule "^404$" "404.php" [QSA,L]
+
+
+ErrorDocument 404 /slf2/404.php
+ErrorDocument 403 /slf2/403.php
