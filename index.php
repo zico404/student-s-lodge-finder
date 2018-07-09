@@ -15,6 +15,16 @@
 	<?php require_once "includes/navbar.php"; ?>
 	<?php require_once "includes/slider.php"; ?>
 
+		<!-- Side Bar -->
+		
+
+	  <ul class="sidenav" id="mobile-demo">
+	    <li><a href="sass.html">Sass</a></li>
+	    <li><a href="badges.html">Components</a></li>
+	    <li><a href="collapsible.html">Javascript</a></li>
+	    <li><a href="mobile.html">Mobile</a></li>
+	  </ul>
+
 		<!-- Lodge Section  -->
 
   <section>
@@ -28,7 +38,7 @@
 
 
 
-	  		<div class="col s12 m8 push-m1 push-l1">
+	  		<div class="col s12 m9">
 			      <div class="card">
 					<?php require_once "includes/view-lodge-panel.php"; ?>
 	  			</div>
@@ -47,21 +57,44 @@
 			<form action="" method="">		
 			    <div class="col s12 m3">
 			      <div class="card">
-			        <div class="card-content white-text">
-			          <span class="card-title">Card Title</span>
-			          <p>I am a very simple card. I am good at containing small bits of information.
-			          I am convenient because I require little markup to use effectively.</p>
+				     <div class="card-content grey-text">
+			          <span class="grey-text text-darken-1">Find Room Mate</span>
+			          <div class="input-field">
+			          	<select>
+			          		<option class="disabled">School Of Choice
+				          </option>
+			          		<option>Abia</option>
+			          		<option>Imo</option>
+			          		<option>Delta</option>
+			          		<option>Lagos</option>
+			          		<option>Abuja</option>
+			          	</select>
+			          </div>
+
+			          <div class="input-field">
+			          	<select>
+					      <option value="" disabled selected>Gender</option>
+					      <option value="1">Male</option>
+					      <option value="2">Female</option>
+					    </select>
+			          </div>
+
+			          <div class="input-field">
+			          	<input class="validate" type="number" name="user-budget" placeholder="Your Budget">
+			          </div>
+
 			        </div>
+
 			        <div class="card-action center">
-			        	<button class="btn btn-large gradient-bg"> Find Lodge</button>
-			        </div>
+		        		<button class="btn btn-large gradient-bg"><i class="ion-android-people left"></i> Find Roomie</button>
+		        	</div>
 			      </div>
 			    </div>	
 			</form>
 
 
 
-	  		<div class="col m8 push-m1 push-l1">
+	  		<div class="col s12 m9">
 			      <div class="card">
 			        <div class="card-content white-text">
 			          <span class="card-title">Card Title</span>

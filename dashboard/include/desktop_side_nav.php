@@ -1,18 +1,12 @@
-<?php 
-	
-	if ( is_user_admin($_SESSION["user-id"]) == false ){
-
-
-?>
-		
+	<!-- For Admin -->
 		<div  style="padding: 0" class="col l2 fixed side-nav center">
 
 		<div style="padding: 10px;background: url(../img/bg1.jpeg);background-repeat: no-repeat;background-size: cover;">
 
-			<img class="circle" src="../img/<?php echo get_user_img($_SESSION["user-id"]); ?>" width="100" height="100">
+			<img class="circle" src="../img/default_male.png" width="100" height="100">
 
 				<span class="white-text truncate" style="text-transform: capitalize; font-size: 1em;">
-					<?php echo get_full_username($_SESSION["user-id"]); ?>	
+					John Doe	
 				</span>
 				
 			</div>
@@ -37,7 +31,7 @@
 			    	<a href="lodge.php" class="grey-text text-darken-4">
 				    	<div class="collapsible-header">
 				    			<i style="font-size: 17px" class="ion-android-person grey-text text-darken-4"></i>
-				    		My Lodge<span class="badge"><?php echo get_lodge_size($_SESSION["user-id"]);?></span>
+				    		My Lodge<span class="badge">2</span>
 				    	</div>
 			    	</a>
 
@@ -90,22 +84,16 @@
 
 		</div>
 
-		<?php
-
-			}
-
-			else{
-
-		?>
-
+		<!-- For Users -->
+<!-- 
 		<div style="padding: 0" class="col l2 fixed side-nav center">
 
 		<div style="padding: 10px;background: url(../img/bg1.jpeg);background-repeat: no-repeat;background-size: cover;">
 
-			<img class="circle" src="../img/<?php echo get_user_img($_SESSION["user-id"]); ?>" width="100" height="100">
+			<img class="circle" src="../img/<?php //echo get_user_img($_SESSION["user-id"]); ?>" width="100" height="100">
 
 				<span class="white-text truncate" style="text-transform: capitalize; font-size: 1em;">
-					<?php echo get_full_username($_SESSION["user-id"]); ?>	
+					<?php //echo get_full_username($_SESSION["user-id"]); ?>	
 				</span>
 				
 			</div>
@@ -130,7 +118,7 @@
 			    	<a href="lodge.php" class="grey-text text-darken-4">
 				    	<div class="collapsible-header">
 				    			<i style="font-size: 17px" class="ion-android-person grey-text text-darken-4"></i>
-				    		My Lodge<span class="badge"><?php echo get_lodge_size($_SESSION["user-id"]);?></span>
+				    		My Lodge<span class="badge"><?php //echo get_lodge_size($_SESSION["user-id"]);?></span>
 				    	</div>
 			    	</a>
 
@@ -168,13 +156,4 @@
 
 			</ul>
 
-		</div>
-
-
-
-
-		<?php
-
-			}
-
-		?>
+		</div> -->

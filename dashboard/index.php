@@ -4,7 +4,7 @@
 
 ?>
 
-	<title><?php echo page_title("Dashboard"); ?></title>
+	<title>Dashboard</title>
 
 <?php
 

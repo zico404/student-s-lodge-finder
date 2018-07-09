@@ -19,13 +19,13 @@
 							<input class="grey-text" type="password" name="password" placeholder="Password">
 						</div>
 						<div class="input-field">
-							<p><a class="grey-text" href="#">Forgot Password</a></p>
+					      	<p><a href="forgot-password"><span class="ion-ios-locked-outline"></span> Forgot Password</a></p>
 						</div>
 						<div class="input-field">
-							<p><a class="grey-text" href="#">Create Account</a></p>
+					      	<p><a href="signup"><span class="ion-android-person-add"></span> Create Account</a></p>
 						</div>
 						<div class="input-field">
-							<p><a class="grey-text" href="#">Home</a></p>
+					      	<p><a href="index.php"><span class="ion-android-home"></span> Home</a></p>
 						</div>
 						<button class="white waves-effect waves-darken-4 btn purple-text right">
 							<i class="ion-ios-locked-outline left"></i>Login >
@@ -38,18 +38,21 @@
 		</div>
 		
 		<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5b4167324af8e57442dc6d7e/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+			<script type="text/javascript">
+			var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+			(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/5b4167324af8e57442dc6d7e/default';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+			})();
+			</script>
+		<!--End of Tawk.to Script-->
+    <script type="text/javascript" src="js/code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
 
 	</body>
 	</html>

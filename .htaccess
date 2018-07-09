@@ -4,7 +4,7 @@ Options -multiviews
 RewriteEngine On
 RewriteRule "^login$" "login.php" [QSA,L]
 RewriteRule "^signup$" "signup.php" [QSA,L]
-RewriteRule "^verify$" "verify.php" [QSA,L]
+RewriteRule "^forgot-password$" "forgot-password.php" [QSA,L]
 RewriteRule "^404$" "404.php" [QSA,L]
 
 

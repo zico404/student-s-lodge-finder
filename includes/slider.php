@@ -2,7 +2,7 @@
 	<!-- Slider -->
 
   <div class="slider">
-    <ul class="slides z-depth-4">
+    <ul class="slides">
       <li>
         <img src="img/background1.jpg">
         <div class="caption center-align">

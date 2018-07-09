@@ -10,4 +10,5 @@ $(function(){
     $('.tabs').tabs();
     $('.timepicker').timepicker();
     $('.tooltipped').tooltip();
+    $('.chips').chips();
 });
