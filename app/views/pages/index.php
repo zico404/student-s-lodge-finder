@@ -1,8 +1,8 @@
-	<?php require_once "includes/header-start.php"; ?>
+	<?php require_once APPROOT . '/views/inc/header-start.php'; ?>
 	<title>Welcome To SLF</title>
-	<?php require_once "includes/header-end.php"; ?>
+	<?php require_once APPROOT . '/views/inc/header-end.php'; ?>
 
-<!-- 
+<!--
 	<div class="splash-screen center">
 		<div class="row">
 			<div class="col s4 offset-s4">
@@ -11,12 +11,11 @@
 			</div>
 		</div>
 	</div> -->
-
-	<?php require_once "includes/navbar.php"; ?>
-	<?php require_once "includes/slider.php"; ?>
+	<?php require_once APPROOT . '/views/inc/navbar.php'; ?>
+	<?php require_once APPROOT . '/views/inc/slider.php'; ?>
 
 		<!-- Side Bar -->
-		
+
 
 	  <ul class="sidenav" id="mobile-demo">
 	    <li><a href="sass.html">Sass</a></li>
@@ -30,21 +29,21 @@
   <section>
 	  	<div class="row" style="padding: 0;">
 
-			<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">		
+			<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">
 			    <div class="col s12 m3">
-					<?php require_once "includes/find-lodge-panel.php"; ?>
-			    </div>	
+						<?php require_once APPROOT . '/views/inc/find-lodge-panel.php'; ?>
+			    </div>
 			</form>
 
 
 
 	  		<div class="col s12 m9">
 			      <div class="card">
-					<?php require_once "includes/view-lodge-panel.php"; ?>
+					  <?php require_once APPROOT . '/views/inc/view-lodge-panel.php'; ?>
 	  			</div>
 	  		</div>
 		</div>
-  	
+
   </section>
 
   <br>
@@ -54,7 +53,7 @@
 
 			<!-- Roomate Section  -->
 
-			<form action="" method="">		
+			<form action="" method="">
 			    <div class="col s12 m3">
 			      <div class="card">
 				     <div class="card-content grey-text">
@@ -89,7 +88,7 @@
 		        		<button class="btn btn-large gradient-bg"><i class="ion-android-people left"></i> Find Roomie</button>
 		        	</div>
 			      </div>
-			    </div>	
+			    </div>
 			</form>
 
 
@@ -104,7 +103,7 @@
 			      </div>
 	  		</div>
 	  	</div>
-  	
+
   </section>
 
 
@@ -123,24 +122,4 @@
     </div>
   </div>
 
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5b4167324af8e57442dc6d7e/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    <script type="text/javascript" src="js/code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/init.js"></script>
- 
-
-</body>
-</html>
+  <?php require_once APPROOT . '/views/inc/footer.php'; ?>

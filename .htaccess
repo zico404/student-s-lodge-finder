@@ -1,12 +1,5 @@
-Options -indexes
-Options -multiviews
-
-RewriteEngine On
-RewriteRule "^login$" "login.php" [QSA,L]
-RewriteRule "^signup$" "signup.php" [QSA,L]
-RewriteRule "^forgot-password$" "forgot-password.php" [QSA,L]
-RewriteRule "^404$" "404.php" [QSA,L]
-
-
-ErrorDocument 404 /slf2/404.php
-ErrorDocument 403 /slf2/403.php
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^$ public/ [L]
+    RewriteRule (.*) public/$1 [L]
+</IfModule>
