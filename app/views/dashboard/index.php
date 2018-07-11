@@ -1,5 +1,7 @@
 <?php
+
 	
+
 	require_once "include/header_start.php";
 
 ?>
@@ -13,39 +15,39 @@
 ?>
 
 <div class="row">
-  
-    <?php require_once "include/desktop_side_nav.php"; ?> 
-    <?php require_once "include/mobile_side_nav.php"; ?>    
+
+    <?php require_once "include/desktop_side_nav.php"; ?>
+    <?php require_once "include/mobile_side_nav.php"; ?>
 
   <div  style="padding: 0" class="col s12 l10 right">
 
       <?php require_once "include/header_main.php"; ?>
 
       <div style="padding: 10px;">
-       
+
         <?php
 
         if ($_SESSION["user-role"] == "user"){
 
-         require_once "include/user_dashboard.php"; 
-         
+         require_once "include/user_dashboard.php";
+
          }
 
          else{
 
-         require_once "include/admin_dashboard.php"; 
+         require_once "include/admin_dashboard.php";
 
          }
 
 
 
          ?>
-        
+
 
       </div>
 
-  
-    
+
+
 
   </div>
 
@@ -53,4 +55,3 @@
 
 
 <?php require_once "include/footer.php"; ?>
-

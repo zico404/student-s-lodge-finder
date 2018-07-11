@@ -9,6 +9,10 @@
 class Users extends Controller
 {
     private $userModel;
+    const COOKIE_NAME = "auth_cookie";
+    const SESSION_TIME = 604800; // 7 days in sec
+    private $s_authenticated = false;
+
     public function __construct()
     {
         $this->userModel = $this->model('User');
@@ -51,7 +55,9 @@ class Users extends Controller
 
                 if ($loggedInUser) {
                     // Create Session
-                    $this->createUserSession($loggedInUser);
+                    if ($this->createUserSession($loggedInUser)) {
+                        redirector('dashboards/');
+                    }
                 }else {
                     $data['password_err'] = 'Email and password combination not correct';
                     $this->view('user/login', $data);
@@ -184,9 +190,68 @@ class Users extends Controller
     private function createUserSession($user)
     {
         $_SESSION['user_id'] = $user->id;
-        $_SESSION['user_email'] = $user->email;
-        $_SESSION['user_name'] = $user->name;
-        redirector('dashboards/');
+        // $_SESSION['user_email'] = $user->email;
+        // $_SESSION['user_name'] = $user->firstname ." ". $user->lastname;
+        if ($this->create_session()) {
+            $this->is_authenticated = true;
+            return true;
+        }
+        return false;
+    }
+
+    public function create_session()
+    {
+        $cookie = bin2hex(random_bytes(16));
+        $user_id = $_SESSION['user_id'];
+        $session_id = $this->userModel->storeSession(md5($cookie), $user_id);
+        if ($session_id) {
+            setcookie(self::COOKIE_NAME, $cookie, time() + self::SESSION_TIME, '/');
+            $_COOKIE[self::COOKIE_NAME] = $cookie;
+            return true;
+        }
+        return false;
+    }
+
+    public function logout($user_id, $close_all_sessions = false)
+    {
+        try {
+
+            $cookie_md5 = md5($_COOKIE[self::COOKIE_NAME]);
+
+            if ($close_all_sessions) {
+                $this->userModel->deleteSession($_SESSION['user_id']);
+            }
+
+            $this->userModel->deleteSession($_SESSION['user_id'], $cookie_md5);
+
+
+            setcookie(self::COOKIE_NAME, '', 0, '/');
+            $_COOKIE[self::COOKIE_NAME] = null;
+
+            $_SESSION['user_id'] = null;
+            unset($_SESSION['user_id']);
+            $this->is_authenticated = false;
+            redirector('');
+        } catch (Exception $e) {
+             echo $e->getMessage();
+        }
+    }
+
+    public function remember_login()
+    {
+        try {
+            if (array_key_exists(self::COOKIE_NAME, $_COOKIE)) {
+                $cookie_md5 = md5($_COOKIE[self::COOKIE_NAME]);
+
+                if ($res = $this->userModel->getUserBySession($cookie_md5)) {
+                    $this->is_authenticated = true;
+                    $_SESSION['user_id'] = $res->user_id;
+                }
+            }
+            return true;
+        } catch (Error $e) {
+            return false;
+        }
     }
 
 
