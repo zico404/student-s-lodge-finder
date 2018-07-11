@@ -8,8 +8,10 @@
  */
 class Users extends Controller
 {
+    private $userModel;
     public function __construct()
     {
+        $this->userModel = $this->model('User');
     }
 
     public function login()
@@ -38,16 +40,29 @@ class Users extends Controller
                 $err_code = 1;
             }
 
+            if (!$this->userModel->findUserByEmail($data['email'])) {
+                 $data['email_err'] = 'No user found';
+                 $err_code = 1;
+            }
             // Making sure there is no error found
             if ($err_code == 0) {
                 // Process information
-                die('SUCCESS');
+                $loggedInUser = $this->userModel->login($data);
+
+                if ($loggedInUser) {
+                    // Create Session
+                    $this->createUserSession($loggedInUser);
+                }else {
+                    $data['password_err'] = 'Email and password combination not correct';
+                    $this->view('user/login', $data);
+                }
+
             } else {
-                $this->views('user/login', $data);
+                $this->view('user/login', $data);
             }
 
         } else {
-            
+
             $data = [
                 'email' => '',
                 'password' => '',
@@ -88,6 +103,11 @@ class Users extends Controller
             if (empty($data['email'])) {
                 $data['email_err'] = 'Please enter email';
                 $err_code = 1;
+            } else {
+                if($this->userModel->findUserByEmail($data['email'])) {
+                    $data['email_err'] = 'Email already exist';
+                    $err_code = 1;
+                }
             }
 
             // validate First Name
@@ -124,11 +144,22 @@ class Users extends Controller
 
             // Making sure there is no error found
             if($err_code == 0) {
-                // validated
-                die('SUCCESS');
+                // validated, proceed to register
+
+                //generate secure password hash
+                $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+
+                //
+                if ($this->userModel->register($data)) {
+                    flash('register_message', 'Successfully Registered, Please verify your account');
+                    redirector('users/login');
+                } else {
+                    flash('register_message', 'Something happens, try again');
+                }
+
             } else {
                 // Load view here
-                $this->views('user/signup', $data);
+                $this->view('user/signup', $data);
             }
 
         } else {
@@ -148,6 +179,14 @@ class Users extends Controller
             // Load view with data
             $this->view('user/signup', $data);
         }
+    }
+
+    private function createUserSession($user)
+    {
+        $_SESSION['user_id'] = $user->id;
+        $_SESSION['user_email'] = $user->email;
+        $_SESSION['user_name'] = $user->name;
+        redirector('dashboards/');
     }
 
 

@@ -3,6 +3,7 @@
 	<?php require_once APPROOT . '/views/inc/header-end.php'; ?>
 
 
+		<?php flash('register_message'); ?>
 		<div class="row">
 			<div class="card gradient-bg login-card col s12 m6 l4 offset-m3 offset-l4">
 				<div class="center">
