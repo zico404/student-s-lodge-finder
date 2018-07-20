@@ -60,7 +60,7 @@
 		        </div>
 
 		        <div class="card-action center">
-		        	<button class="btn btn-large gradient-bg"><i class="ion-home left"></i> Find Lodge</button>
+		        	<button class="btn btn-large gradient-bg"><i class="ion-ios-search left"></i> Find Lodge</button>
 		        </div>
 
 		      </div>

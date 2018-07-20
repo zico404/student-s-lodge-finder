@@ -15,23 +15,23 @@
 					      <div class="row">
 					        <div class="input-field col s6">
 					          <input type="text" name="first_name" id="first_name" class="validate  <?php echo (!empty($data['first_name'])) ? 'is-invalid':''; ?>" value="<?php echo $data['first_name'];?>" placeholder="First Name">
-							  <span class="invalid-feedback"><?php echo $data['first_name_err'];?></span>
+							  <span class="invalid-feedback red-text"><?php echo $data['first_name_err'];?></span>
 					        </div>
 					        <div class="input-field col s6">
 					          <input id="last_name" name="last_name" type="text" class="validate <?php echo (!empty($data['last_name'])) ? 'is-invalid':''; ?>" value="<?php echo $data['last_name'];?>" placeholder="Last Name">
-							  <span class="invalid-feedback"><?php echo $data['last_name_err'];?></span>
+							  <span class="invalid-feedback red-text"><?php echo $data['last_name_err'];?></span>
 					        </div>
 					        <div class="input-field col s12">
 					          <input type="email" name="email" id="email" class="validate <?php echo (!empty($data['email'])) ? 'is-invalid':''; ?>" value="<?php echo $data['email'];?>" placeholder="Email Address">
-							  <span class="invalid-feedback"><?php echo $data['email_err'];?></span>
+							  <span class="invalid-feedback red-text"><?php echo $data['email_err'];?></span>
 							</div>
 					        <div class="input-field col s12">
 					          <input type="password" name="password" id="password" class="validate  <?php echo (!empty($data['password'])) ? 'is-invalid':''; ?>" placeholder="Password">
-							  <span class="invalid-feedback"><?php echo $data['password_err'];?></span>
+							  <span class="invalid-feedback red-text"><?php echo $data['password_err'];?></span>
 					        </div>
 					        <div class="input-field col s12">
 					          <input type="password" name="confirm_password" id="confirm_password"  class="validate <?php echo (!empty($data['confirm_password'])) ? 'is-invalid':''; ?>" placeholder="Confirm Password">
-							  <span class="invalid-feedback"><?php echo $data['confirm_password_err'];?></span>
+							  <span class="invalid-feedback red-text"><?php echo $data['confirm_password_err'];?></span>
 					        </div>
 					      </div>
 
