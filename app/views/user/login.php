@@ -14,11 +14,11 @@
 					<form action="<?php echo htmlspecialchars(SITEURL.'/users/login');?>" method="post">
 						<div class="input-field">
 							<input type="text" name="email" id="email" class="validate <?php echo (!empty($data['email'])) ? 'is-invalid':''; ?>" value="<?php echo $data['email'];?>" placeholder="Email address">
-							<span class="invalid-feedback"><?php echo $data['email_err'];?></span>
+							<span class="invalid-feedback red-text"><?php echo $data['email_err'];?></span>
 						</div>
 						<div class="input-field">
 							<input class="grey-text" type="password" name="password" id="password" class="validate <?php echo (!empty($data['password'])) ? 'is-invalid':''; ?>" placeholder="Password">
-							<span class="invalid-feedback"><?php echo $data['password_err'];?></span>
+							<span class="invalid-feedback red-text"><?php echo $data['password_err'];?></span>
 						</div>
 						<div class="input-field">
 					      	<p><a href="<?php echo SITEURL; ?>/users/forgot-password"><span class="ion-ios-locked-outline"></span> Forgot Password</a></p>

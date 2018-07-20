@@ -2,20 +2,19 @@
 		        <div class="card-content grey-text">
 
 		        	<div class="row">
+			        
+			          <div class="col s12 m4 left">
+				          <h2 class="card-title purple-text text-darken-4"><strong>Popular</strong></h2>
+			          </div>  
 
-			          <div class="col s12 m3 input-field right">
-			          	<select>
+			          <div class="col s6 m3 input-field right hide-on-small-only">
+			          	<select class="grey-text">
 			          		<option class="disabled">Sort By
 				          </option>
-			          		<option>Name</option>
-			          		<option>Date of Upload</option>
-			          		<option>Likes</option>
+			          		<option class="grey-text">Name</option>
+			          		<option class="grey-text">Date</option>
+			          		<option class="grey-text">Likes</option>
 			          	</select>
-			          </div>
-
-			          <div class="col s12 m4 left">
-				          <h4 class="card-title purple-text text-darken-4">Popular Lodges
-				          </h4>
 			          </div>
 
 		        	</div>
@@ -25,11 +24,11 @@
 		            <div class="row view-panel">
 						  <div class="row">
 
-						    <div class="col s12 m6 l4">
+						    <div class="col s12 m6 scale-transition">
 						      <div class="card">
 					        	 <div class="card-image">
-					          		<img class="materialboxed" src="<?php echo SITEURL;?>/img/background1.jpg">
-					          		<h6 class="white-text activator truncate">God is good lodge</h6>
+					          		<img class="activator" src="<?php echo SITEURL;?>/img/img1.jpg">
+					          		<div class="price-tag white-text green">20,000</div>
 					        	 </div>
 						         <div class="card-content">
 						        	<div class="row">
@@ -40,8 +39,9 @@
 						        			</a>
 						        		</div>
 						        		<div class="col s8">
-						        			<div class="grey-text text-darken-3 right">
-						        				<span>#20000</span>
+						        			<div class="grey-text text-darken-3 right truncate">
+						        				<span class="grey-text text-darken-2 ion-ios-timer-outline"></span>
+						        				<span>2days</span>
 						        			</div>
 						        		</div>
 						        	</div>
@@ -53,11 +53,11 @@
 						      </div>
 						    </div>
 
-						    <div class="col s12 m6 l4">
+						    <div class="col s12 m6 scale-transition">
 						      <div class="card">
 					        	 <div class="card-image">
-					          		<img class="materialboxed" src="<?php echo SITEURL;?>/img/background3.jpg">
-					          		<h6 class="white-text activator truncate">This is L lodge</h6>
+					          		<img class="activator" src="<?php echo SITEURL;?>/img/img1.jpg">
+					          		<div class="price-tag white-text green">20,000</div>
 					        	 </div>
 						         <div class="card-content">
 						        	<div class="row">
@@ -68,8 +68,9 @@
 						        			</a>
 						        		</div>
 						        		<div class="col s8">
-						        			<div class="grey-text text-darken-3 right">
-						        				<span>#20000</span>
+						        			<div class="grey-text text-darken-3 right truncate">
+						        				<span class="grey-text text-darken-2 ion-ios-timer-outline"></span>
+						        				<span>2days</span>
 						        			</div>
 						        		</div>
 						        	</div>
@@ -83,7 +84,23 @@
 
 						  </div>
 
-						  <div class="center">
+						  <br>
+
+						  <div class="left">
+						  	<a href="#!"class="white grey-text waves-effect">View all</a>
+						  </div>
+
+						  <div class="right">
+
+							  <ul class="pagination">
+							    <li class="disabled"><a href="#!"><i class="ion-chevron-left"></i></a></li>
+							    <li class="active"><a href="#!">1</a></li>
+							    <li class="waves-effect"><a href="#!">2</a></li>
+							    <li class="waves-effect"><a href="#!">3</a></li>
+							    <li class="waves-effect"><a href="#!">4</a></li>
+							    <li class="waves-effect"><a href="#!">5</a></li>
+							    <li class="waves-effect"><a href="#!"><i class="ion-chevron-right"></i></a></li>
+							  </ul>
 						  </div>
 
 
