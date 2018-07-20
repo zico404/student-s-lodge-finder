@@ -8,7 +8,7 @@
 //DB PARAMS
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'Changeless11!');
 define('DB_NAME', 'slf');
 
 // Define app root
