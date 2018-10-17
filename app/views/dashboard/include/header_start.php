@@ -1,6 +1,5 @@
 <?php
 	
-	session_start();
 	
 	 //  if (check_is_user($_SESSION["user-id"]) == false ){
 

@@ -12,112 +12,189 @@
 		</div>
 	</div> -->
 
-	<?php require_once APPROOT . "/views/inc/navbar.php"; ?>
-	<?php require_once APPROOT . "/views/inc/slider.php"; ?>
+		<?php require_once APPROOT . "/views/inc/navbar.php"; ?>
+		<?php require_once APPROOT . "/views/inc/slider.php"; ?>
+		<?php require_once APPROOT . "/views/inc/sidebar.php"; ?>
 
-		<!-- Side Bar -->
+
+
+
+  <section>	
+
+  	<div class="how-it-works">
 		
+		<br>
+		<h5 class="center-align grey-text text-darken-2"><b> <i class="ion-ios-help-ouline"></i> How it works </b></h5>
 
-	  <ul class="sidenav" id="mobile-demo">
-	    <li><a href="sass.html">Sass</a></li>
-	    <li><a href="badges.html">Components</a></li>
-	    <li><a href="collapsible.html">Javascript</a></li>
-	    <li><a href="mobile.html">Mobile</a></li>
-	  </ul>
+  		<div class="row container">
 
-		<!-- Lodge Section  -->
+  			<div class="col s12 m4 center">
+				<i style="line-height: 115px;" class="medium blue-text text-darken-4 center ion-ios-search"></i>
+				<h5 class="grey-text loose-text text-darken-1 center-align"><b>Search</b></h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore</p>
+  			</div>
 
-  <section>
-	  	<div class="row" style="padding: 0;">
-	
-			    <div class="col s12 m4 l3">
-					<form action="<?php echo $_SERVER['PHP_SELF'];?>" method="get">	
-						<?php require_once APPROOT . "/views/inc/find-lodge-panel.php"; ?>
-					</form>
-					<form action="" method="">
-						<?php require_once APPROOT . "/views/inc/find-roommate-panel.php"; ?>
-					</form>
-			    </div>	
+  			<div class="col s12 m4 center">
+				<i style="line-height: 115px;" class="medium ion-person-stalker blue-text text-darken-2"></i>
+				<h5 class="grey-text loose-text text-darken-1 center-align"><b>Connect</b></h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore</p>
+  			</div>
 
-	  		<div class="col s12 m8 l6">
-			      <div class="card">
-					<?php require_once APPROOT . "/views/inc/view-lodge-panel.php"; ?>
-	  			</div>
-			      <div class="card">
-			      	<div class="card-content">
-			      		<div class="row">
-			      			<div class="col s2"><span class="ad-title white-text">Ad</span></div>
-			      			<div class="col s8"></div>
-			      		</div>	      		
-			      		
+  			<div class="col s12 m4 center">
+				<i style="line-height: 115px;" class="medium blue-text ion-card"></i>
+				<h5 class="grey-text loose-text text-darken-1 center-align"><b>Pay</b></h5>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore</p>
+  			</div>
+
+  		</div>
+
+  	</div>
+
+  </section>
+
+	<section>
+		<div style="padding: 0px 7% 0px 7%;" class="grey lighten-4">
+			<br>
+			<h5 class="center-align black-text"><b> <i class="ion-android-locate"></i> Top Locations</b></h5>
+			<br>
+
+			<div style="margin-bottom: 0;" class="row locations">
+				
+				<div class="col m6 l3">				
+					<div class="card location-item">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/338e11ef6aed9ffb32b9690bcc6de4c51a60a2d9.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Abia</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>124 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
 			      	</div>
-	  			</div>
-					<?php require_once APPROOT . "/views/inc/view-roommate-panel.php"; ?>
-	  		</div>
+				</div>	<div class="col m6 l3">				
+					<div class="card location-item">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/5c378f31a4c8997ff56750dfb549e275d25697c0.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Rivers</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>2224 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>	<div class="col m6 l3">				
+					<div class="card location-item">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/929d506a20a174fe9c03017035b169dbfbf0df01.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Uyo</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>678 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>	<div class="col m6 l3">				
+					<div class="card location-item">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Lagos</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>559 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>
 
 
-	  		<div id="sidebar" class="col s12 m12 l3 adverts-panel hide-on-med-and-down">
-				<?php require_once APPROOT . "/views/inc/advert-panel.php"; ?>
-	  		</div>
+			</div>
+
+			<br>
+			<div class="center">			
+				<a style="border: 1px solid #666;padding: 0px 25px 0px  25px;box-shadow: none;" class="btn center-align transparent grey-text text-darken-2 waves-effect" href="">View All</a>
+			</div>
+			<br>
+
 		</div>
-  	
-  </section>
+	</section>
 
-  <section id="newsletter">
-		<?php require_once APPROOT . "/views/inc/newsletter-panel.php"; ?>	
-  </section>
+	<section>
+		
+		<div class="newsletter">
 
-  <section>
-	  	<div class="row footer-1">
-			<div class="col s12 m4 grey-text">
-				<h6 class="yellow-text text-darken-2"><strong>Call Us</strong></h6>
-				<div class="row">
-					<div class="col s12 m4">
-						+234977077768
+
+			
+			<div style="margin-bottom: 0;" class="row container">
+
+				<div class="col s12 m8 offset-m2 center">
+
+					<br>
+					<h5 class="header white-text"><b> <i class="ion-ios-bell"></i> Newsletter </b></h5>
+					<h6 class="blue-text">Subscribe to our Newsletter to get what's hot on SLF!</h6>
+					<div class="row">
+						<form class="col s12" action="">
+							<div class="row">
+								<div class="col s12 input-field">
+									<i class="ion-ios-at prefix medium white-text"></i>
+									<input id="sub-mail" type="email" name="sub-mail">
+									<label for="sub-mail">example@gmail.com</label>
+								</div>
+								<div class="col s12 input-field">
+									<button class="btn btn-large red darken-2 white-text pulse">
+										<i class="ion-ios-bell left"></i> Subscribe
+									</button>
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
-			</div>			
-			<div class="col s12 m4 grey-text">
-				<h6 class="yellow-text text-darken-2"><strong>Visit Us @</strong></h6>
-				<div class="row">
-					<div class="col s12 m4">
-						24 hover avenue, lagos.
-					</div>
+			</div>
+
+		</div>
+
+	</section>
+
+	<section>
+
+		<div class="row container testimonials">
+			<br>
+			<h5 class="header grey-text text-darken-2 center"><b>Testimonials </b></h5>
+			<br>
+
+			<div class="col m4 center">
+				<img class="circle" src="<?php echo SITEURL;?>/img/338e11ef6aed9ffb32b9690bcc6de4c51a60a2d9.jpg">	
+		        <p style="margin-bottom: 2px;" class="center blue-text"><b>Isah E. Sule</b></p>	
+		        <p style="margin-top: 1px;" class="grey-text">CEO | Exter ltd.</p>			
+		    	<div class="card center">	
+				    <div style="" class="testimonials-text grey darken-4 white-text">
+				        <span><i>Travelling for me has been transformed by Jumia Travel from STRESS to STROLL, as if I just strolled from home to home at best prices ever. Hence, whenever I think of travelling, I think Travel.jumia.com.</i></span>
+				    </div>
 				</div>
-			</div>			
-			<div class="col s12 m4 grey-text">
-				<h6 class="yellow-text text-darken-2"><strong>Mail Us @</strong></h6>
-				<div class="row">
-					<div class="col s12 m4">
-						Ourmail@gmail.com
-					</div>
-				</div>
-			</div>		  		
-	  	</div>
+			</div>
 
-	  	<div class="row footer-2 grey-text text-lighten-1">
-	  		<p><?php echo "&copy; ". SITENAME ." ".date("Y") .", All rights reserved."; ?></p>	  		
-	  	</div>
+		</div>
+	
+                    
+	</section>
 
-  </section>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/5b4167324af8e57442dc6d7e/default';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-    <script type="text/javascript" src="js/code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="js/materialize.min.js"></script>
-    <script type="text/javascript" src="js/init.js"></script>
- 
 
-</body>
-</html>
+
+  
+
+		<?php require_once APPROOT . "/views/inc/footer.php"; ?>

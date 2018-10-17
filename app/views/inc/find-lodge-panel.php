@@ -1,4 +1,4 @@
-
+<!-- 
 		      <div class="card">
 
 		        <div class="card-content grey-text">
@@ -63,4 +63,41 @@
 		        	<button class="btn btn-large gradient-bg"><i class="ion-ios-search left"></i> Find Lodge</button>
 		        </div>
 
-		      </div>
+		      </div> -->
+			  <ul class="collection with-header">
+		        <li class="collection-item">
+	       			 <a href="#!" class="grey-text text-darken-2">
+			        	<div> Lodges Near You
+			        		<div class="secondary-content gradient-bg white-text">2</div>
+			        	</div>
+	    			</a>
+		    	</li>
+		        <li class="collection-item">
+	       			 <a href="#!" class="grey-text text-darken-2">
+			        	<div> Abia
+			        		<div class="secondary-content gradient-bg white-text">239</div>
+			        	</div>
+	    			</a>
+		    	</li>
+		        <li class="collection-item">
+	       			 <a href="#!" class="grey-text text-darken-2">
+			        	<div> Lagos
+			        		<div class="secondary-content gradient-bg white-text">3332</div>
+			        	</div>
+	    			</a>
+		    	</li>
+		        <li class="collection-item">
+	       			 <a href="#!" class="grey-text text-darken-2">
+			        	<div> Ibadan
+			        		<div class="secondary-content gradient-bg white-text">12</div>
+			        	</div>
+	    			</a>
+		    	</li>
+		        <li class="collection-item">
+	       			 <a href="#!" class="grey-text text-darken-2">
+			        	<div> Abuja
+			        		<div class="secondary-content gradient-bg white-text">24</div>
+			        	</div>
+	    			</a>
+		    	</li>
+		      </ul>

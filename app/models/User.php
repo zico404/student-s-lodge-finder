@@ -29,7 +29,7 @@ class User
     {
         echo $data['last_name'];
 
-        $query = 'INSERT INTO guest (first_name, last_name, email, password, token) VALUES (:first_name, :last_name, :email, :password, :token)';
+        $query = 'INSERT INTO users (first_name, last_name, email, password, token) VALUES (:first_name, :last_name, :email, :password, :token)';
         $this->db->query($query);
 
         // Bind values for security
@@ -46,7 +46,7 @@ class User
         return false;
     }
 
-    public function login(array $data): ?object
+    public function login(array $data)
     {
         $this->db->query('SELECT * FROM users WHERE email = :email');
         $this->db->bind(':email', $data['email']);

@@ -1,16 +1,22 @@
 $(function(){
+
     M.AutoInit();
     $('.dropdown-trigger').dropdown();
-    $('.slider').slider();
+    $('.slider').slider({
+        height : $(window).height()
+    });
     $('.parallax').parallax();
     $('.materialboxed').materialbox();
     $('.modal').modal();
     $('.scrollspy').scrollSpy();
     $('.datepicker').datepicker();
-    $('.tabs').tabs();
     $('.timepicker').timepicker();
     $('.tooltipped').tooltip();
     $('.chips').chips();
+
+    //
+
+    $('#lodge-tab').tabs();
 
     //Sticky sidebar 
 
@@ -39,4 +45,5 @@ $(function(){
                 });
             }
         });
+
 });

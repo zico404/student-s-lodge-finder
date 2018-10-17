@@ -1,3 +1,40 @@
+<section>
+	  	<div class="row footer-1 grey darken-4">
+			<div class="col s6 m3 white-text">
+				<h6 class="white-text"><strong>About Us</strong></h6>
+				<div class="row">
+					<div class="col s12 m3">
+					</div>
+				</div>
+			</div>			
+			<div class="col s6 m3 white-text">
+				<h6 class="white-text"><strong>Contact Us</strong></h6>
+				<div class="row">
+					<div class="col s12 m3">
+					</div>
+				</div>
+			</div>				
+			<div class="col s6 m3 white-text">
+				<h6 class="white-text"><strong>Links</strong></h6>
+				<div class="row">
+					<div class="col s12 m3">
+					</div>
+				</div>
+			</div>		
+			<div class="col s6 m3 white-text">
+				<h6 class="white-text"><strong>Follow Us</strong></h6>
+				<div class="row">
+					<div class="col s12 m3">
+					</div>
+				</div>
+			</div>			  		
+	  	</div>
+
+	  	<div class="row footer-2 grey-text">
+	  		<p><?php echo "&copy; ". SITENAME ." ".date("Y") .", All rights reserved."; ?></p>	  		
+	  	</div>
+
+  </section>
 
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
