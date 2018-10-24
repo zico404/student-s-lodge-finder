@@ -1,7 +1,7 @@
 
 	<!-- Slider -->
 
-  <div class="slider">
+  <div id="home-slider" class="slider">
 
       <div id="searchForm">
 
@@ -71,7 +71,7 @@
           <div style="padding:0px 15px 0px 15px;" class="white">          
             <div class="row">
 
-              <div class="col s12 m4">
+              <div class="col s12 m6">
                 <div class="input-field">
                     <select>
                       <option selected disabled>School</option>
@@ -80,7 +80,7 @@
                 </div>
               </div>
 
-              <div class="col s12 m3">
+              <div class="col s12 m2">
                 <div class="input-field">
                   <select name="price">
                     <option selected disabled value="50">Level</option>
@@ -90,7 +90,7 @@
                 </div>
               </div>
 
-              <div class="col s12 m3">
+              <div class="col s12 m2">
                 <div class="input-field">
                   <select name="gender">
                     <option selected disabled value="50">Gender</option>

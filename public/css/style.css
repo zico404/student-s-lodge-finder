@@ -10,6 +10,8 @@
 	z-index: 1000;
 
 }
+/*07062783243*/
+/*$_Zicomighty404*/
 
 .splash-screen i{
 
@@ -21,10 +23,7 @@
 	letter-spacing: -2px;
 }
 
-header nav,header nav.nav-wrapper{
-	background: transparent;
-}
-header nav{
+header#index nav{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -32,12 +31,12 @@ header nav{
 	box-shadow: none;
 }
 
-.slider .slides li .caption{
+#home-slider .slides li .caption{
 	position: absolute;
 	top: unset;
 	bottom:50px;
 	font-size: 1.2em;
-	font-weight: bold;
+	font-weight: 300;
 }
 
 .icon-block {
@@ -95,8 +94,8 @@ input#sl,input#sr{
 }
 
 ul.tools{
-	background: #666;
-	opacity: .7;
+	background: #fff;
+	opacity: .9;
 }
 
 div.welcome-note{
@@ -197,30 +196,30 @@ div.select-wrapper ul li span{
 	background:#fff;
 }
 
-.tabs .tab a{
+#searchForm .tab a{
 	color: #fff;
 	background:#2196F3;
 	box-shadow: 1px 1px 4px grey; 
 	font-weight: 500;
 }
-.tabs .tab a:hover{
+#searchForm .tab a:hover{
 	color:#fff;
 	background: #2196F3;
 }
 
-.tabs .tab a.active,.tabs .indicator{
+#searchForm .tab a.active,.tabs .indicator{
 	border-bottom: none;
 	background:#fff;
 	color: #2196F3;
 }
 
-.tabs .tab a.active:hover{
+#searchForm .tab a.active:hover{
 	background:#fff;
 }
 
 
 
-.tabs .tab a:focus, .tabs .tab a:focus.active{
+#searchForm .tab a:focus, .tabs .tab a:focus.active{
 	background-color:#fff;
 }
 
@@ -290,13 +289,15 @@ input[type=text]:not(.browser-default):focus:not([readonly]){
 }
 
 div.newsletter{
-	background: url(../img/overhead.jpg);
+	background: url(../img/dummy-parallax-2.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: bottom;
-	padding-top: 125px;
-	padding-bottom: 125px;
+	padding-top: 95px;
+	padding-bottom: 95px;
+	position: relative;
+	z-index: -55px;
 }
 
 .loose-text{
@@ -334,3 +335,55 @@ div.newsletter{
 	padding: 25px;
 }
 
+ul.search-menu li i{
+	line-height: 12px;
+}
+
+ul.tabs.search .tab a:focus.active{
+	background-color: transparent;
+}
+
+.curved{
+	border-radius: 45px;
+}
+
+span.search-title{
+	line-height: 55px;
+}
+
+
+div#lodge div.card div.card-action p{
+
+	margin: 0;
+}
+
+div#lodge div.card div.card-image a.btn{
+	z-index: 999;
+}
+
+
+#lodge > div > div.col.s12.l9 > div.row > div.col.s12.m7.l8.card.lodge-content > div:nth-child(1){
+	    border-bottom: 1px solid rgba(160,160,160,0.2);
+}
+
+#lodge  div.row  div.col.s12.m7.l8.card.lodge-content{
+	height: 250px;
+	margin: 0;
+}
+
+i.lodge-mood{
+	font-size: 1.3em;
+}
+
+div.lodge-content div.left h6,div.lodge-content div.right h6{
+	margin: 0;
+}
+
+div.lodge-content div.card-content>p{
+	margin-top: 15px;
+}
+
+div.lodge-price h5{
+
+	margin-bottom: 0px;
+}

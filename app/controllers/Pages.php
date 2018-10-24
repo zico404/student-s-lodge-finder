@@ -23,4 +23,10 @@ class Pages extends Controller
         $this->view('pages/about');
     }
 
+    public function search()
+    {
+        $this->view('pages/search');
+    }
+
+
 }

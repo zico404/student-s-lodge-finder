@@ -2,8 +2,12 @@ $(function(){
 
     M.AutoInit();
     $('.dropdown-trigger').dropdown();
-    $('.slider').slider({
+    $('#home-slider').slider({
         height : $(window).height()
+    });
+    $('.lodge-slider').slider({
+        height : 250,
+        indicators : false
     });
     $('.parallax').parallax();
     $('.materialboxed').materialbox();
@@ -20,11 +24,11 @@ $(function(){
 
     //Sticky sidebar 
 
-    var $sidebar = $("#sidebar"),
-        $newsletter = $("#newsletter"),
+    var $sidebar = $(".search-lodge"),
+        $footer = $("#footer"),
         $window = $(window),
         offset = $sidebar.offset(),
-        noffset = $newsletter.offset(),
+        noffset = $footer.offset(),
         topPadding = 15,
         threshold = noffset.top - $sidebar.height() - offset.top;
 

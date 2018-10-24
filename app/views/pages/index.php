@@ -56,17 +56,17 @@
   </section>
 
 	<section>
-		<div style="padding: 0px 7% 0px 7%;" class="grey lighten-4">
+		<div style="padding: 45px 9% 45px 9%;" class="grey lighten-4">
 			<br>
 			<h5 class="center-align black-text"><b> <i class="ion-android-locate"></i> Top Locations</b></h5>
 			<br>
 
 			<div style="margin-bottom: 0;" class="row locations">
 				
-				<div class="col m6 l3">				
+				<div class="col m6 l3 hoverable">				
 					<div class="card location-item">
 				        <div class="card-image">
-				          <img src="<?php echo SITEURL;?>/img/338e11ef6aed9ffb32b9690bcc6de4c51a60a2d9.jpg" height="200">
+				          <img src="<?php echo SITEURL;?>/img/Abia-tower.jpeg" height="200">
 				          <div class="location-title">
 				          	<h5 class="center-align white-text flow-text"><b>Abia</b></h5>
 				          </div>
@@ -77,7 +77,7 @@
 				        	<a href="" class="btn white-text transparent">Browse</a>
 				        </div>
 			      	</div>
-				</div>	<div class="col m6 l3">				
+				</div>	<div class="col m6 l3 hoverable">				
 					<div class="card location-item">
 				        <div class="card-image">
 				          <img src="<?php echo SITEURL;?>/img/5c378f31a4c8997ff56750dfb549e275d25697c0.jpg" height="200">
@@ -91,12 +91,12 @@
 				        	<a href="" class="btn white-text transparent">Browse</a>
 				        </div>
 			      	</div>
-				</div>	<div class="col m6 l3">				
+				</div>	<div class="col m6 l3 hoverable">				
 					<div class="card location-item">
 				        <div class="card-image">
 				          <img src="<?php echo SITEURL;?>/img/929d506a20a174fe9c03017035b169dbfbf0df01.jpg" height="200">
 				          <div class="location-title">
-				          	<h5 class="center-align white-text flow-text"><b>Uyo</b></h5>
+				          	<h5 class="center-align white-text flow-text"><b>Calabar</b></h5>
 				          </div>
 				        </div>
 				        <div class="container-hover">
@@ -105,7 +105,7 @@
 				        	<a href="" class="btn white-text transparent">Browse</a>
 				        </div>
 			      	</div>
-				</div>	<div class="col m6 l3">				
+				</div>	<div class="col m6 l3 hoverable">				
 					<div class="card location-item">
 				        <div class="card-image">
 				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
@@ -144,20 +144,19 @@
 				<div class="col s12 m8 offset-m2 center">
 
 					<br>
-					<h5 class="header white-text"><b> <i class="ion-ios-bell"></i> Newsletter </b></h5>
-					<h6 class="blue-text">Subscribe to our Newsletter to get what's hot on SLF!</h6>
+					<h4 class="header white-text"><b> <i class="ion-ios-bell"></i> Newsletter </b></h4>
+					<h6 class="grey-text text-lighten-1">Subscribe to our Newsletter to get what's hot on Student's lodge finder</h6>
 					<div class="row">
 						<form class="col s12" action="">
 							<div class="row">
-								<div class="col s12 input-field">
-									<i class="ion-ios-at prefix medium white-text"></i>
-									<input id="sub-mail" type="email" name="sub-mail">
-									<label for="sub-mail">example@gmail.com</label>
+								<br>
+								<div class="col s12 input-field"><!-- 
+									<i class="ion-ios-at prefix medium white-text"></i> -->
+									<input class="white-text" id="sub-mail" type="email" name="sub-mail">
+									<label class="grey-text text-lighten-2" for="sub-mail">example@gmail.com</label>
 								</div>
 								<div class="col s12 input-field">
-									<button class="btn btn-large red darken-2 white-text pulse">
-										<i class="ion-ios-bell left"></i> Subscribe
-									</button>
+									<button style="border-radius: 45px;" class="btn btn-large white-text pulse red darken-2 hoverable">Subscribe</button>
 								</div>
 							</div>
 						</form>

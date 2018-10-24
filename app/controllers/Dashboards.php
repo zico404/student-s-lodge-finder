@@ -14,4 +14,5 @@ class Dashboards extends Controller
     {
         $this->view('dashboard/index');
     }
+
 }
