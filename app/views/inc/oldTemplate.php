@@ -71,3 +71,47 @@
 		</div>
   	
   </section>
+
+
+
+
+  <!--  -->
+
+  
+							<div class="col s12 m7 l8">
+								<div class="card lodge-content">		
+									<div class="card-action">
+										<div class="left">			
+											<h6><b>Title of lodge</b></h6>
+											<p class="grey-text"><i class="ion-location"></i> 24 wales street</p>
+										</div>
+										<div class="right">
+											<h6 class="green-text"><i class="ion-happy-outline lodge-mood"></i><b> Very Good</b></h6>
+											<p class="right">222 reviews</p>
+										</div>
+
+										<div class="clearfix"></div>
+									</div>
+
+									<div class="card-content">				
+										<div class="row">
+											<div class="col s12 m6"></div>
+											<div class="right-align col s12 m6 lodge-price">
+												<h5 class="red-text"><b>24,999 NGN</b></h5>
+												<p>Anually</p>
+											</div>
+										</div>
+									</div>
+									
+									<div class="row">
+										<div class="col s12 m6">		
+											<ul class="amenities">
+												<li><i class="ion-android-bulb grey-text"></i></li>
+												<li><i class="ion-wifi grey-text"></i></li>
+												<li><i class="ion-android-notifications-off grey-text"></i></li>
+												<li><i class="ion-waterdrop grey-text"></i></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>

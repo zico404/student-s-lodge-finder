@@ -2,13 +2,20 @@ $(function(){
 
     M.AutoInit();
     $('.dropdown-trigger').dropdown();
+
     $('#home-slider').slider({
         height : $(window).height()
     });
+
+    $('#view-slider').slider({
+        height : 455
+    });
+
     $('.lodge-slider').slider({
-        height : 250,
+        height : 178,
         indicators : false
     });
+
     $('.parallax').parallax();
     $('.materialboxed').materialbox();
     $('.modal').modal();
@@ -36,17 +43,17 @@ $(function(){
 
             if ($window.scrollTop() >= threshold){
                 $sidebar.stop().animate({
-                    marginTop:threshold});
+                    marginTop:threshold},1000);
             }
             else if ($window.scrollTop() >= offset.top){
 
                 $sidebar.stop().animate({
-                    marginTop:$window.scrollTop() - offset.top + topPadding});
+                    marginTop:$window.scrollTop() - offset.top + topPadding},1000);
             }
             else{
                 $sidebar.stop().animate({
                     marginTop:0
-                });
+                },1000);
             }
         });
 

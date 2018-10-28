@@ -29,22 +29,22 @@
   		<div class="row container">
 
   			<div class="col s12 m4 center">
-				<i style="line-height: 115px;" class="medium blue-text text-darken-4 center ion-ios-search"></i>
-				<h5 class="grey-text loose-text text-darken-1 center-align"><b>Search</b></h5>
+				<i style="line-height: 115px;" class="medium indigo-text text-darken-4 center ion-ios-search"></i>
+				<h6 class="grey-text loose-text text-darken-1 center-align"><b>Search</b></h6>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore</p>
   			</div>
 
   			<div class="col s12 m4 center">
-				<i style="line-height: 115px;" class="medium ion-person-stalker blue-text text-darken-2"></i>
-				<h5 class="grey-text loose-text text-darken-1 center-align"><b>Connect</b></h5>
+				<i style="line-height: 115px;" class="medium ion-person-stalker indigo-text text-darken-2"></i>
+				<h6 class="grey-text loose-text text-darken-1 center-align"><b>Connect</b></h6>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore</p>
   			</div>
 
   			<div class="col s12 m4 center">
-				<i style="line-height: 115px;" class="medium blue-text ion-card"></i>
-				<h5 class="grey-text loose-text text-darken-1 center-align"><b>Pay</b></h5>
+				<i style="line-height: 115px;" class="medium indigo-text ion-card"></i>
+				<h6 class="grey-text loose-text text-darken-1 center-align"><b>Pay</b></h6>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 				tempor incididunt ut labore</p>
   			</div>
@@ -62,51 +62,9 @@
 			<br>
 
 			<div style="margin-bottom: 0;" class="row locations">
-				
-				<div class="col m6 l3 hoverable">				
-					<div class="card location-item">
-				        <div class="card-image">
-				          <img src="<?php echo SITEURL;?>/img/Abia-tower.jpeg" height="200">
-				          <div class="location-title">
-				          	<h5 class="center-align white-text flow-text"><b>Abia</b></h5>
-				          </div>
-				        </div>
-				        <div class="container-hover">
-				        	<br>
-				        	<p>124 LODGES</p>
-				        	<a href="" class="btn white-text transparent">Browse</a>
-				        </div>
-			      	</div>
-				</div>	<div class="col m6 l3 hoverable">				
-					<div class="card location-item">
-				        <div class="card-image">
-				          <img src="<?php echo SITEURL;?>/img/5c378f31a4c8997ff56750dfb549e275d25697c0.jpg" height="200">
-				          <div class="location-title">
-				          	<h5 class="center-align white-text flow-text"><b>Rivers</b></h5>
-				          </div>
-				        </div>
-				        <div class="container-hover">
-				        	<br>
-				        	<p>2224 LODGES</p>
-				        	<a href="" class="btn white-text transparent">Browse</a>
-				        </div>
-			      	</div>
-				</div>	<div class="col m6 l3 hoverable">				
-					<div class="card location-item">
-				        <div class="card-image">
-				          <img src="<?php echo SITEURL;?>/img/929d506a20a174fe9c03017035b169dbfbf0df01.jpg" height="200">
-				          <div class="location-title">
-				          	<h5 class="center-align white-text flow-text"><b>Calabar</b></h5>
-				          </div>
-				        </div>
-				        <div class="container-hover">
-				        	<br>
-				        	<p>678 LODGES</p>
-				        	<a href="" class="btn white-text transparent">Browse</a>
-				        </div>
-			      	</div>
-				</div>	<div class="col m6 l3 hoverable">				
-					<div class="card location-item">
+
+				<div class="col m6 l3">				
+					<div class="card location-item hoverable">
 				        <div class="card-image">
 				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
 				          <div class="location-title">
@@ -120,6 +78,119 @@
 				        </div>
 			      	</div>
 				</div>
+
+				<div class="col m6 l3">				
+					<div class="card location-item hoverable">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Lagos</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>559 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>
+
+				<div class="col m6 l3">				
+					<div class="card location-item hoverable">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Lagos</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>559 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>
+
+				<div class="col m6 l3">				
+					<div class="card location-item hoverable">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Lagos</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>559 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>
+
+				<div class="col m6 l3">				
+					<div class="card location-item hoverable">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Lagos</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>559 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>
+
+				<div class="col m6 l3">				
+					<div class="card location-item hoverable">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Lagos</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>559 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>
+
+				<div class="col m6 l3">				
+					<div class="card location-item hoverable">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Lagos</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>559 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>
+
+				<div class="col m6 l3">				
+					<div class="card location-item hoverable">
+				        <div class="card-image">
+				          <img src="<?php echo SITEURL;?>/img/80688ee61d1c50e01a3df89ed57bc3051899a0ef.jpg" height="200">
+				          <div class="location-title">
+				          	<h5 class="center-align white-text flow-text"><b>Lagos</b></h5>
+				          </div>
+				        </div>
+				        <div class="container-hover">
+				        	<br>
+				        	<p>559 LODGES</p>
+				        	<a href="" class="btn white-text transparent">Browse</a>
+				        </div>
+			      	</div>
+				</div>
+
 
 
 			</div>
@@ -136,16 +207,18 @@
 	<section>
 		
 		<div class="newsletter">
-
-
 			
 			<div style="margin-bottom: 0;" class="row container">
 
-				<div class="col s12 m8 offset-m2 center">
-
 					<br>
-					<h4 class="header white-text"><b> <i class="ion-ios-bell"></i> Newsletter </b></h4>
-					<h6 class="grey-text text-lighten-1">Subscribe to our Newsletter to get what's hot on Student's lodge finder</h6>
+					<h2 class="header white-text"><b> <i class="ion-ios-bell"></i> Newsletter </b></h2>
+
+				<div class="col s12 m4">	
+					<h6 style="line-height: 25px;" class="red-text text-lighten-1"><b>Subscribe to our Newsletter to get what's hot on Student's lodge finder</b></h6>
+				</div>
+
+				<div class="col s12 m8 center">
+
 					<div class="row">
 						<form class="col s12" action="">
 							<div class="row">
@@ -175,16 +248,41 @@
 			<h5 class="header grey-text text-darken-2 center"><b>Testimonials </b></h5>
 			<br>
 
-			<div class="col m4 center">
+			<div class="col s12 m6 l4 center">
 				<img class="circle" src="<?php echo SITEURL;?>/img/338e11ef6aed9ffb32b9690bcc6de4c51a60a2d9.jpg">	
-		        <p style="margin-bottom: 2px;" class="center blue-text"><b>Isah E. Sule</b></p>	
+		        <p style="margin-bottom: 2px;" class="center indigo-text"><b>Isah E. Sule</b></p>	
 		        <p style="margin-top: 1px;" class="grey-text">CEO | Exter ltd.</p>			
 		    	<div class="card center">	
 				    <div style="" class="testimonials-text grey darken-4 white-text">
-				        <span><i>Travelling for me has been transformed by Jumia Travel from STRESS to STROLL, as if I just strolled from home to home at best prices ever. Hence, whenever I think of travelling, I think Travel.jumia.com.</i></span>
+				        <span><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</i></span>
 				    </div>
 				</div>
 			</div>
+
+			<div class="col s12 m6 l4 center">
+				<img class="circle" src="<?php echo SITEURL;?>/img/338e11ef6aed9ffb32b9690bcc6de4c51a60a2d9.jpg">	
+		        <p style="margin-bottom: 2px;" class="center indigo-text"><b>Isah E. Sule</b></p>	
+		        <p style="margin-top: 1px;" class="grey-text">CEO | Exter ltd.</p>			
+		    	<div class="card center">	
+				    <div style="" class="testimonials-text grey darken-4 white-text">
+				        <span><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</i></span>
+				    </div>
+				</div>
+			</div>
+			
+
+			<div class="col s12 m6 l4 center">
+				<img class="circle" src="<?php echo SITEURL;?>/img/338e11ef6aed9ffb32b9690bcc6de4c51a60a2d9.jpg">	
+		        <p style="margin-bottom: 2px;" class="center indigo-text"><b>Isah E. Sule</b></p>	
+		        <p style="margin-top: 1px;" class="grey-text">CEO | Exter ltd.</p>			
+		    	<div class="card center">	
+				    <div style="" class="testimonials-text grey darken-4 white-text">
+				        <span><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</i></span>
+				    </div>
+				</div>
+			</div>
+			
+
 
 		</div>
 	

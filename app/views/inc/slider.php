@@ -18,7 +18,7 @@
     <div id="lodge" class="col s12 container">
 
       <div class="row">
-        <form class="col s12" action="" method="get">
+        <form class="col s12" action="<?php echo htmlspecialchars(SITEURL . '/pages/search');?>" method="get">
           <div style="padding:0px 25px 0px 25px;" class="white">          
             <div class="row">
 
@@ -51,7 +51,7 @@
 
               <div class="col s12 m2">
                 <div class="input-field">
-                  <input id="sl" class="btn blue white-text right" type="submit" name="sl" value="find">
+                  <input id="sl" class="btn indigo white-text right" type="submit" name="sl" value="find">
                 </div>
               </div>
 
@@ -102,7 +102,7 @@
 
               <div class="col s12 m2">
                 <div class="input-field">
-                  <input id="sr" class="btn blue white-text right" type="submit" name="search" value="Find">
+                  <input id="sr" class="btn indigo white-text right" type="submit" name="search" value="Find">
                 </div>
               </div>
 

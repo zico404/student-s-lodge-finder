@@ -93,10 +93,6 @@ input#sl,input#sr{
 	margin-top: 9px;
 }
 
-ul.tools{
-	background: #fff;
-	opacity: .9;
-}
 
 div.welcome-note{
 	margin-top: -40px;
@@ -141,10 +137,13 @@ div.welcome-note{
 }
 
 ul.pagination li.active{
-	background: linear-gradient(40deg,purple,#0D47A1);
+	border: 1px solid #3f51b5;
+	background-color: #3f51b5;
+	color: #3f51b5;
 }
 .footer-1{
-	background: rgba(0,0,0,.9);
+	border-top: 4px solid #ccc;
+	color: #444;
 	padding: 30px;
 	margin-bottom: 0;
 }
@@ -198,19 +197,19 @@ div.select-wrapper ul li span{
 
 #searchForm .tab a{
 	color: #fff;
-	background:#2196F3;
+	background:#3f51b5;
 	box-shadow: 1px 1px 4px grey; 
 	font-weight: 500;
 }
 #searchForm .tab a:hover{
 	color:#fff;
-	background: #2196F3;
+	background: #3f51b5;
 }
 
 #searchForm .tab a.active,.tabs .indicator{
 	border-bottom: none;
 	background:#fff;
-	color: #2196F3;
+	color: #3f51b5;
 }
 
 #searchForm .tab a.active:hover{
@@ -241,8 +240,8 @@ div.select-wrapper ul li span{
 	width: 100%;
 }
 
-.location-title h4 b{
-	text-shadow: 2px 2px 15px #000; 
+.location-title h5{
+	text-shadow: 2px 2px 5px blue,2px 2px 5px #000; 
 }
 
 .location-item:hover div.container-hover{
@@ -274,7 +273,7 @@ div.container-hover{
 }
 
 div.container-hover a.btn{
-	border: 2px solid #2196F3;
+	border: 2px solid #3f51b5;
 	text-transform: capitalize;
 }
 
@@ -298,11 +297,11 @@ div.newsletter{
 	padding-bottom: 95px;
 	position: relative;
 	z-index: -55px;
+	transform: skewY(2deg);
 }
 
 .loose-text{
 	letter-spacing: 1px;
-	font-size: 1.2em;
 }
 
 .testimonials-text::after{
@@ -333,6 +332,9 @@ div.newsletter{
 
 .testimonials-text{
 	padding: 25px;
+	background: #fff;
+	box-shadow: 1px 1px 4px solid #666;
+	margin-bottom: 45px;
 }
 
 ul.search-menu li i{
@@ -367,7 +369,7 @@ div#lodge div.card div.card-image a.btn{
 }
 
 #lodge  div.row  div.col.s12.m7.l8.card.lodge-content{
-	height: 250px;
+	max-height: 250px;
 	margin: 0;
 }
 
@@ -386,4 +388,32 @@ div.lodge-content div.card-content>p{
 div.lodge-price h5{
 
 	margin-bottom: 0px;
+}
+
+div.lodge-price p{
+	margin-top: 0px;
+}
+
+ul.amenities{
+	margin:0;
+}
+
+ul.amenities li{
+	display: inline-block;
+	margin-left: 9px;
+	margin-top: 15px;
+	font-size: 1.3em;
+}
+
+div.view-lodge{
+	margin-top: 75px;
+	padding: 15px;
+}
+
+div.view-lodge>div.col.s12.m8>h5{
+	margin-bottom: 2px;
+}
+
+div.view-lodge>div.col.s12.m8>p{
+	margin-top: 1px;
 }

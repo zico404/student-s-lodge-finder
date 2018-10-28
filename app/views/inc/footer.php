@@ -1,5 +1,5 @@
-<section id="footer">
-	  	<div class="row footer-1 blue darken-4">
+<section class="" id="footer">
+	  	<div class="row footer-1 indigo">
 			<div class="col s6 m3 white-text">
 				<h6 class="white-text"><strong>About Us</strong></h6>
 				<div class="row">
