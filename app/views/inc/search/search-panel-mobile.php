@@ -1,23 +1,29 @@
-					<div class="col s12 l3 hide-on-large-only">
+					
+			<ul class="collapsible hide-on-large-only">
+			    <li>
+			      <div class="collapsible-header waves-effect">
+			      	<h6 class="grey-text"><b>Advanced Search</b></h6>
+			      </div>
+					<div class="collapsible-body col s12 l3">
 
-						<ul style="box-shadow: none;border: none;" class="collapsible search-menu">
-						    <li>
+						<ul class="collapsible popout search-menu">
+						    <li class="active">
 						      <div class="collapsible-header waves-effect">
-						      	<i class="indigo-text text-darken-2 ion-ios-search-strong"></i>Keyword
+						      	<i class="purple-text text-darken-2 ion-ios-search-strong"></i>Keyword
 						      </div>
 						      <div class="collapsible-body sub-menu">
 						      	<form action=""> 			
 						      		<input id="text" type="text" name="" placeholder="Enter a keyword">
 						      		<div class="input-field">  
-						      			<button class="btn indigo white-text curved">search</button>
+						      			<button class="btn purple white-text curved">search</button>
 						      		</div>
 						      	</form>
 						      </div>
 
 						    </li>
-						    <li class="active">
+						    <li>
 						      <div class="collapsible-header waves-effect">
-						      	<i class="indigo-text text-darken-2 ion-ios-pricetags"></i>Price
+						      	<i class="purple-text text-darken-2 ion-cash"></i>Price
 						      </div>
 						      <div class="collapsible-body sub-menu">
 							  	<div class="row">
@@ -36,7 +42,7 @@
 						    </li>
 						    <li>
 						      <div class="collapsible-header waves-effect">
-						      	<i class="indigo-text text-darken-2 ion-ios-location"></i>Location
+						      	<i class="purple-text text-darken-2 ion-ios-location"></i>Location
 						      </div>
 						      <div class="collapsible-body sub-menu">					  			
 					  			<select>
@@ -46,7 +52,7 @@
 						    </li>
 						    <li>
 						      <div class="collapsible-header waves-effect">
-						      	<i class="indigo-text text-darken-2 ion-home"></i>Lodge Type
+						      	<i class="purple-text text-darken-2 ion-android-options"></i>Lodge Type
 						      </div>
 						      <div class="collapsible-body sub-menu">					  			
 					  			<select>
@@ -56,7 +62,7 @@
 						    </li>
 						    <li>
 						      <div class="collapsible-header waves-effect">
-						      	<i class="indigo-text text-darken-2 ion-ios-toggle"></i>Amenities
+						      	<i class="purple-text text-darken-2 ion-ios-toggle"></i>Amenities
 						      </div>
 						      <div class="collapsible-body sub-menu">
 							     <div class="switch">
@@ -85,3 +91,5 @@
 						</ul>
 
 					</div>
+				</li>
+			</ul>

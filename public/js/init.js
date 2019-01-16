@@ -3,9 +3,9 @@ $(function(){
     M.AutoInit();
     $('.dropdown-trigger').dropdown();
 
-    $('#home-slider').slider({
-        height : $(window).height()
-    });
+    // $('#home-slider').slider({
+    //     height : 0.7 * $(window).height()
+    // });
 
     $('#view-slider').slider({
         height : 455
@@ -23,6 +23,7 @@ $(function(){
     $('.datepicker').datepicker();
     $('.timepicker').timepicker();
     $('.tooltipped').tooltip();
+    $('.pushpin').pushpin();
     $('.chips').chips();
 
     //

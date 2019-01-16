@@ -1,5 +1,5 @@
 	<?php require_once APPROOT . "/views/inc/header-start.php"; ?>
-	<title>Lodges In Nigeria</title>
+	<title><?php echo $data->lodge_name;?></title>
 	<?php require_once APPROOT . "/views/inc/header-end.php"; ?>
 	<?php require_once APPROOT . "/views/inc/navbar.php"; ?>
 
@@ -8,8 +8,8 @@
 
 		<div class="view-lodge row">
 			<div class="col s12 l8">
-				<h5><b>This Is The Lodge Title</b></h5>
-				<p class="grey-text"><i class="ion-location"></i> 24 wales street</p>			
+				<h5><b><?php echo $data->lodge_name;?></b></h5>
+				<p class="grey-text"><?php echo $data->lga;?>,<?php echo $data->state;?></p>			
 				<div id="view-slider" class="slider">
 					
 				    <ul class="slides">
@@ -43,14 +43,43 @@
 					</div>
 				</div>
 
+
+				<div class="card">
+					<div class="card-content">
+						<h6><b>Comment</b></h6>
+						<p class="grey-text text-darken-2">Say something about this lodge</p>
+						<br>  
+						<div class="row">
+						    <form class="col s12">
+						      <div class="row">
+						        <div class="input-field col s12 m9">
+								    <p class="range-field">
+								    	<p>Your Rating</p>
+								      <input class="indigo-text" type="range" id="test5" min="0" max="10" />
+								    </p>
+						        </div>
+						        <div class="input-field col s12">
+						          <textarea id="textarea1" class="materialize-textarea"></textarea>
+						          <label for="textarea1">Comment</label>
+						        </div>
+						        <div class="input-field col s12">
+						          <button class="btn indigo"><i class="left ion-android-textsms"></i> Comment</button>
+						        </div>
+						      </div>
+						    </form>
+						  </div>
+					</div>
+				</div>
+
 			</div>
 
 			<div class="col s12 l4">
 
 				<div class="card">
 					<div class="card-content">
-						<a class="btn waves-effect red darken-1 white-text" href="javascript:void(0)"><i class="ion-ios-heart left"></i> Like</a>
-						<a class="btn waves-effect indigo white-text" href="javascript:void(0)"><i class="ion-android-checkmark-circle left"></i> Book Now</a>
+						<a class="btn btn-floating waves-effect red darken-1 white-text" href="javascript:void(0)"><i class="ion-ios-heart left"></i></a>
+						<a class="btn btn-floating waves-effect grey darken-1 white-text" href="javascript:void(0)"><i class="ion-android-share left"></i></a>
+						<a class="btn waves-effect green white-text right" href="javascript:void(0)"><i class="ion-checkmark-circled left"></i> Book Now</a>
 					</div>
 				</div>
 
@@ -114,6 +143,7 @@
 
 			<div class="container">
 				<h6><b>You May Also Like</b></h6>
+				<br>
 
 			  <div class="row">
 

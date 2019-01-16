@@ -1,17 +1,25 @@
       <nav class="nav-extended">
         <div class="nav-wrapper indigo">
-          <a href="#" class="brand-logo"></a>
+          <a href="<?php echo SITEURL;?>" class="brand-logo">Logo</a>
           <a href="#!" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><span class="ion-android-menu"></span></a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="<?php echo SITEURL;?>">Home</a></li>
-            <li><a href="<?php echo SITEURL;?>/users/login">My Account</a></li>
+          <ul class="right tools hide-on-med-and-down">
+        <li>
+          <a class="dropdown-trigger" data-target="myaccount"><b>My Account <i class="ion-chevron-down right tiny"></i></b></a>
+        </li>
           </ul>
+            <ul id='myaccount' class='dropdown-content'>
+          <li><a class="blue-text text-darken-4" href="<?php echo SITEURL;?>/users/login">Login</a></li>
+          <li><a class="blue-text text-darken-4" href="<?php echo SITEURL;?>/users/signup">Signup</a></li>
+        </ul>
         </div>
         <div class="nav-content indigo darken-2">
-          <ul class="tabs tabs-transparent search">
-            <li class="tab"><a class="active" href="#lodge">Find Lodge</a></li>
-            <li class="tab disabled"><a href="#roomie">Find room mate</a></li>
-          </ul>
-        </div>
+          <div class="row">
+            <div class="col s4 m2 right">       
+              <form>
+                <select>
+                  <option>Date</option>
+                </select>
+              </form>
+            </div>
+          </div>
       </nav>
-      <div id="roomie" class="col s12">Test 2</div>

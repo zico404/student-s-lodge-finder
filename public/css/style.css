@@ -17,28 +17,53 @@
 
 	font-size: 50px;
 }
-
+/*
+span.thumb,span.thumb.active{
+	background: #0D47A1;
+}
+*/
+.featured{
+	padding: 5px;
+	width: 65px;
+	color: red;
+	font-weight: bold;
+	font-size: 12px;
+	border: 1px solid red;
+}
 .brand-logo{
 	font-weight: bold;
 	letter-spacing: -2px;
 }
 
-header#index nav{
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 100;
-	box-shadow: none;
+.appGradient{
+	background: -moz-linear-gradient(40deg,purple,#0D47A1);	
+	background: -o-linear-gradient(40deg,purple,#0D47A1);
+	background: -webkit-linear-gradient(40deg,purple,#0D47A1);
+	background: linear-gradient(40deg,purple,#0D47A1);
 }
-
-#home-slider .slides li .caption{
-	position: absolute;
-	top: unset;
-	bottom:50px;
-	font-size: 1.2em;
-	font-weight: 300;
+#indexSearchContainer{
+	padding-top: 95px;
+	padding-bottom: 95px;
+	background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)) , url(../img/mainBg.jpg);
+	background-attachment: fixed;
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
-
+.darkTransparentBg{
+	background-color: #000;
+	opacity: .7;
+	width: 100%;
+}
+#indexSearchContainer .select-wrapper input.select-dropdown:focus{
+	border-bottom: 1px solid #ccc;
+}
+#indexSearchContainer div.select-wrapper input{
+	color: #fff;
+}
+.tabContainer{
+	margin-top: -48px;
+}
 .icon-block {
   padding: 0 15px;
 }
@@ -52,12 +77,6 @@ header#index nav{
 
 .caption h3{
 	font-weight: bold;
-}
-.gradient-bg{
-	background: -moz-linear-gradient(40deg,purple,#0D47A1);	
-	background: -o-linear-gradient(40deg,purple,#0D47A1);
-	background: -webkit-linear-gradient(40deg,purple,#0D47A1);
-	background: linear-gradient(40deg,purple,#0D47A1);
 }
 .nav-wrapper{
 	padding-left: 10px;
@@ -79,7 +98,7 @@ header#index nav{
 	border-radius:0px ;
 }
 
-#searchForm{
+#tabContainer{
 	position: absolute;
 	top: 40%;
 	left: 0;
@@ -154,7 +173,7 @@ ul.pagination li.active{
 }
 .my-parallax{
 	padding: 50px;
-	background: url(../img/background3.jpg);
+	background: url(../img/overhead.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-attachment: fixed;
@@ -183,7 +202,7 @@ span.ad-title{
 	cursor: pointer;
 }
 div.select-wrapper ul li span{
-	color: grey;
+	color: black;
 }
 .roomie-img{
 	height: 100px;
@@ -195,30 +214,30 @@ div.select-wrapper ul li span{
 	background:#fff;
 }
 
-#searchForm .tab a{
+.tabContainer .tab a{
 	color: #fff;
-	background:#3f51b5;
-	box-shadow: 1px 1px 4px grey; 
+	background:#4a148c; 
 	font-weight: 500;
 }
-#searchForm .tab a:hover{
+.tabContainer .tab a:hover{
 	color:#fff;
-	background: #3f51b5;
+	background:#4a148c;
 }
 
-#searchForm .tab a.active,.tabs .indicator{
+.tabContainer .tab a.active,.tabs .indicator{
 	border-bottom: none;
 	background:#fff;
-	color: #3f51b5;
+	color: #4a148c;
+	font-weight: bold;
 }
 
-#searchForm .tab a.active:hover{
+.tabContainer .tab a.active:hover{
 	background:#fff;
 }
 
 
 
-#searchForm .tab a:focus, .tabs .tab a:focus.active{
+.tabContainer .tab a:focus, .tabs .tab a:focus.active{
 	background-color:#fff;
 }
 
@@ -283,58 +302,31 @@ div.container-hover p{
 }
 
 
-input[type=text]:not(.browser-default):focus:not([readonly]){
-	border-bottom: 1px solid #9e9e9e;
+input[type=text]:not(.browser-default):focus:not([readonly]),input[type=email]:not(.browser-default):focus:not([readonly]),input[type=password]:not(.browser-default):focus:not([readonly]){
+	border-bottom: 1px solid #ccc;
+	box-shadow: none;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) + label,input[type=email]:not(.browser-default):focus:not([readonly]) + label,input[type=password]:not(.browser-default):focus:not([readonly]) + label{
+	color: #7b1fa2;
+	font-size: 1.2em;
+	font-weight: bold;
 }
 
 div.newsletter{
-	background: url(../img/dummy-parallax-2.jpg);
+	background: linear-gradient(rgba(0,0,0,.9),rgba(0,0,0,.9)) , url(../img/mainBg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: bottom;
-	padding-top: 95px;
-	padding-bottom: 95px;
+	background-position: left;
+	padding-top: 55px;
+	padding-bottom: 55px;
 	position: relative;
 	z-index: -55px;
-	transform: skewY(2deg);
 }
 
 .loose-text{
 	letter-spacing: 1px;
-}
-
-.testimonials-text::after{
-	
-	bottom: 100%;
-    left: 50%;
-    border: solid transparent;
-        border-top-width: medium;
-        border-right-width: medium;
-        border-bottom-color: transparent;
-        border-bottom-width: medium;
-        border-left-width: medium;
-    content: " ";
-    height: 0;
-    width: 0;
-    position: absolute;
-    pointer-events: none;
-    border-bottom-color:#666;
-    border-width: 0 15px 15px;
-    margin-left: -17px;
-
-}
-
-.testimonials img{
-	width: 95px;
-	height: 95px;
-}
-
-.testimonials-text{
-	padding: 25px;
-	background: #fff;
-	box-shadow: 1px 1px 4px solid #666;
-	margin-bottom: 45px;
 }
 
 ul.search-menu li i{
@@ -401,7 +393,6 @@ ul.amenities{
 ul.amenities li{
 	display: inline-block;
 	margin-left: 9px;
-	margin-top: 15px;
 	font-size: 1.3em;
 }
 
@@ -410,10 +401,27 @@ div.view-lodge{
 	padding: 15px;
 }
 
-div.view-lodge>div.col.s12.m8>h5{
+div.view-lodge>div.col.s12.l8>h5{
 	margin-bottom: 2px;
 }
 
-div.view-lodge>div.col.s12.m8>p{
+div.view-lodge>div.col.s12.l8>p{
 	margin-top: 1px;
 }
+div.roomie:hover{
+	transform: scale(1.05,1.05);
+	transition: all ease .5s;
+}
+
+  .pin-top {
+    position: relative;
+  }
+  .pin-bottom {
+    position: relative;
+  }
+  .pinned {
+    position: fixed !important;
+  }
+  .select-wrapper .caret{
+  	fill: #ffa000;
+  }

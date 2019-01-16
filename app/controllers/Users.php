@@ -137,7 +137,7 @@ class Users extends Controller
                 $err_code = 1;
             } else {
                 if ($data['password'] != $data['confirm_password']) {
-                    $data['confirm_password_err'] = 'Please do not match';
+                    $data['confirm_password_err'] = 'Passwords do not match';
                     $err_code = 1;
                 }
             }
