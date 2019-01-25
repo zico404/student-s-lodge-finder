@@ -15,7 +15,7 @@
                   <div class="col s12 m4 l3">
                     <div class="input-field">
                       <i class="ion-ios-location grey-text text-darken-2 prefix"></i>
-                      <select class="red-text" name="location">
+                      <select class="red-text select" name="location">
                         <option selected value="abia">Abia</option>
                         <option value="imo">Imo</option>
                         <option value="rivers">Rivers</option>
@@ -27,7 +27,7 @@
                   <div class="col s12 m4 l3">
                     <div class="input-field">
                       <i class="ion-cash grey-text text-darken-2 prefix"></i>
-                      <select name="price">
+                      <select class="select" name="price">
                         <option selected value="50000">50k & below</option>
                         <option value="100000">100k & below</option>
                         <option value="150000">More than 100k</option>
@@ -38,7 +38,7 @@
                   <div class="col s12 m4 l4">
                     <div class="input-field">
                       <i class="ion-android-options grey-text text-darken-2 prefix"></i>
-                      <select name="type">
+                      <select class="select" name="type">
                         <option selected value="1room">A Room</option>
                         <option value="2">2 Rooms & Above</option>
                       </select>
@@ -94,7 +94,7 @@
       <section>
         <div style="padding: 45px 9% 45px 9%;">
           <br>
-          <div id="locationContainer" style="margin-bottom: 0;" class="row locations"></div>
+          <div id="locationContainer" style="margin-bottom: 0;" class="row location"></div>
 
           <br>
           <div class="right">     

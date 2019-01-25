@@ -39,14 +39,15 @@
 	  	</div> -->
 
 	  	<div class="row footer-2 grey-text center">
-	  		<p><?php echo "&copy; ". SITENAME ." ".date("Y") .", All rights reserved."; ?></p>	  		
+	  		<!-- <h5 class="grey-text text-darken-2"><b>Logo</b></h5> -->
+	  		<p><?php echo "&copy; "." Copyright ".date("Y") .", All rights reserved."; ?></p>	  		
 	  	</div>
 
   </section>
 
     <script type="text/javascript" src="<?php echo SITEURL;?>/js/code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="<?php echo SITEURL;?>/js/materialize.min.js"></script>
-    <script type="text/javascript" src="<?php echo SITEURL;?>/js/select2.min.js"></script>
+   	<script type="text/javascript" src="<?php echo SITEURL;?>/js/select2.min.js"></script>   
     <script type="text/javascript" src="<?php echo SITEURL;?>/js/index.js"></script>
     <script type="text/javascript" src="<?php echo SITEURL;?>/js/init.js"></script>
 

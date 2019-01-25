@@ -1,27 +1,8 @@
 
 					<div class="col s12 l9">
+						<h6 class="card-title"><b><?php echo count($data); ?></b> results found.</h6>
+						<br>
 
-<!-- 
-						<div class="card header">
-							<div  style="padding: 10px 20px 0px 20px;">
-								<div class="row">
-									<div class="left col s8 m7">
-										<span class="header search-title">Search Results [ <?php echo count($data); ?> ]</span>
-									</div>
-									<div class="col s4 m2 right">									  			
-							  			<select>
-							  				<option disabled selected>Sort By</option>
-							  				<option>Name</option>
-							  				<option>Price</option>
-							  				<option>Date</option>
-							  				<option>Likes</option>
-							  			</select>
-									</div>
-								</div>
-							</div>
-
-
-						</div> -->
 
 
 <?php
@@ -40,7 +21,10 @@
 									<div class="card-action">
 										<div class="left">			
 											<h6 class="grey-text text-darken-4"><b><?php echo ucfirst($data->lodge_name);?></b></h6>
-											<p class="amber-text text-darken-4"><?php echo ucfirst($data->lga) . ', ' .ucfirst($data->state). ' state';?></p>
+											<p class="amber-text text-darken-4">
+												<i class="ion-ios-location"></i>
+												<?php echo ucfirst($data->lga) . ', ' .ucfirst($data->state). ' state';?>
+											</p>
 										</div><!-- 
 										<div class="right">
 											<h6 class="green-text"><i class="ion-happy-outline lodge-mood"></i><b> Very Good</b></h6>
@@ -74,16 +58,10 @@
 													<?php endif;?>
 												</ul>
 											</div>
-											<!-- <div class="right-align col s6 lodge-price">
+											<div class="right-align col s6 lodge-price">
 												<h5 class="red-text"><b><?php echo $data->price;?></b></h5>
 												<p class="grey-text">Anually</p>
-											</div> -->
-
-						                    <div class="right-align col s6">
-							                    <a href="<?php echo SITEURL;?>/lodge/<?php echo $data->lodge_id;?>">
-							                      <button class="btn white curved hoverable purple-text right">View</button>
-							                  	</a>
-						                    </div>
+											</div>
 										</div>
 									</div>
 									
@@ -105,36 +83,20 @@
 
 								<div style="padding: 0;" class="col s12 m5 l4"> 
 									<a href="<?php echo SITEURL;?>/lodge/<?php echo $elem->lodge_id;?>"> 
-										<img src="<?php echo SITEURL;?>/img/mainBg.jpg" width="100%" height="162">
+										<img class=" z-depth-2" src="<?php echo SITEURL;?>/img/mainBg.jpg" width="100%" height="169">
 							        </a>
 								</div>
 
 
-								<div class="col s12 m7 l8 card lodge-content">
+								<div style="margin-top: 0;" class="col s12 m7 l8 z-depth-2 card lodge-action">
 									<div class="card-action">
 										<div class="left">			
-											<h6 style="margin: 0;text-transform: uppercase;" class="indigo-text text-darken-4 truncate"><b><?php echo $elem->lodge_name;?></b></h6>
-											<span style="font-size: 12px;" class="grey-text text-darken-4"><?php echo ucfirst($elem->state). ' state';?></span>
-											<div class="featured">Featured</div>
+											<h6 class="grey-text text-darken-3"><b><?php echo $elem->lodge_name;?></b></h6>
+											<span style=";" class="grey-text text-darken-1"><?php echo ucfirst($elem->state). ' state';?></span>
+											
 										</div>
+										<div class="featured right red darken-3 z-depth-2">Featured</div>
 
-										<div class="right lodge-price">	
-												<ul class="amenities">
-													<?php if ($elem->light == 'on'):?>
-													<li><i class="ion-android-bulb blue-text text-darken-2"></i></li>
-													<?php endif;?>
-
-													<?php if ($elem->wifi == 'on'):?>
-													<li><i class="ion-wifi blue-text text-darken-2"></i></li>
-													<?php endif;?>
-
-													<li><i class="ion-android-notifications-off blue-text text-darken-2"></i></li>
-
-													<?php if ($elem->water == 'on'):?>
-													<li><i class="ion-waterdrop blue-text text-darken-2"></i></li>
-													<?php endif;?>
-												</ul>
-										</div>
 
 										<div class="clearfix"></div>
 									</div>
@@ -142,15 +104,33 @@
 									<div class="card-action">		
 										<div style="margin-bottom: 0px;" class="row">
 											<div class="col s6 right">
-												<p class="amber-text text-darken-4 right">Anually</p>	
-												<h6 style="margin-top: 0;" class="blue-text text-darken-4 right"><b><?php echo $elem->price;?>NGN</b></h6>
 											</div>
 
-						                    <div class="right-align col s6"><!-- 
-							                    <a href="<?php echo SITEURL;?>/lodge/<?php echo $elem->lodge_id;?>"> 
-							                    	<button class="btn white curved hoverable blue-text right"><b>View</b></button>
-							                  	</a> -->
+						                    <div class="left col s6">
+
+												<div class="lodge-price">	
+														<ul class="amenities">
+															<?php if ($elem->light == 'on'):?>
+															<li><i class="material-icons purple-text text-darken-4">lightbulb_outline</i></li>
+															<?php endif;?>
+
+															<?php if ($elem->wifi == 'on'):?>
+															<li><i class="material-icons purple-text text-darken-4">wifi</i></li>
+															<?php endif;?>
+
+															<li><i class="material-icons purple-text text-darken-4">smoke_free</i></li>
+
+															<?php if ($elem->water == 'on'):?>
+															<li><i class="material-icons purple-text text-darken-4">weekend</i></li>
+															<?php endif;?>
+														</ul>
+												</div>
 						                    </div>
+
+											<div class="right-align col s6 lodge-price">
+												<h6 style="margin:0px; " class="grey-text text-darken-3"><b><?php echo $elem->price;?>NGN</b></h6>
+												<p class="amber-text text-darken-4">Anually</p>
+											</div>
 
 										</div>
 									</div>
@@ -158,6 +138,8 @@
 								</div>
 
 							</div>
+
+
  
 
 	<?php
@@ -172,11 +154,14 @@
 
    ?>
 
-			  			<br>
-			  			<div class="right">	
-	                      <button class="btn blue darken-4 waves-effect white-text center" type="submit" name="sl">
-	                        <i class="ion-ios-reload left"></i>Load more
-	                      </button>
-			  			</div>
+		  <ul class="pagination right">
+		    <li class="disabled"><a href="#!"><i class="ion-chevron-left"></i></a></li>
+		    <li class="active"><a href="#!">1</a></li>
+		    <li class="waves-effect"><a href="#!">2</a></li>
+		    <li class="waves-effect"><a href="#!">3</a></li>
+		    <li class="waves-effect"><a href="#!">4</a></li>
+		    <li class="waves-effect"><a href="#!">5</a></li>
+		    <li class="waves-effect"><a href="#!"><i class="ion-chevron-right"></i></a></li>
+		  </ul>
 
 			</div>

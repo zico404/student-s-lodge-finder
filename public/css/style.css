@@ -25,10 +25,14 @@ span.thumb,span.thumb.active{
 .featured{
 	padding: 5px;
 	width: 65px;
-	color: red;
-	font-weight: bold;
-	font-size: 12px;
-	border: 1px solid red;
+	color: #fff;
+	font-weight: lighter;
+	text-align: center;
+	font-size:0.9em;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: skewX(-5deg);
 }
 .brand-logo{
 	font-weight: bold;
@@ -54,6 +58,9 @@ span.thumb,span.thumb.active{
 	background-color: #000;
 	opacity: .7;
 	width: 100%;
+}
+input[type="range"]{
+	border: none;
 }
 #indexSearchContainer .select-wrapper input.select-dropdown:focus{
 	border-bottom: 1px solid #ccc;
@@ -241,11 +248,14 @@ div.select-wrapper ul li span{
 	background-color:#fff;
 }
 
-.collection-item a div.secondary-content{
+/*.collection-item a div.secondary-content{
 	padding: 5px;
 	padding-top: 0;
 	padding-bottom: 0;
 	border-radius: 2px;
+}*/
+.collapsible-header i{
+	margin-top: 7px;
 }
 .view-panel .card-content{
 	padding: 20px;

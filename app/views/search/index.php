@@ -5,7 +5,7 @@
 	<?php require_once APPROOT . "/views/inc/navbar.php"; ?>
 
 		<?php require_once APPROOT . "/views/inc/sidebar.php"; ?>
-		<div class="card"></div>
+		<br>
 			<div style="padding:0px 5% 0px 5%;" id="lodge">
 				<div class="row">
 

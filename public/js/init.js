@@ -3,10 +3,6 @@ $(function(){
     M.AutoInit();
     $('.dropdown-trigger').dropdown();
 
-    // $('#home-slider').slider({
-    //     height : 0.7 * $(window).height()
-    // });
-
     $('#view-slider').slider({
         height : 455
     });

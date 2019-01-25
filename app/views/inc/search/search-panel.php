@@ -1,21 +1,73 @@
 					<div class="col s12 l3 hide-on-med-and-down search-lodge">
-						<h5 class="grey-text text-darken-2" style="font-weight:200;">Search Results (2)</h5>
-						<div class="card">
+				<!-- 		<div class="card darken-4">
 							<div class="card-content">
-								<p class="blue-text text-darken-4">Advanced Search</p>
+								<h6 class="blue-text text-darken-2"><b>Filter Search</b></h6>
 								   <form action=""> 			
 							      		<div class="input-field">  
-							      			<input class="grey-text text-darken-2" id="text" type="text" name="" placeholder="Enter a keyword">
+							      			<input class="grey-text text-lighten-2" id="text" type="text" name="" placeholder="Enter a keyword">
 							      		</div>  			
 							      		<div class="input-field">  
-							      			<select>
+											<p class="blue-text text-darken-2">Price</p>
+						      				 <p class="range-field">
+										      <input type="range" id="test5" min="0" max="100" />
+										    </p>
+							      		</div> 			
+							      		<div class="input-field">  
+											<p class="blue-text text-darken-2">Location</p>
+											<br>
+							      			<select class="locations">
 							      				<option>Hello</option>
 							      			</select>
-							      		</div> 		
+							      		</div>		
 							      		
 							      	</form>
 							</div>
-						</div>
+						</div> -->
+
+
+  <ul class="grey lighten-4 collapsible">
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons purple-text text-darken-4">attach_money</i>
+      	<h6 style="font-weight: lighter;"><b>Price</b></h6>
+      </div>
+      <div class="collapsible-body"> 
+		 <p class="range-field">
+	      <input type="range" id="test5" min="20" max="200" />
+	    </p>
+  		</div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons purple-text text-darken-4">location_on</i>
+      	<h6 style="font-weight: lighter;"><b>Location</b></h6>
+      </div>
+      <div class="collapsible-body">
+  			<select class="locations">
+  				<option>Hello</option>
+  			</select>
+  		</div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons purple-text text-darken-4">location_city</i>
+      	<h6 style="font-weight: lighter;"><b>Room Type</b></h6>
+      </div>
+      <div class="collapsible-body">
+  			<select class="locations">
+  				<option>Hello</option>
+  			</select>
+  		</div>
+    </li>
+    <li>
+      <div class="collapsible-header">
+      	<i class="material-icons purple-text text-darken-4">beenhere</i>
+      	<h6 style="font-weight: lighter;"><b>Amenities</b></h6>
+  	</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+
 
 						<!-- <ul class="collapsible search-menu">
 						    <li>

@@ -15,11 +15,10 @@
         <div class="nav-content indigo darken-2">
           <div class="row">
             <div class="col s4 m2 right">       
-              <form>
-                <select>
-                  <option>Date</option>
-                </select>
-              </form>
+             <button class="btn white grey-text text-darken-4 right hide-on-large-only">
+              <i class="ion-ios-settings-strong left"></i>Filter
+            </button>
             </div>
           </div>
+        </div>
       </nav>
